@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F3FDD0F15AD6A510002376C /* obOlaBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3FDD0D15AD6A510002376C /* obOlaBuffer.cpp */; };
 		9FAB603F15ACDA6F00275920 /* HTS_audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603415ACDA6F00275920 /* HTS_audio.c */; };
 		9FAB604015ACDA6F00275920 /* HTS_engine.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603515ACDA6F00275920 /* HTS_engine.c */; };
 		9FAB604115ACDA6F00275920 /* HTS_gstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603715ACDA6F00275920 /* HTS_gstream.c */; };
@@ -66,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F3FDD0D15AD6A510002376C /* obOlaBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = obOlaBuffer.cpp; path = "../../../../../../magelib-2.00/libs/olabox-0.01/obOlaBuffer.cpp"; sourceTree = "<group>"; };
+		9F3FDD0E15AD6A510002376C /* obOlaBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = obOlaBuffer.h; path = "../../../../../../magelib-2.00/libs/olabox-0.01/obOlaBuffer.h"; sourceTree = "<group>"; };
 		9FAB603415ACDA6F00275920 /* HTS_audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTS_audio.c; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_audio.c"; sourceTree = "<group>"; };
 		9FAB603515ACDA6F00275920 /* HTS_engine.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTS_engine.c; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_engine.c"; sourceTree = "<group>"; };
 		9FAB603615ACDA6F00275920 /* HTS_engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTS_engine.h; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_engine.h"; sourceTree = "<group>"; };
@@ -135,10 +138,20 @@
 			name = products;
 			sourceTree = "<group>";
 		};
+		9F3FDD0C15AD6A2F0002376C /* olabox */ = {
+			isa = PBXGroup;
+			children = (
+				9F3FDD0D15AD6A510002376C /* obOlaBuffer.cpp */,
+				9F3FDD0E15AD6A510002376C /* obOlaBuffer.h */,
+			);
+			name = olabox;
+			sourceTree = "<group>";
+		};
 		9F4B302F15ACDA2900E6DF6E /* mage */ = {
 			isa = PBXGroup;
 			children = (
 				9F4B303015ACDA3E00E6DF6E /* hts_engine */,
+				9F3FDD0C15AD6A2F0002376C /* olabox */,
 			);
 			name = mage;
 			sourceTree = "<group>";
@@ -350,6 +363,7 @@
 				9FAB604515ACDA6F00275920 /* HTS_pstream.c in Sources */,
 				9FAB604615ACDA6F00275920 /* HTS_sstream.c in Sources */,
 				9FAB604715ACDA6F00275920 /* HTS_vocoder.c in Sources */,
+				9F3FDD0F15AD6A510002376C /* obOlaBuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

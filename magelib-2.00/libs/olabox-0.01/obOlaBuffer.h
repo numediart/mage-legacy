@@ -6,7 +6,7 @@ class obOlaBuffer {
     
     obOlaBuffer( int bufferLen );
     void ola( float *frame, int frameLen, int atLoc );
-    void pull( float *buffer, int bufferLen );
+    void pop( float *buffer, int bufferLen );
     
   protected:
     

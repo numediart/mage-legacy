@@ -22,7 +22,7 @@ void obOlaBuffer::ola( float *frame, int frameLen, int atLoc ) {
 }
 
 
-void obOlaBuffer::pull( float *buffer, int bufferLen ) {
+void obOlaBuffer::pop( float *buffer, int bufferLen ) {
 
     if( pos+bufferLen < length ) {
     

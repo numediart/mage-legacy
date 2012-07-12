@@ -17,6 +17,8 @@
 		9FAB604515ACDA6F00275920 /* HTS_pstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603C15ACDA6F00275920 /* HTS_pstream.c */; };
 		9FAB604615ACDA6F00275920 /* HTS_sstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603D15ACDA6F00275920 /* HTS_sstream.c */; };
 		9FAB604715ACDA6F00275920 /* HTS_vocoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603E15ACDA6F00275920 /* HTS_vocoder.c */; };
+		9FB76E8015ADBD93001711DA /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FB76E7F15ADBD93001711DA /* Label.cpp */; };
+		9FF6C0AC15AEBB83004B4363 /* LabelQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6C0AB15AEBB83004B4363 /* LabelQueue.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworks.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -67,6 +69,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F0C2BA215AEC15400FF66D7 /* mage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mage.h; path = "../../../../../../magelib-2.00/src/mage.h"; sourceTree = "<group>"; };
+		9F0C2BA715AED9FF00FF66D7 /* State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		9F0C2BAC15AEEED300FF66D7 /* Distribution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Distribution.h; sourceTree = "<group>"; };
+		9F0C2BAD15AEEFDF00FF66D7 /* MSDistribution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSDistribution.h; sourceTree = "<group>"; };
+		9F0C2BAE15AEF5FC00FF66D7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "../../../../../../magelib-2.00/src/Constants.h"; sourceTree = "<group>"; };
+		9F0C2BAF15AEFE3700FF66D7 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		9F3FDD0D15AD6A510002376C /* obOlaBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = obOlaBuffer.cpp; path = "../../../../../../magelib-2.00/libs/olabox-0.01/obOlaBuffer.cpp"; sourceTree = "<group>"; };
 		9F3FDD0E15AD6A510002376C /* obOlaBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = obOlaBuffer.h; path = "../../../../../../magelib-2.00/libs/olabox-0.01/obOlaBuffer.h"; sourceTree = "<group>"; };
 		9FAB603415ACDA6F00275920 /* HTS_audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTS_audio.c; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_audio.c"; sourceTree = "<group>"; };
@@ -80,6 +88,11 @@
 		9FAB603C15ACDA6F00275920 /* HTS_pstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTS_pstream.c; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_pstream.c"; sourceTree = "<group>"; };
 		9FAB603D15ACDA6F00275920 /* HTS_sstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTS_sstream.c; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_sstream.c"; sourceTree = "<group>"; };
 		9FAB603E15ACDA6F00275920 /* HTS_vocoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTS_vocoder.c; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_vocoder.c"; sourceTree = "<group>"; };
+		9FB76E7F15ADBD93001711DA /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
+		9FB76E8115ADBDB3001711DA /* Label.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Label.h; sourceTree = "<group>"; };
+		9FBA3D3615AF02C40063B53D /* MemQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemQueue.h; sourceTree = "<group>"; };
+		9FF6C0AB15AEBB83004B4363 /* LabelQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LabelQueue.cpp; sourceTree = "<group>"; };
+		9FF6C0AD15AEBB93004B4363 /* LabelQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelQueue.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -150,6 +163,9 @@
 		9F4B302F15ACDA2900E6DF6E /* mage */ = {
 			isa = PBXGroup;
 			children = (
+				9F0C2BA215AEC15400FF66D7 /* mage.h */,
+				9F0C2BAE15AEF5FC00FF66D7 /* Constants.h */,
+				9FB76E7E15ADBD72001711DA /* classes */,
 				9F4B303015ACDA3E00E6DF6E /* hts_engine */,
 				9F3FDD0C15AD6A2F0002376C /* olabox */,
 			);
@@ -182,6 +198,47 @@
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 			);
 			name = app;
+			sourceTree = "<group>";
+		};
+		9FB76E7E15ADBD72001711DA /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				9FBA3D3415AF029B0063B53D /* input */,
+				9FBA3D3515AF02A90063B53D /* queues */,
+				9FBA3D3315AF02870063B53D /* stats */,
+			);
+			name = classes;
+			path = "../../../../../../magelib-2.00/src";
+			sourceTree = "<group>";
+		};
+		9FBA3D3315AF02870063B53D /* stats */ = {
+			isa = PBXGroup;
+			children = (
+				9F0C2BAD15AEEFDF00FF66D7 /* MSDistribution.h */,
+				9F0C2BAC15AEEED300FF66D7 /* Distribution.h */,
+				9F0C2BAF15AEFE3700FF66D7 /* Model.h */,
+				9F0C2BA715AED9FF00FF66D7 /* State.h */,
+			);
+			name = stats;
+			sourceTree = "<group>";
+		};
+		9FBA3D3415AF029B0063B53D /* input */ = {
+			isa = PBXGroup;
+			children = (
+				9FB76E7F15ADBD93001711DA /* Label.cpp */,
+				9FB76E8115ADBDB3001711DA /* Label.h */,
+			);
+			name = input;
+			sourceTree = "<group>";
+		};
+		9FBA3D3515AF02A90063B53D /* queues */ = {
+			isa = PBXGroup;
+			children = (
+				9FBA3D3615AF02C40063B53D /* MemQueue.h */,
+				9FF6C0AB15AEBB83004B4363 /* LabelQueue.cpp */,
+				9FF6C0AD15AEBB93004B4363 /* LabelQueue.h */,
+			);
+			name = queues;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
@@ -364,6 +421,8 @@
 				9FAB604615ACDA6F00275920 /* HTS_sstream.c in Sources */,
 				9FAB604715ACDA6F00275920 /* HTS_vocoder.c in Sources */,
 				9F3FDD0F15AD6A510002376C /* obOlaBuffer.cpp in Sources */,
+				9FB76E8015ADBD93001711DA /* Label.cpp in Sources */,
+				9FF6C0AC15AEBB83004B4363 /* LabelQueue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +446,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
 				GCC_AUTO_VECTORIZATION = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;

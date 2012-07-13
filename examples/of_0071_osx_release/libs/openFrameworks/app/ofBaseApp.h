@@ -34,8 +34,5 @@ class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput{
 	
 		virtual void windowEntry ( int state ) { }
 		
-		int mouseX, mouseY;			// for processing heads
+		int mouseX, mouseY; // for processing heads
 };
-
-
-

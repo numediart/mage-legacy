@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F11F62A15AF57FD00745C92 /* genThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F11F62915AF57FD00745C92 /* genThread.cpp */; };
+		9F11F62C15AF5F0200745C92 /* ModelQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F11F62B15AF5F0200745C92 /* ModelQueue.cpp */; };
 		9F3FDD0F15AD6A510002376C /* obOlaBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3FDD0D15AD6A510002376C /* obOlaBuffer.cpp */; };
+		9F4800EB15AF751000556F97 /* FrameQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4800EA15AF751000556F97 /* FrameQueue.cpp */; };
 		9FAB603F15ACDA6F00275920 /* HTS_audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603415ACDA6F00275920 /* HTS_audio.c */; };
 		9FAB604015ACDA6F00275920 /* HTS_engine.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603515ACDA6F00275920 /* HTS_engine.c */; };
 		9FAB604115ACDA6F00275920 /* HTS_gstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB603715ACDA6F00275920 /* HTS_gstream.c */; };
@@ -75,8 +78,16 @@
 		9F0C2BAD15AEEFDF00FF66D7 /* MSDistribution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSDistribution.h; sourceTree = "<group>"; };
 		9F0C2BAE15AEF5FC00FF66D7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "../../../../../../magelib-2.00/src/Constants.h"; sourceTree = "<group>"; };
 		9F0C2BAF15AEFE3700FF66D7 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		9F11F62815AF57F100745C92 /* genThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = genThread.h; sourceTree = "<group>"; };
+		9F11F62915AF57FD00745C92 /* genThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = genThread.cpp; sourceTree = "<group>"; };
+		9F11F62B15AF5F0200745C92 /* ModelQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelQueue.cpp; sourceTree = "<group>"; };
+		9F11F62D15AF5F1000745C92 /* ModelQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelQueue.h; sourceTree = "<group>"; };
 		9F3FDD0D15AD6A510002376C /* obOlaBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = obOlaBuffer.cpp; path = "../../../../../../magelib-2.00/libs/olabox-0.01/obOlaBuffer.cpp"; sourceTree = "<group>"; };
 		9F3FDD0E15AD6A510002376C /* obOlaBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = obOlaBuffer.h; path = "../../../../../../magelib-2.00/libs/olabox-0.01/obOlaBuffer.h"; sourceTree = "<group>"; };
+		9F47327A15B00604001C9C1F /* pa_memorybarrier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pa_memorybarrier.h; path = "../../../../../../magelib-2.00/libs/portaudio-0.19/pa_memorybarrier.h"; sourceTree = "<group>"; };
+		9F4800E715AF737800556F97 /* Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
+		9F4800E915AF750400556F97 /* FrameQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameQueue.h; sourceTree = "<group>"; };
+		9F4800EA15AF751000556F97 /* FrameQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameQueue.cpp; sourceTree = "<group>"; };
 		9FAB603415ACDA6F00275920 /* HTS_audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTS_audio.c; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_audio.c"; sourceTree = "<group>"; };
 		9FAB603515ACDA6F00275920 /* HTS_engine.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HTS_engine.c; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_engine.c"; sourceTree = "<group>"; };
 		9FAB603615ACDA6F00275920 /* HTS_engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTS_engine.h; path = "../../../../../../magelib-2.00/libs/hts_engine-1.06/HTS_engine.h"; sourceTree = "<group>"; };
@@ -160,12 +171,29 @@
 			name = olabox;
 			sourceTree = "<group>";
 		};
+		9F47327B15B00611001C9C1F /* portaudio */ = {
+			isa = PBXGroup;
+			children = (
+				9F47327A15B00604001C9C1F /* pa_memorybarrier.h */,
+			);
+			name = portaudio;
+			sourceTree = "<group>";
+		};
+		9F4800E815AF737D00556F97 /* synth */ = {
+			isa = PBXGroup;
+			children = (
+				9F4800E715AF737800556F97 /* Frame.h */,
+			);
+			name = synth;
+			sourceTree = "<group>";
+		};
 		9F4B302F15ACDA2900E6DF6E /* mage */ = {
 			isa = PBXGroup;
 			children = (
 				9F0C2BA215AEC15400FF66D7 /* mage.h */,
 				9F0C2BAE15AEF5FC00FF66D7 /* Constants.h */,
 				9FB76E7E15ADBD72001711DA /* classes */,
+				9F47327B15B00611001C9C1F /* portaudio */,
 				9F4B303015ACDA3E00E6DF6E /* hts_engine */,
 				9F3FDD0C15AD6A2F0002376C /* olabox */,
 			);
@@ -194,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				9F11F62915AF57FD00745C92 /* genThread.cpp */,
+				9F11F62815AF57F100745C92 /* genThread.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 			);
@@ -206,6 +236,7 @@
 				9FBA3D3415AF029B0063B53D /* input */,
 				9FBA3D3515AF02A90063B53D /* queues */,
 				9FBA3D3315AF02870063B53D /* stats */,
+				9F4800E815AF737D00556F97 /* synth */,
 			);
 			name = classes;
 			path = "../../../../../../magelib-2.00/src";
@@ -214,10 +245,10 @@
 		9FBA3D3315AF02870063B53D /* stats */ = {
 			isa = PBXGroup;
 			children = (
-				9F0C2BAD15AEEFDF00FF66D7 /* MSDistribution.h */,
-				9F0C2BAC15AEEED300FF66D7 /* Distribution.h */,
-				9F0C2BAF15AEFE3700FF66D7 /* Model.h */,
 				9F0C2BA715AED9FF00FF66D7 /* State.h */,
+				9F0C2BAC15AEEED300FF66D7 /* Distribution.h */,
+				9F0C2BAD15AEEFDF00FF66D7 /* MSDistribution.h */,
+				9F0C2BAF15AEFE3700FF66D7 /* Model.h */,
 			);
 			name = stats;
 			sourceTree = "<group>";
@@ -237,6 +268,10 @@
 				9FBA3D3615AF02C40063B53D /* MemQueue.h */,
 				9FF6C0AB15AEBB83004B4363 /* LabelQueue.cpp */,
 				9FF6C0AD15AEBB93004B4363 /* LabelQueue.h */,
+				9F11F62B15AF5F0200745C92 /* ModelQueue.cpp */,
+				9F11F62D15AF5F1000745C92 /* ModelQueue.h */,
+				9F4800EA15AF751000556F97 /* FrameQueue.cpp */,
+				9F4800E915AF750400556F97 /* FrameQueue.h */,
 			);
 			name = queues;
 			sourceTree = "<group>";
@@ -423,6 +458,9 @@
 				9F3FDD0F15AD6A510002376C /* obOlaBuffer.cpp in Sources */,
 				9FB76E8015ADBD93001711DA /* Label.cpp in Sources */,
 				9FF6C0AC15AEBB83004B4363 /* LabelQueue.cpp in Sources */,
+				9F11F62A15AF57FD00745C92 /* genThread.cpp in Sources */,
+				9F11F62C15AF5F0200745C92 /* ModelQueue.cpp in Sources */,
+				9F4800EB15AF751000556F97 /* FrameQueue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

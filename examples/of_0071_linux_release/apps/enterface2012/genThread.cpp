@@ -41,7 +41,7 @@ void genThread::threadedFunction( void ) {
             
             modelQueue->push( &model, 1 );
             
-            if( modelQueue->getNumOfItems() >= nOfLookup+1 ) {
+            if( modelQueue->getNumOfItems() > nOfLookup ) {
             
                 modelQueue->generate( nOfLookup+1, frameQueue );                
                 modelQueue->pop( 1 );

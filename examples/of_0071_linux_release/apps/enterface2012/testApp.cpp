@@ -15,7 +15,7 @@ void testApp::setup( void ) {
     drawSampleFrame = true; // we don't draw the sample frame at runtime
     frameLen = 480; hopLen = 240; sampleCount = 0; // initialize OLA variables
     olaBuffer = new obOlaBuffer( 8*maxFrameLen ); // allocate memory for the OLA buffer
-    sampleFrame = new float[ maxFrameLen ]; // allocate memory for the speech frame
+    sampleFrame = new float[ maxFrameLen ](); // allocate memory for the speech frame
     ofSoundStreamSetup( 1, 0, this, sampleRate, dacBufferLen, 4 ); // audio setup
 }
 
@@ -69,7 +69,7 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
     
     for ( int k=0; k<bufSize; k++ ) {
         
-        if( sampleCount >= hopLen ) { // if we hit the hop lenght
+        if( sampleCount >= hopLen ) { // if we hit the hop length
             
             if( !frameQueue->isEmpty() ) {
                 

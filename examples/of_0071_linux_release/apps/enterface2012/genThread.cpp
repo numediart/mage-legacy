@@ -17,7 +17,7 @@ void genThread::threadedFunction( void ) {
             
             for( int s=0; s<nOfStates; s++ ) {
             
-                model.state[s].duration = (int)ofRandom( 1, 40 );
+                model.state[s].duration = (int) ofRandom( 1, 40 );
                 
                 for( int k=0; k<(nOfDers*nOfMGCs); k++ ) {
                 

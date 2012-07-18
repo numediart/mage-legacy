@@ -14,7 +14,7 @@ const int frameQueueLen = 200; // longest label 1 sec = 200 frames of 5 smsec
 // --- AUDIO THINGS ---
 const int sampleRate = 48000;
 const int maxFrameLen =  4800;
-const int dacBufferLen = 64;
+const int dacBufferLen = 128;
 
 class testApp : public ofBaseApp {
     

@@ -66,10 +66,8 @@ void testApp::draw( void ) {
 }
 
 void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
-    
     for ( int k=0; k<bufSize; k++ ) {
-        
-        if( sampleCount >= hopLen ) { // if we hit the hop length
+        if( sampleCount >= hopLen-1 ) { // if we hit the hop length
             
             if( !frameQueue->isEmpty() ) {
                 
@@ -89,15 +87,20 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
             
             olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
             sampleCount = 0; // and reset the sample count for next time
-            
         } else {
-        
             sampleCount++; // otherwise increment sample count
         }
     }
-    
+
     // pulling samples out for the DAC
     olaBuffer->pop( outBuffer, bufSize );
+
+//    FILE *file;
+//
+//    file = fopen("out.raw", "ab");
+//    fwrite(outBuffer, sizeof(float), bufSize, file);
+//
+//    fclose(file);
 }
 
 //---
@@ -109,7 +112,6 @@ testApp::testApp( int argc, char **argv ) {
 }
 
 void testApp::keyPressed( int key ) {
-    
     if( key == 'l' ) {
         
         MAGE::Label label;

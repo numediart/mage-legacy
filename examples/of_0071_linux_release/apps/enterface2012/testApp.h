@@ -48,6 +48,7 @@ class testApp : public ofBaseApp {
     MAGE::LabelQueue *labelQueue;
     MAGE::ModelQueue *modelQueue;
     MAGE::FrameQueue *frameQueue;
+    MAGE::Engine *engine;
     
     genThread *generate;
     Frame frame;

@@ -1,10 +1,13 @@
 #include "genThread.h"
 
-genThread::genThread( LabelQueue *lab, ModelQueue *mod, FrameQueue *frm ) {
+genThread::genThread( LabelQueue *lab, ModelQueue *mod, FrameQueue *frm, Engine *eng ) {
 
-    labelQueue = lab;
-    modelQueue = mod;
-    frameQueue = frm;
+    this->labelQueue = lab;
+    this->modelQueue = mod;
+    this->frameQueue = frm;
+    this->engine = eng;
+    
+    model.checkInterpolationWeights( engine );
 }
 
 void genThread::threadedFunction( void ) {
@@ -19,7 +22,10 @@ void genThread::threadedFunction( void ) {
             
             for(s=0; s<nOfStates; s++ ) {
             
-                model.getState(s).duration = (int) ofRandom( 1, 40 );
+                //model.getState(s).duration = (int) ofRandom( 1, 40 );
+                model.computeDuration( engine, &label );
+                //model.computeParameters( engine, label );
+                //model.computeGlobalVariances( engine, label );
                 
                 for( k=0; k<(nOfDers*nOfMGCs); k++ ) {
                 

@@ -7,8 +7,12 @@ void testApp::setup( void ) {
     modelQueue = new MAGE::ModelQueue( modelQueueLen );
     frameQueue = new MAGE::FrameQueue( frameQueueLen );
     
+    // --- HTS Engine ---
+    engine = new MAGE::Engine();
+    engine->load(Argc, Argv);
+    
     // --- PARAMETER GENERATION THREAD ---
-    generate = new genThread( labelQueue, modelQueue, frameQueue );
+    generate = new genThread( labelQueue, modelQueue, frameQueue, engine );
     generate->startThread();
     
     // -- OLA AND AUDIO ---
@@ -114,8 +118,8 @@ testApp::testApp( int argc, char **argv ) {
 void testApp::keyPressed( int key ) {
     if( key == 'l' ) {
         
-        MAGE::Label label;
-        label.setQuery( "x^x-pau+ae=l@x_x/A:0_0_0/B:x-x-x@x-x&x-x#x-x$x-x!x-x;x-x|x/C:1+1+2/D:0_0/E:x+x@x+x&x+x#x+x/F:content_2/G:0_0/H:x=x^1=10|0/I:19=12/J:79+57-10" );
+        MAGE::Label label("x^x-pau+ae=l@x_x/A:0_0_0/B:x-x-x@x-x&x-x#x-x$x-x!x-x;x-x|x/C:1+1+2/D:0_0/E:x+x@x+x&x+x#x+x/F:content_2/G:0_0/H:x=x^1=10|0/I:19=12/J:79+57-10");
+        //label.setQuery( "x^x-pau+ae=l@x_x/A:0_0_0/B:x-x-x@x-x&x-x#x-x$x-x!x-x;x-x|x/C:1+1+2/D:0_0/E:x+x@x+x&x+x#x+x/F:content_2/G:0_0/H:x=x^1=10|0/I:19=12/J:79+57-10" );
         
         if( !labelQueue->isFull() ) labelQueue->push( label );
         else printf( "label queue is full !\n" );

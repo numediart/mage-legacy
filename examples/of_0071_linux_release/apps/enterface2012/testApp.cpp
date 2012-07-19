@@ -21,6 +21,10 @@ void testApp::setup( void ) {
     olaBuffer = new obOlaBuffer( 8*maxFrameLen ); // allocate memory for the OLA buffer
     sampleFrame = new float[ maxFrameLen ](); // allocate memory for the speech frame
     ofSoundStreamSetup( 1, 0, this, sampleRate, dacBufferLen, 4 ); // audio setup
+    
+    string s(this->Argv[this->Argc-1]);
+    parsefile(s);
+    //parsefile("../../../../data/inouts/labels/alice01.lab");
 }
 
 void testApp::exit( void ) {
@@ -80,10 +84,13 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
                 // <DUMMY-CODE>
                 
                 for( int s=0; s<frameLen; s++ ) {
-                    
-                    // create a frame with windowed sin reacting to interactive value of Length
-                    float hannWin = 0.5 * (1.0 - cos((TWO_PI * ((float)s)) / (((float)frameLen) - 1.0)));
-                    sampleFrame[s] = 0.95 * hannWin * sin( (float)s * ((TWO_PI*frame.lf0)/(float)sampleRate) );
+                    if (frame.voiced) {    
+                        // create a frame with windowed sin reacting to interactive value of Length
+                        float hannWin = 0.5 * (1.0 - cos((TWO_PI * ((float)s)) / (((float)frameLen) - 1.0)));
+                        sampleFrame[s] = 0.25 * hannWin * sin( (float)s * ((TWO_PI*exp(frame.lf0))/(float)sampleRate) );
+                    } else {
+                        sampleFrame[s] = 0.0;
+                    }
                 }
                 
                 // </DUMMY-CODE>
@@ -119,11 +126,17 @@ void testApp::keyPressed( int key ) {
     if( key == 'l' ) {
         
         //MAGE::Label label("x^x-pau+ae=l@x_x/A:0_0_0/B:x-x-x@x-x&x-x#x-x$x-x!x-x;x-x|x/C:1+1+2/D:0_0/E:x+x@x+x&x+x#x+x/F:content_2/G:0_0/H:x=x^1=10|0/I:19=12/J:79+57-10");
+        //MAGE::Label label;
+        //label.setQuery( "x^x-pau+ae=l@x_x/A:0_0_0/B:x-x-x@x-x&x-x#x-x$x-x!x-x;x-x|x/C:1+1+2/D:0_0/E:x+x@x+x&x+x#x+x/F:content_2/G:0_0/H:x=x^1=10|0/I:19=12/J:79+57-10" );
         MAGE::Label label;
-        label.setQuery( "x^x-pau+ae=l@x_x/A:0_0_0/B:x-x-x@x-x&x-x#x-x$x-x!x-x;x-x|x/C:1+1+2/D:0_0/E:x+x@x+x&x+x#x+x/F:content_2/G:0_0/H:x=x^1=10|0/I:19=12/J:79+57-10" );
+        while (!labellist.empty()) {
+            string q = labellist.front();
+            label.setQuery(q);
+            labellist.pop();
         
-        if( !labelQueue->isFull() ) labelQueue->push( label );
-        else printf( "label queue is full !\n" );
+            if( !labelQueue->isFull() ) labelQueue->push( label );
+            else printf( "label queue is full !\n%s",q.c_str());
+        }
     }
     
     /*if( key == 'b' ) {
@@ -141,4 +154,23 @@ void testApp::keyPressed( int key ) {
 void testApp::keyReleased( int key ) {
 
     
+}
+
+void testApp::parsefile(std::string filename) 
+{
+    string line;
+    ifstream myfile(filename.c_str());
+    
+    if (!myfile.is_open()) {
+        printf("could not open file %s",filename.c_str());
+        return;
+    }
+    
+    for (int k=0;getline(myfile, line);k++) {
+        this->labellist.push(line);
+    }
+    
+    myfile.close();
+    
+    return;
 }

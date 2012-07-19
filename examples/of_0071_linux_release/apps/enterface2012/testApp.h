@@ -7,7 +7,7 @@
 #include "genThread.h"
 
 // --- QUEUE THINGS ---
-const int labelQueueLen = 128; // max amount of labels that can wait
+const int labelQueueLen = 256; // max amount of labels that can wait
 const int modelQueueLen = nOfLookup+2; // max stored past models for generation
 const int frameQueueLen = 200; // longest label 1 sec = 200 frames of 5 smsec
 
@@ -37,6 +37,9 @@ class testApp : public ofBaseApp {
     // keyboard callbacks
     void keyPressed( int key );
     void keyReleased( int key );
+    
+    //parse lab file line-by-line
+    void parsefile(std::string filename);
 
   protected:
     
@@ -60,4 +63,6 @@ class testApp : public ofBaseApp {
     int frameLen, hopLen; // frame size and hop size
     int sampleCount; // sample count for triggering
     bool drawSampleFrame; // do we show the frame
+    
+    std::queue<std::string> labellist;
 };

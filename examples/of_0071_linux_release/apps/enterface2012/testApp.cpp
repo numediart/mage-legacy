@@ -32,9 +32,10 @@ void testApp::exit( void ) {
     generate->waitForThread( true );
     delete generate;
     
-    delete labelQueue;
-    delete modelQueue;
+    delete engine;
     delete frameQueue;
+    delete modelQueue;
+    delete labelQueue;
     
     delete sampleFrame;
     delete olaBuffer;

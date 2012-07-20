@@ -6,6 +6,8 @@
 #include "obOlaBuffer.h"
 #include "genThread.h"
 
+#include <fstream>
+
 // --- QUEUE THINGS ---
 const int labelQueueLen = 256; // max amount of labels that can wait
 const int modelQueueLen = nOfLookup+2; // max stored past models for generation

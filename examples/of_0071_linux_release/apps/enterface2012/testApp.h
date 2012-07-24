@@ -67,5 +67,8 @@ class testApp : public ofBaseApp {
     int sampleCount; // sample count for triggering
     bool drawSampleFrame; // do we show the frame
     
+    //SPTK vocoder
+    MAGE::Vocoder *vocoder;
+    
     std::queue<std::string> labellist;
 };

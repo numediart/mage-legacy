@@ -29,6 +29,8 @@ void testApp::setup( void ) {
     string s(this->Argv[this->Argc-1]);
     parsefile(s);
     //parsefile("../../../../data/inouts/labels/alice01.lab");
+    
+    vocoder = new MAGE::Vocoder::Vocoder();
 }
 
 void testApp::exit( void ) {
@@ -46,6 +48,8 @@ void testApp::exit( void ) {
     
     delete sampleFrame;
     delete olaBuffer;
+    
+    delete vocoder;
 }
 
 void testApp::update( void ) {
@@ -83,36 +87,22 @@ void testApp::draw( void ) {
 
 void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
     for ( int k=0; k<bufSize; k++ ) {
-        if( sampleCount >= hopLen-1 ) { // if we hit the hop length
-            
-            if( !frameQueue->isEmpty() ) {
-                
+        if( sampleCount >= hopLen-1 ) { // if we hit the hop length            
+            if( !frameQueue->isEmpty() ) {               
                 frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
-            
-                // <DUMMY-CODE>
-                
-                for( int s=0; s<frameLen; s++ ) {
-                    if (frame.voiced) {    
-                        // create a frame with windowed sin reacting to interactive value of Length
-                        float hannWin = 0.5 * (1.0 - cos((TWO_PI * ((float)s)) / (((float)frameLen) - 1.0)));
-                        sampleFrame[s] = 0.25 * hannWin * sin( (float)s * ((TWO_PI*exp(frame.lf0))/(float)sampleRate) );
-                    } else {
-                        sampleFrame[s] = 0.0;
-                    }
-                }
-                
-                // </DUMMY-CODE>
+                vocoder->push(frame);
             }
-            
-            olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
+            //olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
             sampleCount = 0; // and reset the sample count for next time
         } else {
             sampleCount++; // otherwise increment sample count
         }
+        if (vocoder->ready())
+            outBuffer[k] = vocoder->pop()/1000;
     }
 
     // pulling samples out for the DAC
-    olaBuffer->pop( outBuffer, bufSize );
+    //olaBuffer->pop( outBuffer, bufSize );
 
 //    FILE *file;
 //

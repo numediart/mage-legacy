@@ -77,6 +77,7 @@ int main(int argc, char **argv) {
         model.computeDuration( engine, &label );
         model.computeParameters( engine, &label );
         model.computeGlobalVariances( engine, &label );
+        model.optimizeParameters(engine);
     }
     
     delete engine;

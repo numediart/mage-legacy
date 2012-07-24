@@ -51,7 +51,8 @@ int main(int argc, char **argv) {
     Engine *engine;
 
     Label label;
-    Model model;
+    ModelMemory *memory = new MAGE::ModelMemory::ModelMemory();
+	Model model(memory);
 
     labelQueue = new MAGE::LabelQueue(labelQueueLen);
     modelQueue = new MAGE::ModelQueue(modelQueueLen);
@@ -82,6 +83,7 @@ int main(int argc, char **argv) {
     delete frameQueue;
     delete modelQueue;
     delete labelQueue;
+    delete memory;
 
     return 0;
 }

@@ -1,9 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-#include "mage.h"
-
 #include "obOlaBuffer.h"
+#include "mage.h"
 #include "genThread.h"
 
 #include <fstream>
@@ -54,10 +53,12 @@ class testApp : public ofBaseApp {
     MAGE::ModelQueue *modelQueue;
     MAGE::FrameQueue *frameQueue;
     MAGE::Engine *engine;
+    MAGE::Model *model;
+    MAGE::ModelMemory *memory;
     
     genThread *generate;
     Frame frame;
-    
+   
     //---
     
     float *sampleFrame; // frame to be OLAed

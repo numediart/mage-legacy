@@ -26,13 +26,13 @@ void genThread::threadedFunction( void ) {
             model->computeParameters( engine, &label );
             model->computeGlobalVariances( engine, &label );
             
-            model->optimizeParameters( engine );
+            //model->optimizeParameters( engine );
 
             modelQueue->push( model, 1 );
             
             if( modelQueue->getNumOfItems() > nOfLookup ) {
-            
-                modelQueue->generate( nOfLookup+1, frameQueue );                
+                modelQueue->optimizeParameters(engine, nOfLookup+1);
+                modelQueue->generate( engine, frameQueue, nOfLookup+1 );                
                 modelQueue->pop();
             }
                 

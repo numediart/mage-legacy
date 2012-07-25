@@ -55,13 +55,11 @@ int main(int argc, char **argv) {
 
     Label label, label2;
     ModelMemory *memory = new MAGE::ModelMemory::ModelMemory();
-	Model model(memory);
-    
-    ModelMemory *memory2 = new MAGE::ModelMemory::ModelMemory();
-	Model model2(memory2);
+	Model model;
+	Model model2;
 
     labelQueue = new MAGE::LabelQueue(labelQueueLen);
-    modelQueue = new MAGE::ModelQueue(modelQueueLen);
+    modelQueue = new MAGE::ModelQueue(modelQueueLen, memory);
     frameQueue = new MAGE::FrameQueue(frameQueueLen);
 
     // --- HTS Engine ---
@@ -97,7 +95,10 @@ int main(int argc, char **argv) {
         model2.computeParameters( engine, &label2 );
         model2.computeGlobalVariances( engine, &label2 );
         
-        optimizeParameters(engine, &model, &model2);
+        modelQueue->push(&model,1);
+        modelQueue->push(&model2,1);
+        
+        modelQueue->optimizeParameters(engine,MAGE::nOfLookup+1);
         
         printf("done !\n");
     

@@ -4,16 +4,19 @@ void testApp::setup( void ) {
     
     // --- QUEUES ---
     labelQueue = new MAGE::LabelQueue( labelQueueLen );
-    modelQueue = new MAGE::ModelQueue( modelQueueLen );
+    memory = new MAGE::ModelMemory::ModelMemory();
+    modelQueue = new MAGE::ModelQueue( modelQueueLen, memory );
     frameQueue = new MAGE::FrameQueue( frameQueueLen );
     
     // --- HTS Engine ---
     engine = new MAGE::Engine();
     engine->load(Argc, Argv);
     
+    vocoder = new MAGE::Vocoder::Vocoder();
+    
     // --- HTS Model ---
-    memory = new MAGE::ModelMemory::ModelMemory();
-	model = new MAGE::Model::Model(memory);
+    
+	model = new MAGE::Model::Model();
     
     // --- PARAMETER GENERATION THREAD ---
     generate = new genThread( labelQueue, modelQueue, frameQueue, engine, model );
@@ -30,7 +33,6 @@ void testApp::setup( void ) {
     parsefile(s);
     //parsefile("../../../../data/inouts/labels/alice01.lab");
     
-    vocoder = new MAGE::Vocoder::Vocoder();
     f0scale = 1.0;
     f0shift = 0.0;
 }
@@ -165,18 +167,6 @@ void testApp::keyPressed( int key ) {
     if( key == 'b' ) {
         f0shift -= 5; // -5Hz
     }
-    
-    
-    /*if( key == 'b' ) {
-    
-        if( !frameQueue->isEmpty() ) frameQueue->pop( &frame, 1 );
-        else printf( "frame queue is empty !\n" );
-    }
-    
-    if( key == 'p' ) {
-    
-        frameQueue->printQueue();
-    }*/
 }
 
 void testApp::keyReleased( int key ) {

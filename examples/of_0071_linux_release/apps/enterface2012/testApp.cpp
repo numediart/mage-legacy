@@ -31,6 +31,8 @@ void testApp::setup( void ) {
     //parsefile("../../../../data/inouts/labels/alice01.lab");
     
     vocoder = new MAGE::Vocoder::Vocoder();
+    f0scale = 1.0;
+    f0shift = 0.0;
 }
 
 void testApp::exit( void ) {
@@ -71,9 +73,9 @@ void testApp::draw( void ) {
     
         // middle line to show the zero
         ofLine( xOffset, yOffset+(yWidth/2),
-        xOffset+frameLen, yOffset+(yWidth/2) );
+        xOffset+hopLen, yOffset+(yWidth/2) );
         
-        for( int k=1; k<frameLen; k++ ) {
+        for( int k=1; k<hopLen; k++ ) {
         
             // linearly interpolated waveform to look nice on screen
             ofLine( (k-1)+xOffset, ofMap( sampleFrame[k-1], -1, 1, yOffset+yWidth,
@@ -81,7 +83,7 @@ void testApp::draw( void ) {
         }
         
         // rectangle box to show where is the max
-        ofRect( xOffset, yOffset, frameLen, yWidth );
+        ofRect( xOffset, yOffset, hopLen, yWidth );
     }
 }
 
@@ -90,15 +92,20 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
         if( sampleCount >= hopLen-1 ) { // if we hit the hop length            
             if( !frameQueue->isEmpty() ) {               
                 frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
-                vocoder->push(frame);
+                //any f0 modification should go here
+                frame.f0 = frame.f0*f0scale + f0shift;
+                vocoder->push(frame);               
             }
             //olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
             sampleCount = 0; // and reset the sample count for next time
         } else {
             sampleCount++; // otherwise increment sample count
         }
-        if (vocoder->ready())
-            outBuffer[k] = vocoder->pop()/1000;
+        
+        if (vocoder->ready()) {
+            outBuffer[k] = vocoder->pop()/250;
+            sampleFrame[sampleCount] = outBuffer[k];
+        }
     }
 
     // pulling samples out for the DAC
@@ -139,7 +146,26 @@ void testApp::keyPressed( int key ) {
             if( !labelQueue->isFull() ) labelQueue->push( label );
             else printf( "label queue is full !\n%s",q.c_str());
         }
+        
+        string s(this->Argv[this->Argc-1]);
+        parsefile(s);
+        
     }
+    
+    if( key == 'd' ) {
+        f0scale += 0.1;// multiplication --> small steps
+    }
+    if( key == 'g' ) {
+        f0scale -= 0.1;// multiplication --> small steps
+    }
+    
+    if( key == 'h' ) {
+        f0shift += 5; //+ 5Hz
+    }
+    if( key == 'b' ) {
+        f0shift -= 5; // -5Hz
+    }
+    
     
     /*if( key == 'b' ) {
     

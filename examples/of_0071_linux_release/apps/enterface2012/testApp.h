@@ -69,6 +69,8 @@ class testApp : public ofBaseApp {
     
     //SPTK vocoder
     MAGE::Vocoder *vocoder;
+    double f0shift;
+    double f0scale;
     
     std::queue<std::string> labellist;
 };

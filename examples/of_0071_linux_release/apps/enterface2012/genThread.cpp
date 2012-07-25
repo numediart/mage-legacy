@@ -25,6 +25,7 @@ void genThread::threadedFunction( void ) {
             //TODO model->updateDuration() // to put a speed profile on state duration (put it inside compute duration ?)
             model->computeParameters( engine, &label );
             model->computeGlobalVariances( engine, &label );
+            
             model->optimizeParameters( engine );
 
             modelQueue->push( model, 1 );

@@ -115,7 +115,7 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
         if (paused) {
             outBuffer[k] = 0.0;
         } else if (vocoder->ready()) {
-            outBuffer[k] = vocoder->pop()/32768;
+            outBuffer[k] = 0.5*vocoder->pop()/32768;
             if (outBuffer[k] > 1.0)
                 outBuffer[k] = 1.0;
             else if (outBuffer[k] < -1.0)
@@ -125,12 +125,14 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
         sampleFrame[sampleCount] = outBuffer[k];
     }
 
-    FILE *file;
-
-    file = fopen("out.raw", "ab");
-    fwrite(outBuffer, sizeof(float), bufSize, file);
-
-    fclose(file);
+    if (!paused) {
+//        FILE *file;
+//
+//        file = fopen("out.raw", "ab");
+//        fwrite(outBuffer, sizeof(float), bufSize, file);
+//
+//        fclose(file);
+    }
 }
 
 //---

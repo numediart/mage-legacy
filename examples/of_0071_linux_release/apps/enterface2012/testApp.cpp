@@ -96,14 +96,14 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
                 frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
                 //any f0 modification should go here
                 frame.f0 = frame.f0*f0scale + f0shift;
-                vocoder->push(frame);               
+                vocoder->push(frame);
             }
             //olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
             sampleCount = 0; // and reset the sample count for next time
         } else {
             sampleCount++; // otherwise increment sample count
         }
-        
+
         if (vocoder->ready()) {
             outBuffer[k] = vocoder->pop()/250;
             sampleFrame[sampleCount] = outBuffer[k];

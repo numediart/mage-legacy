@@ -34,11 +34,11 @@ void genThread::threadedFunction( void ) {
             if( modelQueue->getNumOfItems() > nOfLookup+nOfBackup ) {
                 flag = false;
                 modelQueue->optimizeParameters(engine, nOfBackup, nOfLookup);
-                modelQueue->generate( engine, frameQueue, nOfBackup );                
+                modelQueue->generate( frameQueue, nOfBackup );                
                 modelQueue->pop();
             } else if (modelQueue->getNumOfItems() > nOfLookup && flag) {
                 modelQueue->optimizeParameters(engine, modelQueue->getNumOfItems()-nOfLookup-1, nOfLookup);
-                modelQueue->generate( engine, frameQueue, modelQueue->getNumOfItems()-nOfLookup-1 );  
+                modelQueue->generate( frameQueue, modelQueue->getNumOfItems()-nOfLookup-1 );  
             }     
         } else {
         

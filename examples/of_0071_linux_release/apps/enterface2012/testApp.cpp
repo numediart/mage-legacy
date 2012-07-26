@@ -35,6 +35,8 @@ void testApp::setup( void ) {
     
     f0scale = 1.0;
     f0shift = 0.0;
+    
+    paused = true;
 }
 
 void testApp::exit( void ) {
@@ -89,14 +91,20 @@ void testApp::draw( void ) {
     }
 }
 
-void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
+void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {    
     for ( int k=0; k<bufSize; k++ ) {
         if( sampleCount >= hopLen-1 ) { // if we hit the hop length            
             if( !frameQueue->isEmpty() ) {               
                 frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
                 //any f0 modification should go here
                 frame.f0 = frame.f0*f0scale + f0shift;
-                vocoder->push(frame);               
+                vocoder->push(frame);
+                //use the two lines below instead to generate unvoiced speech
+                //vocoder->push(frame,true);
+                //vocoder->setVoiced(false);
+                paused = false;
+            } else {
+                paused = true;
             }
             //olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
             sampleCount = 0; // and reset the sample count for next time
@@ -104,21 +112,27 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
             sampleCount++; // otherwise increment sample count
         }
         
-        if (vocoder->ready()) {
-            outBuffer[k] = vocoder->pop()/250;
-            sampleFrame[sampleCount] = outBuffer[k];
+        if (paused) {
+            outBuffer[k] = 0.0;
+        } else if (vocoder->ready()) {
+            outBuffer[k] = 0.5*vocoder->pop()/32768;
+            if (outBuffer[k] > 1.0)
+                outBuffer[k] = 1.0;
+            else if (outBuffer[k] < -1.0)
+                outBuffer[k] = -1.0;
         }
+        
+        sampleFrame[sampleCount] = outBuffer[k];
     }
 
-    // pulling samples out for the DAC
-    //olaBuffer->pop( outBuffer, bufSize );
-
-//    FILE *file;
+    if (!paused) {
+//        FILE *file;
 //
-//    file = fopen("out.raw", "ab");
-//    fwrite(outBuffer, sizeof(float), bufSize, file);
+//        file = fopen("out.raw", "ab");
+//        fwrite(outBuffer, sizeof(float), bufSize, file);
 //
-//    fclose(file);
+//        fclose(file);
+    }
 }
 
 //---

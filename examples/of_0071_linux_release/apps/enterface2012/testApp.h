@@ -7,6 +7,11 @@
 
 #include <fstream>
 
+// --- OSC
+//#include "ofxOsc.h"
+//#define PORT 5454 // listen on port 5454
+
+
 // --- QUEUE THINGS ---
 const int labelQueueLen = 256; // max amount of labels that can wait
 const int modelQueueLen = nOfLookup+nOfBackup+2; // max stored past models for generation
@@ -44,9 +49,19 @@ class testApp : public ofBaseApp {
 
   protected:
     
-    int Argc; // number of arguments passed to the main()
-    char **Argv; // table of arguments passed to the main()
-    
+    int Argc;		// number of arguments passed to the main()
+    char **Argv;	// table of arguments passed to the main()
+	
+	// --- User controls
+	float speed;
+	float alpha;
+	float volume;
+	float pitch;
+	int	  action;
+   
+	// --- OSC
+	//ofxOscReceiver	receiver;
+	
     //---
     
     MAGE::LabelQueue *labelQueue;
@@ -70,6 +85,8 @@ class testApp : public ofBaseApp {
     
     //SPTK vocoder
     MAGE::Vocoder *vocoder;
+    
+	//f0 modifications
     double f0shift;
     double f0scale;
     

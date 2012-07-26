@@ -1,6 +1,16 @@
 #include "testApp.h"
 
 void testApp::setup( void ) {
+	
+	// --- HTS Engine ---
+    engine = new MAGE::Engine();
+    engine->load(Argc, Argv);
+	
+	// --- Vocoder 
+	vocoder = new MAGE::Vocoder::Vocoder();
+
+	// --- OSC ---
+	//receiver.setup( PORT );
     
     // --- QUEUES ---
     labelQueue = new MAGE::LabelQueue( labelQueueLen );
@@ -8,20 +18,13 @@ void testApp::setup( void ) {
     modelQueue = new MAGE::ModelQueue( modelQueueLen, memory );
     frameQueue = new MAGE::FrameQueue( frameQueueLen );
     
-    // --- HTS Engine ---
-    engine = new MAGE::Engine();
-    engine->load(Argc, Argv);
-    
-    vocoder = new MAGE::Vocoder::Vocoder();
-    
     // --- HTS Model ---
-    
 	model = new MAGE::Model::Model();
     
     // --- PARAMETER GENERATION THREAD ---
     generate = new genThread( labelQueue, modelQueue, frameQueue, engine, model );
     generate->startThread();
-    
+
     // -- OLA AND AUDIO ---
     drawSampleFrame = true; // we don't draw the sample frame at runtime
     frameLen = 480; hopLen = 240; sampleCount = 0; // initialize OLA variables
@@ -59,8 +62,72 @@ void testApp::exit( void ) {
 }
 
 void testApp::update( void ) {
-    
-    
+/*    
+	static float oscSpeed;
+	static float oscAlpha;
+	static float oscVolume;
+	static float oscPitch;
+	static int oscAction;
+
+	static ofxOscMessage m; 
+	
+	if( receiver.hasWaitingMessages() )
+	{
+		// --- get new OSC message ---
+		m.clear();
+		receiver.getNextMessage( &m );
+		
+		// --- THE LIST OF MESSAGES ---
+		if( m.getAddress() == "/speed" ) 
+		{
+			// --- change speed  ---
+			oscSpeed = m.getArgAsFloat( 0 );
+			speed = ofMap(oscSpeed, 0, 3, 0.1, 3, true);
+			printf("speed : %f\n", speed);
+			//setSpeed(speed);
+		}
+		
+		if( m.getAddress() == "/alpha" )
+		{
+			// --- change alpha ---
+			oscAlpha = m.getArgAsFloat( 0 );
+			alpha = ofMap(oscAlpha, 0.1, 0.9, 0.1, 0.9, true);
+			printf("alpha : %f\n", alpha);
+			//setAlpha(alpha);
+		}
+		
+		if( m.getAddress() == "/volume" ) 
+		{
+			// --- change volume ---
+			oscVolume = m.getArgAsFloat( 0 );
+			volume = ofMap(oscVolume, 0, 5, 0, 5, true);
+			printf("volume : %f\n", volume);
+			//setVolume(volume);
+		}
+		
+		if( m.getAddress() == "/pitch" ) 
+		{
+			// --- change pitch ---
+			oscPitch = m.getArgAsFloat( 0 ); 
+			oscAction = m.getArgAsFloat( 1 );
+
+			if (oscAction == MAGE::overwrite)
+			{
+				pitch = 65.406395 * ((oscPitch/12)*(oscPitch/12));
+				printf("pitch_overwrite : %f\n", pitch);
+				pitch = log(pitch);
+				//setPitch(pitch, MAGE::action::overwrite);
+			}
+			
+			if (oscAction == MAGE::shift)
+			{
+				pitch = ofMap(oscPitch, -3, 3, -3, 3, true);
+				printf("pitch_shift : %f\n", pitch);
+				//setPitch(pitch, MAGE::action::shift);				
+			}
+		}
+	}
+ */
 }
 
 void testApp::draw( void ) {
@@ -91,17 +158,23 @@ void testApp::draw( void ) {
     }
 }
 
-void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {    
+void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
     for ( int k=0; k<bufSize; k++ ) {
         if( sampleCount >= hopLen-1 ) { // if we hit the hop length            
             if( !frameQueue->isEmpty() ) {               
                 frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
-                //any f0 modification should go here
-                frame.f0 = frame.f0*f0scale + f0shift;
+                //any modification to f0 can go here
+                //frame.f0 = frame.f0*f0scale + f0shift;
                 vocoder->push(frame);
+
                 //use the two lines below instead to generate unvoiced speech
                 //vocoder->push(frame,true);
                 //vocoder->setVoiced(false);
+
+				//vocoder->setPitch(0.1, scale, false);
+				//vocoder->setAlpha(-1);
+				//vocoder->setVolume(9);
+
                 paused = false;
             } else {
                 paused = true;
@@ -112,16 +185,13 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
             sampleCount++; // otherwise increment sample count
         }
         
-        if (paused) {
-            outBuffer[k] = 0.0;
-        } else if (vocoder->ready()) {
+        if (vocoder->ready()) {
             outBuffer[k] = 0.5*vocoder->pop()/32768;
             if (outBuffer[k] > 1.0)
                 outBuffer[k] = 1.0;
             else if (outBuffer[k] < -1.0)
                 outBuffer[k] = -1.0;
         }
-        
         sampleFrame[sampleCount] = outBuffer[k];
     }
 
@@ -157,10 +227,15 @@ void testApp::keyPressed( int key ) {
         while (!labellist.empty()) {
             string q = labellist.front();
             label.setQuery(q);
-            labellist.pop();
+			
+			//label.setSpeed(0.5);
+            
+			labellist.pop();
         
-            if( !labelQueue->isFull() ) labelQueue->push( label );
-            else printf( "label queue is full !\n%s",q.c_str());
+            if( !labelQueue->isFull() ) 
+				labelQueue->push( label );
+            else 
+				printf( "label queue is full !\n%s",q.c_str());
         }
         
         string s(this->Argv[this->Argc-1]);

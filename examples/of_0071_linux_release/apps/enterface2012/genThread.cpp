@@ -46,7 +46,6 @@ void genThread::threadedFunction( void ) {
 
 
     while ( isThreadRunning() ) {
-        
         if( !labelQueue->isEmpty() ) {
         
             labelQueue->pop( label );

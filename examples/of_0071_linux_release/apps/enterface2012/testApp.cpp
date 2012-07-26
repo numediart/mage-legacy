@@ -98,7 +98,9 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
                 frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
                 //any f0 modification should go here
                 frame.f0 = frame.f0*f0scale + f0shift;
-                vocoder->push(frame,true);
+                vocoder->push(frame);
+                //use the two lines below instead to generate unvoiced speech
+                //vocoder->push(frame,true);
                 //vocoder->setVoiced(false);
                 paused = false;
             } else {
@@ -113,7 +115,7 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
         if (paused) {
             outBuffer[k] = 0.0;
         } else if (vocoder->ready()) {
-            outBuffer[k] = 10*vocoder->pop()/32768;
+            outBuffer[k] = vocoder->pop()/32768;
             if (outBuffer[k] > 1.0)
                 outBuffer[k] = 1.0;
             else if (outBuffer[k] < -1.0)
@@ -123,12 +125,12 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
         sampleFrame[sampleCount] = outBuffer[k];
     }
 
-//    FILE *file;
-//
-//    file = fopen("out.raw", "ab");
-//    fwrite(outBuffer, sizeof(float), bufSize, file);
-//
-//    fclose(file);
+    FILE *file;
+
+    file = fopen("out.raw", "ab");
+    fwrite(outBuffer, sizeof(float), bufSize, file);
+
+    fclose(file);
 }
 
 //---

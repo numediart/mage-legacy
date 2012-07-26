@@ -9,7 +9,7 @@
 
 // --- QUEUE THINGS ---
 const int labelQueueLen = 256; // max amount of labels that can wait
-const int modelQueueLen = nOfLookup+2; // max stored past models for generation
+const int modelQueueLen = nOfLookup+nOfBackup+2; // max stored past models for generation
 const int frameQueueLen = 200; // longest label 1 sec = 200 frames of 5 smsec
 
 // --- AUDIO THINGS ---
@@ -69,6 +69,8 @@ class testApp : public ofBaseApp {
     
     //SPTK vocoder
     MAGE::Vocoder *vocoder;
+    double f0shift;
+    double f0scale;
     
     std::queue<std::string> labellist;
 };

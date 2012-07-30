@@ -230,6 +230,8 @@ void testApp::draw( void ) {
 }
 
 void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
+    int c;
+
     for ( int k=0; k<bufSize; k++ ) {
         if( sampleCount >= hopLen-1 ) { // if we hit the hop length            
             if( !frameQueue->isEmpty() ) {               
@@ -267,7 +269,13 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
                 outBuffer[indchan] = -1.0;
             }
             
-            outBuffer[indchan+1] = outBuffer[indchan];
+            for (c=1;c<nChan;c++)
+                outBuffer[indchan+c] = outBuffer[indchan]; //mono --> stereo / multi-channel
+
+        } else {
+            outBuffer[indchan] = 0.0;
+            for (c=1;c<nChan;c++)
+                outBuffer[indchan+c] = 0.0; //mono --> stereo / multi-channel
         }
         sampleFrame[sampleCount] = outBuffer[k];
     }

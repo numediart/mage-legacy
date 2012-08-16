@@ -116,7 +116,14 @@ void testApp::update( void ) {
 			//speed = ofMap(oscSpeed, 0, 3, 0.1, 3, true);
 			//printf("speed : %f\n", speed);
 			//setSpeed(speed);
-			hopLen = (oscSpeed > 1) ? oscSpeed : 1;
+			hopLen = (int) 240/oscSpeed;
+			if (hopLen < 1) {
+				hopLen = 1;
+			}
+ 			if (hopLen > 240*20) {
+				hopLen = 240*20;
+			}
+
 			printf("speed : %f\n", hopLen);
 		}
 		
@@ -173,6 +180,7 @@ void testApp::update( void ) {
 		if( m.getAddress() == "/reset" ) 
 		{
 			this->vocoder->reset();
+			hopLen = 240;
 			printf("Reset \n");
 		}
 
@@ -184,6 +192,7 @@ void testApp::update( void ) {
 			} else {
 				printf("No Loop\n");
 			}
+		}
 	}
 */
     //TODO check that this is thread-safe (probably not)
@@ -221,6 +230,8 @@ void testApp::draw( void ) {
 }
 
 void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
+    int c;
+
     for ( int k=0; k<bufSize; k++ ) {
         if( sampleCount >= hopLen-1 ) { // if we hit the hop length            
             if( !frameQueue->isEmpty() ) {               
@@ -258,7 +269,13 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan ) {
                 outBuffer[indchan] = -1.0;
             }
             
-            outBuffer[indchan+1] = outBuffer[indchan];
+            for (c=1;c<nChan;c++)
+                outBuffer[indchan+c] = outBuffer[indchan]; //mono --> stereo / multi-channel
+
+        } else {
+            outBuffer[indchan] = 0.0;
+            for (c=1;c<nChan;c++)
+                outBuffer[indchan+c] = 0.0; //mono --> stereo / multi-channel
         }
         sampleFrame[sampleCount] = outBuffer[k];
     }
@@ -333,16 +350,19 @@ void testApp::keyPressed( int key ) {
     
     if( key == 'r' ) {
         this->vocoder->reset();
-//        f0shift -= 5; // -5Hz
+        hopLen = 240;
     }
     
     if( key == 'f' ) {
-        hopLen += 10;
-    }
-    if( key == 's' ) {
         hopLen -= 10;
         if (hopLen < 1)
             hopLen = 1;
+    }
+    if( key == 's' ) {
+        hopLen += 10;
+        if (hopLen > 240*20) {
+            hopLen = 240*20;
+        }
     }
     
     if( key == 'o' ) {

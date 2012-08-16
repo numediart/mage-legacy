@@ -16,10 +16,10 @@
 
 #include "mage.h"
 
+using namespace MAGE;
 // --- QUEUE THINGS ---
-const unsigned int nOfLookup = 1; // # of looked-up labels
 const int labelQueueLen = 256; // max amount of labels that can wait
-const int modelQueueLen = nOfLookup + 2; // max stored past models for generation
+const int modelQueueLen = nOfLookup + nOfBackup + 2; // max stored past models for generation
 const int frameQueueLen = 200; // longest label 1 sec = 200 frames of 5 smsec
 
 void optimizeParameters( MAGE::Engine *engine, MAGE::Model *model1, MAGE::Model *model2);
@@ -77,71 +77,78 @@ int main(int argc, char **argv) {
         t.pop();
     }
     
-    int sampleCount = 0;
-    int hopLen = 240;
+//    int sampleCount = 0;
+//    int hopLen = 240;
     int bufSize = 128;
     MAGE::Frame frame;
     float *outbuffer;
     outbuffer = new float[bufSize];
     
+//    labelQueue->pop(label);
+//    labelQueue->pop(label2);
+//
+//    model.computeDuration( engine, &label );
+//    model.computeParameters( engine, &label );
+//    model.computeGlobalVariances( engine, &label );
+//
+//    model2.computeDuration( engine, &label2 );
+//    model2.computeParameters( engine, &label2 );
+//    model2.computeGlobalVariances( engine, &label2 );
+//
+//    modelQueue->push(&model,1);
+//    modelQueue->push(&model2,1);
+//
+//    modelQueue->optimizeParameters(engine,MAGE::nOfLookup+1);
+//
+//    printf("done !\n");
+    
+    bool flag = true;
+    
+    while (!labelQueue->isEmpty()) {
         labelQueue->pop(label);
-        labelQueue->pop(label2);
+        printf("pop label %s\n",label.getQuery().c_str());
         
         model.computeDuration( engine, &label );
         model.computeParameters( engine, &label );
         model.computeGlobalVariances( engine, &label );
         
-        model2.computeDuration( engine, &label2 );
-        model2.computeParameters( engine, &label2 );
-        model2.computeGlobalVariances( engine, &label2 );
+        modelQueue->push( &model, 1 );
+        printf("push model\n");
         
-        modelQueue->push(&model,1);
-        modelQueue->push(&model2,1);
+        if( modelQueue->getNumOfItems() > nOfLookup+nOfBackup ) {
+            flag = false;
+            modelQueue->optimizeParameters(engine, nOfBackup, nOfLookup);
+            modelQueue->generate( frameQueue, nOfBackup );                
+            modelQueue->pop();
+        } else if (modelQueue->getNumOfItems() > nOfLookup && flag) {
+            modelQueue->optimizeParameters(engine, modelQueue->getNumOfItems()-nOfLookup-1, nOfLookup);
+            modelQueue->generate( frameQueue, modelQueue->getNumOfItems()-nOfLookup-1 );  
+        }   
         
-        modelQueue->optimizeParameters(engine,MAGE::nOfLookup+1);
+        while(!frameQueue->isEmpty()) {
+            frameQueue->pop( &frame );
+            vocoder->push(frame);
+            for ( int k=0; k<bufSize; k++ ) {
+                if (vocoder->ready())
+                    outbuffer[k] = 0.5*vocoder->pop()/32768;
+            }
+        }
         
-        printf("done !\n");
-    
-    
-//    while (!labelQueue->isEmpty()) {
-//        labelQueue->pop(label);
-//        
-//        model.computeDuration( engine, &label );
-//        model.computeParameters( engine, &label );
-//        model.computeGlobalVariances( engine, &label );
-//        model.optimizeParameters(engine);
-//        
-//        modelQueue->push( &model, 1 );
-//        
-//        if( modelQueue->getNumOfItems() > 0 ) {  
-//            modelQueue->generate( 1, frameQueue );                
-//            modelQueue->pop();
-//        }
-//        
-//        while(!frameQueue->isEmpty()) {
-//            frameQueue->pop( &frame );
-//            vocoder->push(frame);
-//            for ( int k=0; k<bufSize; k++ ) {
-//                if (vocoder->ready())
-//                    outbuffer[k] = vocoder->pop()/1000;
+//        for ( int k=0; k<bufSize; k++ ) {
+//            if( sampleCount >= hopLen-1 ) { // if we hit the hop length            
+//                if( !frameQueue->isEmpty() ) {               
+//                    frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
+//                    vocoder->push(frame);
+//                }
+//                //olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
+//                sampleCount = 0; // and reset the sample count for next time
+//            } else {
+//                sampleCount++; // otherwise increment sample count
 //            }
+//            if (vocoder->ready())
+//                outbuffer[k] = vocoder->pop()/1000;
 //        }
-//        
-////        for ( int k=0; k<bufSize; k++ ) {
-////            if( sampleCount >= hopLen-1 ) { // if we hit the hop length            
-////                if( !frameQueue->isEmpty() ) {               
-////                    frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
-////                    vocoder->push(frame);
-////                }
-////                //olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
-////                sampleCount = 0; // and reset the sample count for next time
-////            } else {
-////                sampleCount++; // otherwise increment sample count
-////            }
-////            if (vocoder->ready())
-////                outbuffer[k] = vocoder->pop()/1000;
-////        }
-//    }
+    }
     
     delete engine;
     delete frameQueue;

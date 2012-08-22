@@ -38,7 +38,7 @@ void testApp::setup( void )
 	vocoder = new MAGE::Vocoder::Vocoder();
 	
 	// --- OSC ---
-	receiver.setup( PORT );
+	//receiver.setup( PORT );
 	
 	// --- QUEUES ---
 	labelQueue = new MAGE::LabelQueue( labelQueueLen );

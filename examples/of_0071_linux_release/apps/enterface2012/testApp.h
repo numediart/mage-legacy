@@ -90,7 +90,7 @@ class testApp : public ofBaseApp
 		int		action;
 	 
 		// --- OSC
-		ofxOscReceiver	receiver;
+		//ofxOscReceiver	receiver;
 	
 		//--- Mage
 		MAGE::LabelQueue *labelQueue;

@@ -46,11 +46,8 @@ void testApp::setup( void )
 	modelQueue = new MAGE::ModelQueue( modelQueueLen, memory );
 	frameQueue = new MAGE::FrameQueue( frameQueueLen );
 	
-	// --- HTS Model ---
-	model = new MAGE::Model::Model();
-	
 	// --- PARAMETER GENERATION THREAD ---
-	generate = new genThread( labelQueue, modelQueue, frameQueue, engine, model );
+	generate = new genThread( labelQueue, modelQueue, frameQueue, engine );
 	generate->startThread();
 	
 	// -- OLA AND AUDIO ---

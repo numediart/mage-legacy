@@ -45,7 +45,7 @@ class genThread : public ofThread
 	
 	public:
 	
-		genThread( LabelQueue *lab, ModelQueue *mq, FrameQueue *frm, Engine *eng, Model *mod );
+		genThread( LabelQueue *lab, ModelQueue *mq, FrameQueue *frm, Engine *eng );
 		void threadedFunction( void );
 	
 	protected:

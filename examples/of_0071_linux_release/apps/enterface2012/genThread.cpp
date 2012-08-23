@@ -28,7 +28,7 @@
 
 #include "genThread.h"
 
-genThread::genThread( LabelQueue *lab, ModelQueue *mq, FrameQueue *frm, Engine *eng, Model *mod )
+genThread::genThread( LabelQueue *lab, ModelQueue *mq, FrameQueue *frm, Engine *eng )
 {
 	this->labelQueue = lab;
 	this->modelQueue = mq;

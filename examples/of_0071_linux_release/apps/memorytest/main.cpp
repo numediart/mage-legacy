@@ -56,8 +56,8 @@ int main(int argc, char **argv) {
 
 	Label label, label2;
 	ModelMemory *memory = new MAGE::ModelMemory::ModelMemory();
-	Model model;
-	Model model2;
+	Model *model;
+	//Model model2;
 
 	labelQueue = new MAGE::LabelQueue(labelQueueLen);
 	modelQueue = new MAGE::ModelQueue(modelQueueLen, memory);
@@ -109,11 +109,13 @@ int main(int argc, char **argv) {
 		labelQueue->pop(label);
 		printf("pop label %s\n", label.getQuery().c_str());
 
-		model.computeDuration(engine, &label);
-		model.computeParameters(engine, &label);
-		model.computeGlobalVariances(engine, &label);
-
-		modelQueue->push(&model, 1);
+		model = modelQueue->next();
+		
+		model->computeDuration(engine, &label);
+		model->computeParameters(engine, &label);
+		model->computeGlobalVariances(engine, &label);
+		
+		modelQueue->push();
 		printf("push model\n");
 
 		if (modelQueue->getNumOfItems() > nOfLookup + nOfBackup) {

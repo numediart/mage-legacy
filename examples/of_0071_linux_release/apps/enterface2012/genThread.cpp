@@ -49,7 +49,7 @@ void genThread::threadedFunction( void )
 		{
 			labelQueue->pop( label );
 		
-			model = modelQueue->get();
+			model = modelQueue->next();
 			// there is a check inside this function so that it's actually executed completely only once 
 			model->checkInterpolationWeights( engine ); 
 			model->computeDuration( engine, &label );

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7B48042615E3B2000074DC29 /* mage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B48042515E3B2000074DC29 /* mage.cpp */; };
-		7BEFD22815C00F8F009A7F4A /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFD22615C00F8F009A7F4A /* Engine.cpp */; };
 		7BEFD22B15C00F99009A7F4A /* hts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFD22915C00F99009A7F4A /* hts.cpp */; };
 		7BEFD22E15C00FA7009A7F4A /* MathFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFD22C15C00FA7009A7F4A /* MathFunctions.cpp */; };
 		7BEFD23015C00FB2009A7F4A /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFD22F15C00FB2009A7F4A /* Model.cpp */; };
@@ -92,8 +91,6 @@
 
 /* Begin PBXFileReference section */
 		7B48042515E3B2000074DC29 /* mage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mage.cpp; path = "../../../../../magelib-2.00/src/mage.cpp"; sourceTree = SOURCE_ROOT; };
-		7BEFD22615C00F8F009A7F4A /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
-		7BEFD22715C00F8F009A7F4A /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
 		7BEFD22915C00F99009A7F4A /* hts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hts.cpp; sourceTree = "<group>"; };
 		7BEFD22A15C00F99009A7F4A /* hts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hts.h; sourceTree = "<group>"; };
 		7BEFD22C15C00FA7009A7F4A /* MathFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MathFunctions.cpp; sourceTree = "<group>"; };
@@ -411,8 +408,6 @@
 		9FB76E7E15ADBD72001711DA /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				7BEFD22615C00F8F009A7F4A /* Engine.cpp */,
-				7BEFD22715C00F8F009A7F4A /* Engine.h */,
 				7BEFD22915C00F99009A7F4A /* hts.cpp */,
 				7BEFD22A15C00F99009A7F4A /* hts.h */,
 				7BEFD22C15C00FA7009A7F4A /* MathFunctions.cpp */,
@@ -639,7 +634,6 @@
 				9F11F62A15AF57FD00745C92 /* genThread.cpp in Sources */,
 				9F11F62C15AF5F0200745C92 /* ModelQueue.cpp in Sources */,
 				9F4800EB15AF751000556F97 /* FrameQueue.cpp in Sources */,
-				7BEFD22815C00F8F009A7F4A /* Engine.cpp in Sources */,
 				7BEFD22B15C00F99009A7F4A /* hts.cpp in Sources */,
 				7BEFD22E15C00FA7009A7F4A /* MathFunctions.cpp in Sources */,
 				7BEFD23015C00FB2009A7F4A /* Model.cpp in Sources */,

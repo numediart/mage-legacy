@@ -28,15 +28,15 @@
 
 #include "genThread.h"
 
-genThread::genThread( LabelQueue *lab, ModelQueue *mq, FrameQueue *frm, Engine *eng, Model *mod )
+genThread::genThread( LabelQueue *lab, ModelQueue *mq, FrameQueue *frm, Engine *eng )
 {
 	this->labelQueue = lab;
 	this->modelQueue = mq;
 	this->frameQueue = frm;
 	this->engine = eng;
-	this->model = mod;
 	
-	this->model->checkInterpolationWeights( engine );
+	this->model = this->modelQueue->get();
+	//this->model->checkInterpolationWeights( engine );
 }
 
 void genThread::threadedFunction( void )
@@ -48,7 +48,10 @@ void genThread::threadedFunction( void )
 		if( !labelQueue->isEmpty() )
 		{
 			labelQueue->pop( label );
-			
+		
+			model = modelQueue->next();
+			// there is a check inside this function so that it's actually executed completely only once 
+			model->checkInterpolationWeights( engine ); 
 			model->computeDuration( engine, &label );
 			
 			//static int dur[5] = {0,0,10,0,0};
@@ -57,7 +60,7 @@ void genThread::threadedFunction( void )
 			model->computeParameters( engine, &label );
 			model->computeGlobalVariances( engine, &label );
 			
-			modelQueue->push( model, 1 );
+			modelQueue->push();
 			
 			if( modelQueue->getNumOfItems() > nOfLookup+nOfBackup )
 			{

@@ -101,7 +101,7 @@ class testApp : public ofBaseApp
 		MAGE::ModelMemory *memory;
 	
 		genThread *generate;
-		Frame frame;
+		Frame *frame;
 	 
 		//---
 	

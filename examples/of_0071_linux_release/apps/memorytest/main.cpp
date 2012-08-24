@@ -54,10 +54,10 @@ int main(int argc, char **argv) {
 	Engine *engine;
 	Vocoder *vocoder;
 
-	Label label, label2;
+	Label *label;//, label2;
 	ModelMemory *memory = new MAGE::ModelMemory::ModelMemory();
-	Model model;
-	Model model2;
+	Model *model;
+	//Model model2;
 
 	labelQueue = new MAGE::LabelQueue(labelQueueLen);
 	modelQueue = new MAGE::ModelQueue(modelQueueLen, memory);
@@ -73,15 +73,17 @@ int main(int argc, char **argv) {
 	std::queue<std::string> t = parsefile(s);
 
 	while (!t.empty()) {
-		label.setQuery(t.front());
-		labelQueue->push(label);
+		//NB labelQueue is big enough, otherwise, check isFull()
+		label = labelQueue->next();
+		label->setQuery(t.front());
+		labelQueue->push();
 		t.pop();
 	}
 
 	//    int sampleCount = 0;
 	//    int hopLen = 240;
 	int bufSize = 128;
-	MAGE::Frame frame;
+	MAGE::Frame *frame;
 	float *outbuffer;
 	outbuffer = new float[bufSize];
 
@@ -106,14 +108,17 @@ int main(int argc, char **argv) {
 	bool flag = true;
 
 	while (!labelQueue->isEmpty()) {
-		labelQueue->pop(label);
-		printf("pop label %s\n", label.getQuery().c_str());
+		label = labelQueue->get();
+		printf("pop label %s\n", label->getQuery().c_str());
 
-		model.computeDuration(engine, &label);
-		model.computeParameters(engine, &label);
-		model.computeGlobalVariances(engine, &label);
-
-		modelQueue->push(&model, 1);
+		model = modelQueue->next();
+		
+		model->computeDuration(engine, label);
+		model->computeParameters(engine, label);
+		model->computeGlobalVariances(engine, label);
+		
+		modelQueue->push();
+		labelQueue->pop();
 		printf("push model\n");
 
 		if (modelQueue->getNumOfItems() > nOfLookup + nOfBackup) {
@@ -127,7 +132,8 @@ int main(int argc, char **argv) {
 		}
 
 		while (!frameQueue->isEmpty()) {
-			frameQueue->pop(&frame);
+			//frameQueue->pop(&frame);
+			frame = frameQueue->get();
 			vocoder->push(frame);
 			for (int k = 0; k < bufSize; k++) {
 				if (vocoder->ready())

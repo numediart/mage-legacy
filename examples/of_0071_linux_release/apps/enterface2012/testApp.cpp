@@ -232,11 +232,13 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan )
 		{ // if we hit the hop length			
 			if( !frameQueue->isEmpty() )
 			{				 
-				frameQueue->pop( &frame, 1 ); // we pop a speech parameter frame
+				frame = frameQueue->get();
 				
 				//any modification to f0 can go here
 				//frame.f0 = frame.f0*f0scale + f0shift;
 				vocoder->push( frame );
+				
+				frameQueue->pop();
 				
 				//use the two lines below instead to generate unvoiced speech
 				//vocoder->push( frame,true );

@@ -83,7 +83,7 @@ int main(int argc, char **argv) {
 	//    int sampleCount = 0;
 	//    int hopLen = 240;
 	int bufSize = 128;
-	MAGE::Frame frame;
+	MAGE::Frame *frame;
 	float *outbuffer;
 	outbuffer = new float[bufSize];
 
@@ -132,7 +132,8 @@ int main(int argc, char **argv) {
 		}
 
 		while (!frameQueue->isEmpty()) {
-			frameQueue->pop(&frame);
+			//frameQueue->pop(&frame);
+			frame = frameQueue->get();
 			vocoder->push(frame);
 			for (int k = 0; k < bufSize; k++) {
 				if (vocoder->ready())

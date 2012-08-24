@@ -40,14 +40,8 @@
 //#define PORT 5454 // listen on port 5454
 
 
-// --- QUEUE THINGS ---
-const int labelQueueLen = 512; // max amount of labels that can wait
-const int modelQueueLen = nOfLookup+nOfBackup+2; // max stored past models for generation
-const int frameQueueLen = 200; // longest label 1 sec = 200 frames of 5 smsec
-
 // --- AUDIO THINGS ---
-const int sampleRate = 48000;
-const int maxFrameLen = 4800;
+const int maxFrameLen =	4800;
 const int dacBufferLen = 128;
 
 class testApp : public ofBaseApp 
@@ -87,18 +81,13 @@ class testApp : public ofBaseApp
 		float alpha;
 		float volume;
 		float pitch;
-		int		action;
+		int	  action;
 	 
 		// --- OSC
 		//ofxOscReceiver	receiver;
 	
 		//--- Mage
-		MAGE::LabelQueue *labelQueue;
-		MAGE::ModelQueue *modelQueue;
-		MAGE::FrameQueue *frameQueue;
-		MAGE::Engine *engine;
-		MAGE::Model *model;
-		MAGE::ModelMemory *memory;
+		MAGE::Mage *mage;
 	
 		genThread *generate;
 		Frame *frame;
@@ -114,12 +103,5 @@ class testApp : public ofBaseApp
 		bool loop;
 		bool fill;
 		
-		// --- SPTK vocoder
-		MAGE::Vocoder *vocoder;
-	
-		// f0 modifications
-		double f0shift;
-		double f0scale;
-	
 		std::queue<std::string> labellist;
 };

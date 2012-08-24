@@ -28,56 +28,25 @@
 
 #include "genThread.h"
 
-genThread::genThread( LabelQueue *lab, ModelQueue *mq, FrameQueue *frm, Engine *eng )
+// constructor
+genThread::genThread( Mage *mage )
 {
-	this->labelQueue = lab;
-	this->modelQueue = mq;
-	this->frameQueue = frm;
-	this->engine = eng;
-	
-	this->model = this->modelQueue->get();
-	//this->model->checkInterpolationWeights( engine );
+	this->mage = mage;
 }
 
+// methods
 void genThread::threadedFunction( void )
 {	
-	bool flag = true;
+	Label label;
 	
 	while( isThreadRunning() )
 	{
-		if( !labelQueue->isEmpty() )
-		{
-			labelQueue->pop( label );
+		//this->mage->run( );
 		
-			model = modelQueue->next();
-			// there is a check inside this function so that it's actually executed completely only once 
-			model->checkInterpolationWeights( engine ); 
-			model->computeDuration( engine, &label );
-			
-			//static int dur[5] = {0,0,10,0,0};
-			//model->updateDuration( dur, MAGE::scale ); // to put a speed profile on state duration ( put it inside compute duration ? )
-			
-			model->computeParameters( engine, &label );
-			model->computeGlobalVariances( engine, &label );
-			
-			modelQueue->push();
-			
-			if( modelQueue->getNumOfItems() > nOfLookup+nOfBackup )
-			{
-				flag = false;
-				modelQueue->optimizeParameters( engine, nOfBackup, nOfLookup );
-				modelQueue->generate( frameQueue, nOfBackup );				
-				modelQueue->pop();
-			} 
-			else if( modelQueue->getNumOfItems() > nOfLookup && flag )
-			{
-				modelQueue->optimizeParameters( engine, modelQueue->getNumOfItems() - nOfLookup - 1, nOfLookup );
-				modelQueue->generate( frameQueue, modelQueue->getNumOfItems() - nOfLookup - 1 );	
-			}	 
-		}
-		else 
-		{
-			usleep( 100 );
-		}
+		this->mage->popLabel ( label );
+		this->mage->computeDuration   ( );
+		this->mage->computeParameters ( );
+		this->mage->optimizeParameters( );
 	}
+	return;
 }

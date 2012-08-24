@@ -30,39 +30,28 @@
 
 void testApp::setup( void )
 {
-	// --- HTS Engine ---
-	engine = new MAGE::Engine();
-	engine->load( Argc, Argv );
-	
-	// --- Vocoder 
-	vocoder = new MAGE::Vocoder::Vocoder();
-	
 	// --- OSC ---
 	//receiver.setup( PORT );
 	
-	// --- QUEUES ---
-	labelQueue = new MAGE::LabelQueue( labelQueueLen );
-	memory = new MAGE::ModelMemory::ModelMemory();
-	modelQueue = new MAGE::ModelQueue( modelQueueLen, memory );
-	frameQueue = new MAGE::FrameQueue( frameQueueLen );
+	// --- Mage ---
+	this->mage = new MAGE::Mage( this->Argc, this->Argv );		
+	//this->mage = new MAGE::Mage( "/Users/Maipn/Documents/myLibs/MAGE/examples/of_0071_osx_release/apps/enterface12/mage2.00/inouts/configSLT.conf" );		
 	
-	// --- PARAMETER GENERATION THREAD ---
-	generate = new genThread( labelQueue, modelQueue, frameQueue, engine );
+	//this->mage->parseConfigFile("/Users/Maipn/Documents/myLibs/MAGE/examples/of_0071_osx_release/apps/enterface12/mage2.00/inouts/configSLT.conf");
+	// --- Parameter Generation Thread ---
+	generate = new genThread( this->mage );
 	generate->startThread();
 	
 	// -- OLA AND AUDIO ---
 	drawSampleFrame = true; // we don't draw the sample frame at runtime
-	frameLen = 480;
-	hopLen = 240;
+	frameLen = defaultFrameRate * 2;
+	hopLen = defaultFrameRate;
 	sampleCount = 0; // initialize OLA variables
-	olaBuffer = new obOlaBuffer( 8*maxFrameLen ); // allocate memory for the OLA buffer
+	olaBuffer = new obOlaBuffer( 8 * maxFrameLen ); // allocate memory for the OLA buffer
 	sampleFrame = new float[ maxFrameLen ](); // allocate memory for the speech frame
-	ofSoundStreamSetup( 2, 0, this, sampleRate, dacBufferLen, 4 ); // audio setup
-	
-	//f0 modification parameters ( cf. audioOut )
-	f0scale = 1.0;
-	f0shift = 0.0;
-	
+
+	ofSoundStreamSetup( 2, 0, this, defaultSamplingRate, dacBufferLen, 4 ); // audio setup
+		
 	paused = true;
 	loop = true;
 	fill = true;
@@ -71,20 +60,11 @@ void testApp::setup( void )
 void testApp::exit( void )
 {
 	generate->waitForThread( true );
+	
+	delete mage;
 	delete generate;
-	
-	delete engine;
-	delete frameQueue;
-	delete modelQueue;
-	delete labelQueue;
-	
-	delete memory;
-	delete model;
-	
-	delete sampleFrame;
 	delete olaBuffer;
-	
-	delete vocoder;
+	delete sampleFrame;
 }
 
 void testApp::update( void )
@@ -92,10 +72,9 @@ void testApp::update( void )
 	/*    
 	static float oscSpeed;
 	static float oscAlpha;
-	static float oscVolume;
 	static float oscPitch;
-	static int oscAction;
-	
+	static float oscVolume;
+
 	static ofxOscMessage m; 
 	
 	if( receiver.hasWaitingMessages() )
@@ -113,16 +92,16 @@ void testApp::update( void )
 			//speed = ofMap( oscSpeed, 0, 3, 0.1, 3, true );
 			//setSpeed( speed );
 			
-			hopLen = ( oscSpeed > 1 )? oscSpeed : 1;
+			hopLen = ( oscSpeed > 1 ) ? oscSpeed : 1;
 			//printf( "speed : %d\n", hopLen );
 			
-			hopLen = ( int )240/oscSpeed;
+			hopLen = ( int )defaultFrameRate/oscSpeed;
 			
 			if( hopLen < 1 )
 				hopLen = 1;
 		
- 			if( hopLen > 240*20 )
-				hopLen = 240*20;
+ 			if( hopLen > defaultFrameRate * 20 )
+				hopLen = defaultFrameRate * 20;
 		}
 		
 		if( m.getAddress() == "/alpha" )
@@ -131,7 +110,7 @@ void testApp::update( void )
 			oscAlpha = m.getArgAsFloat( 0 );
 			alpha = ofMap( oscAlpha, 0.1, 0.9, 0.1, 0.9, true );
 			//printf( "alpha : %f\n", alpha );
-			this->vocoder->setAlpha( alpha );
+			this->mage->setAlpha( alpha );
 		}
 		
 		if( m.getAddress() == "/volume" )
@@ -140,7 +119,7 @@ void testApp::update( void )
 			oscVolume = m.getArgAsFloat( 0 );
 			volume = ofMap( oscVolume, 0, 5, 0, 5, true );
 			//printf( "volume : %f\n", volume );
-			this->vocoder->setVolume( volume );
+			this->mage->setVolume( volume );
 		}
 		
 		if( m.getAddress() == "/pitch" )
@@ -153,7 +132,7 @@ void testApp::update( void )
 			{
 				pitch = 65.406395 *( ( oscPitch/12 )*( oscPitch/12 ) );
 				printf( "pitch_overwrite : %f\n", pitch );
-				this->vocoder->setPitch( pitch, overwrite );
+				this->mage->setPitch( pitch, overwrite );
 			}
 			
 			if( oscAction == shift )
@@ -161,21 +140,21 @@ void testApp::update( void )
 				//pitch = ofMap( oscPitch, -3, 3, -3, 3, true );
 				pitch = 65.406395 *( ( oscPitch/12 )*( oscPitch/12 ) );
 				printf( "pitch_shift : %f\n", pitch );
-				this->vocoder->setPitch( pitch, shift );				
+				this->mage->setPitch( pitch, shift );				
 			}
 			
 			if( oscAction == scale )
 			{
 				pitch = ofMap( oscPitch, -3, 3, -3, 3, true );
 				//printf( "pitch_scale : %f\n", pitch );
-				this->vocoder->setPitch( pitch, scale );				
+				this->mage->setPitch( pitch, scale );				
 			}
 		}
 		
 		if( m.getAddress() == "/reset" )
 		{
-			this->vocoder->reset();
-			hopLen = 240;
+			this->mage->resetVocoder();
+			hopLen = defaultFrameRate;
 			printf( "Reset \n" );
 		}
 		
@@ -189,8 +168,8 @@ void testApp::update( void )
 		}
 	}
 	*/
-	//TODO check that this is thread-safe ( probably not )
-	if( this->fill && this->labelQueue->isEmpty() && this->loop )
+	//TODO check that this is thread-safe( probably not )
+	if( this->fill && this->mage->getLabelQueue()->isEmpty() && this->loop )
 		fillLabelQueue();
 }
 
@@ -230,23 +209,15 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan )
 	{
 		if( sampleCount >= hopLen-1 )
 		{ // if we hit the hop length			
-			if( !frameQueue->isEmpty() )
+			if( !this->mage->getFrameQueue()->isEmpty() )
 			{				 
-				frame = frameQueue->get();
+				frame = this->mage->getFrameQueue()->get();
 				
 				//any modification to f0 can go here
 				//frame.f0 = frame.f0*f0scale + f0shift;
-				vocoder->push( frame );
+				this->mage->getVocoder()->push( frame );
 				
-				frameQueue->pop();
-				
-				//use the two lines below instead to generate unvoiced speech
-				//vocoder->push( frame,true );
-				//vocoder->setVoiced( false );
-				
-				//vocoder->setPitch( 0.1, scale, false );
-				//vocoder->setAlpha( -1 );
-				//vocoder->setVolume( 9 );
+				this->mage->getFrameQueue()->pop();
 				
 				paused = false;
 			} 
@@ -265,9 +236,9 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan )
 		
 		int indchan = k * nChan;
 		
-		if( vocoder->ready() )
+		if( this->mage->getVocoder()->ready() )
 		{
-			outBuffer[indchan] = 0.5 * vocoder->pop() / 32768;
+			outBuffer[indchan] = 0.5 * this->mage->getVocoder()->pop() / 32768;
 			
 			if( outBuffer[indchan] > 1.0 )
 			{
@@ -281,13 +252,15 @@ void testApp::audioOut( float *outBuffer, int bufSize, int nChan )
 			for( c = 1; c < nChan; c++ )
 				outBuffer[indchan+c] = outBuffer[indchan]; //mono --> stereo / multi-channel
 
-		} else {
+		} else 
+		{
 			outBuffer[indchan] = 0.0;
 			for( c = 1; c < nChan; c++ )
 				outBuffer[indchan+c] = 0.0; //mono --> stereo / multi-channel
 		}
 
-		if (drawSampleFrame) {
+		if (drawSampleFrame) 
+		{
 			sampleFrame[sampleCount] = outBuffer[k];
 		}
 	}
@@ -315,14 +288,6 @@ void testApp::keyPressed( int key )
 {
 	if( key == 'l' )
 	{
-		
-		//	MAGE::Label label( "x^x-pau+ae=l@x_x/A:0_0_0/B:x-x-x@x-x&x-x#x-x$x-x!x-x;x-x|x/C:1+1+2/D:0_0/E:x+x@x+x&x+x#x+x/F:content_2/G:0_0/H:x=x^1=10|0/I:19=12/J:79+57-10" );
-		//	MAGE::Label label;
-		//	label.setQuery( "x^x-pau+ae=l@x_x/A:0_0_0/B:x-x-x@x-x&x-x#x-x$x-x!x-x;x-x|x/C:1+1+2/D:0_0/E:x+x@x+x&x+x#x+x/F:content_2/G:0_0/H:x=x^1=10|0/I:19=12/J:79+57-10" );
-		//	label.setQuery( "x^pau-ae+l=ax@1_2/A:0_0_0/B:1-1-2@1-2&1-19#1-10$1-5!0-2;0-8|ae/C:0+0+2/D:0_0/E:content+2@1+12&1+6#0+2/F:aux_1/G:0_0/H:19=12^1=10|L-H%/I:3=3/J:79+57-10" );
-		//	if( !labelQueue->isFull() )labelQueue->push( label );
-		//	else printf( "label queue is full !\n" );
-		
 		MAGE::Label label;
 		while( !labellist.empty() )
 		{
@@ -333,10 +298,7 @@ void testApp::keyPressed( int key )
 			
 			labellist.pop();
 			
-			if( !labelQueue->isFull() )
-				labelQueue->push( label );
-			else 
-				printf( "label queue is full !\n%s",q.c_str() );
+			this->mage->pushLabel( label );
 		}
 		
 		string s( this->Argv[this->Argc - 1] );
@@ -344,38 +306,24 @@ void testApp::keyPressed( int key )
 	}
 	
 	if( key == 'a' )
-	{
-		this->vocoder->setPitch( 440, MAGE::overwrite );
-		//		f0shift -= 5; // -5Hz
-	}
+		this->mage->setPitch( 440, MAGE::overwrite );
 	
 	if( key == 'd' )
-	{
-		this->vocoder->setPitch( 2, MAGE::scale );
-		//		f0scale += 0.1;// multiplication --> small steps
-	}
+		this->mage->setPitch( 2, MAGE::scale );
 	
 	if( key == 'g' )
-	{
-		this->vocoder->setPitch( 0.5, MAGE::scale );
-		//		f0scale -= 0.1;// multiplication --> small steps
-	}
+		this->mage->setPitch( 0.5, MAGE::scale );
 	
 	if( key == 'h' )
-	{
-		this->vocoder->setPitch( 1000, MAGE::shift );
-		//		f0shift += 5; //+ 5Hz
-	}
+		this->mage->setPitch( 1000, MAGE::shift );
+
 	if( key == 'b' )
-	{
-		this->vocoder->setPitch( 50, MAGE::shift );
-		//		f0shift -= 5; // -5Hz
-	}
+		this->mage->setPitch( 50, MAGE::shift );
 	
 	if( key == 'r' )
 	{
-		this->vocoder->reset();
-		hopLen = 240;
+		this->mage->resetVocoder( );
+		hopLen = defaultFrameRate;
 	}
 	
 	if( key == 'f' )
@@ -389,8 +337,8 @@ void testApp::keyPressed( int key )
 	{
 		hopLen += 10;
 		
-		if( hopLen > 240 * 20 )
-			hopLen = 240 * 20;
+		if( hopLen > defaultFrameRate * 20 )
+			hopLen = defaultFrameRate * 20;
 	}
 	
 	if( key == 'o' )
@@ -412,19 +360,15 @@ void testApp::keyReleased( int key )
 void testApp::pushLabel()
 {
 	MAGE::Label label;
+	
 	if( !labellist.empty() )
 	{
 		string q = labellist.front();
 		label.setQuery( q );
-
-		//label.setSpeed( 0.5 );
-
+		
 		labellist.pop();
 
-		if( !labelQueue->isFull() )
-			labelQueue->push( label );
-		else
-			printf("label queue is full !\n%s",q.c_str());
+		this->mage->pushLabel( label );
 	}
 }
 
@@ -441,15 +385,10 @@ void testApp::fillLabelQueue()
 	{
 		string q = labellist.front();
 		label.setQuery( q );
-		
-		//label.setSpeed( 0.5 );
-		
+				
 		labellist.pop();
 		
-		if( !labelQueue->isFull() )
-			labelQueue->push( label );
-		else 
-			printf( "label queue is full !\n%s",q.c_str() );
+		this->mage->pushLabel( label );
 	}
 	
 	this->fill = true;

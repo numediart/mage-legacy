@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
 	Engine *engine;
 	Vocoder *vocoder;
 
-	Label label, label2;
+	Label *label;//, label2;
 	ModelMemory *memory = new MAGE::ModelMemory::ModelMemory();
 	Model *model;
 	//Model model2;
@@ -73,8 +73,10 @@ int main(int argc, char **argv) {
 	std::queue<std::string> t = parsefile(s);
 
 	while (!t.empty()) {
-		label.setQuery(t.front());
-		labelQueue->push(label);
+		//NB labelQueue is big enough, otherwise, check isFull()
+		label = labelQueue->next();
+		label->setQuery(t.front());
+		labelQueue->push();
 		t.pop();
 	}
 
@@ -106,16 +108,17 @@ int main(int argc, char **argv) {
 	bool flag = true;
 
 	while (!labelQueue->isEmpty()) {
-		labelQueue->pop(label);
-		printf("pop label %s\n", label.getQuery().c_str());
+		label = labelQueue->get();
+		printf("pop label %s\n", label->getQuery().c_str());
 
 		model = modelQueue->next();
 		
-		model->computeDuration(engine, &label);
-		model->computeParameters(engine, &label);
-		model->computeGlobalVariances(engine, &label);
+		model->computeDuration(engine, label);
+		model->computeParameters(engine, label);
+		model->computeGlobalVariances(engine, label);
 		
 		modelQueue->push();
+		labelQueue->pop();
 		printf("push model\n");
 
 		if (modelQueue->getNumOfItems() > nOfLookup + nOfBackup) {

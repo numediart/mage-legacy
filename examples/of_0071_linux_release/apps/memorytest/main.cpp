@@ -47,8 +47,62 @@ std::queue<std::string> parsefile(std::string filename) {
 	return labellist;
 }
 
+void fillLabelQueue(MAGE::Mage *mage, string s)
+{	
+	MAGE::Label label;
+	std::queue<std::string> labellist;
+	
+	labellist = parsefile( s );
+
+	while( !labellist.empty() )
+	{
+		string q = labellist.front();
+		label.setQuery( q );
+				
+		labellist.pop();
+		
+		mage->pushLabel( label );
+	}
+}
+
 int main(int argc, char **argv) {
-	LabelQueue *labelQueue;
+	MAGE::Mage *mage = new MAGE::Mage( argc, argv );
+	string s( argv[argc - 1] );
+	
+	int bufSize = 128;
+	MAGE::Frame *frame;
+	float *outbuffer;
+	outbuffer = new float[bufSize];
+	
+	fillLabelQueue( mage, s );
+	
+	int count = 0, fc = 0;
+	
+	while( !mage->getLabelQueue()->isEmpty() && count < 4 ) 
+	{
+		printf("count: %d\n", count++);
+		mage->run();
+		fc = 0;
+		while( !mage->getFrameQueue()->isEmpty() )
+		{
+			printf("frame: %d\n", fc++);
+			//frameQueue->pop(&frame);
+			frame = mage->getFrameQueue()->get();
+			mage->getVocoder()->push( frame );
+			mage->getFrameQueue()->pop();
+			
+			for( int k = 0; k < bufSize; k++ )
+			{
+				if( mage->getVocoder()->ready() )
+					outbuffer[k] = 0.5 * mage->getVocoder()->pop() / 32768;
+			}
+		}
+	}
+	
+	delete mage;
+	delete[] outbuffer;
+	
+	/*LabelQueue *labelQueue;
 	ModelQueue *modelQueue;
 	FrameQueue *frameQueue;
 	Engine *engine;
@@ -163,13 +217,13 @@ int main(int argc, char **argv) {
 	delete labelQueue;
 	delete memory;
 	delete vocoder;
-	delete[] outbuffer;
+	delete[] outbuffer;*/
 
 	return 0;
 }
 
 void optimizeParameters(MAGE::Engine *engine, MAGE::Model *model1, MAGE::Model *model2) {
-	static HTS_ModelSet ms = engine->getModelSet();
+/*	static HTS_ModelSet ms = engine->getModelSet();
 	static HTS_Global global = engine->getGlobal();
 	static HTS_PStream pss = engine->getPStream();
 
@@ -467,6 +521,6 @@ void optimizeParameters(MAGE::Engine *engine, MAGE::Model *model1, MAGE::Model *
 
 		fclose(file);
 	}
-
+*/
 	return;
 }

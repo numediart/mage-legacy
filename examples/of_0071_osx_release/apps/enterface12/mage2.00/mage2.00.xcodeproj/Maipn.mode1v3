@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -316,8 +318,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -335,7 +335,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7B841D8B15EE682600BCBDF3</string>
+										<string>7B841DA115EE69F700BCBDF3</string>
 										<key>history</key>
 										<array>
 											<string>7BEFD41E15C12184009A7F4A</string>
@@ -362,13 +362,13 @@
 											<string>7B841D0615EE5CA300BCBDF3</string>
 											<string>7B841D5515EE630E00BCBDF3</string>
 											<string>7B841D5715EE630E00BCBDF3</string>
-											<string>7B841D8415EE682600BCBDF3</string>
 											<string>7B841D8515EE682600BCBDF3</string>
 											<string>7B841D8615EE682600BCBDF3</string>
-											<string>7B841D8715EE682600BCBDF3</string>
 											<string>7B841D8815EE682600BCBDF3</string>
-											<string>7B841D8915EE682600BCBDF3</string>
-											<string>7B841D8A15EE682600BCBDF3</string>
+											<string>7B841D9D15EE69F700BCBDF3</string>
+											<string>7B841D9E15EE69F700BCBDF3</string>
+											<string>7B841D9F15EE69F700BCBDF3</string>
+											<string>7B841DA015EE69F700BCBDF3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -566,12 +566,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>7B841C9615EE564100BCBDF3</string>
 		<string>7B841C9715EE564100BCBDF3</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>7B2E988115AF170C0090A262</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/Maipn/Documents/myLibs/MAGE/examples/of_0071_osx_release/apps/enterface12/mage2.00/mage2.00.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -809,14 +809,12 @@
 							<key>Dock</key>
 							<array>
 								<dict>
-									<key>BecomeActive</key>
-									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>mage.cpp</string>
+										<string>Vocoder.h</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -837,6 +835,8 @@
 							<string>421pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -882,7 +882,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

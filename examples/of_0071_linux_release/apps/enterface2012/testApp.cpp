@@ -1,30 +1,30 @@
-/* --------------------------------------------------------------------------------------------	*/
-/*																								*/
-/*	This file is part of MAGE / pHTS( the performative HMM-based speech synthesis system )		*/
-/*																								*/
-/*	MAGE / pHTS is free software: you can redistribute it and/or modify it under the terms		*/
-/*	of the GNU General Public License as published by the Free Software Foundation, either		*/
-/*	version 3 of the license, or any later version.												*/
-/*																								*/
-/*	MAGE / pHTS is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;	*/	
-/*	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	*/
-/*	See the GNU General Public License for more details.										*/
-/*																								*/	
-/*	You should have received a copy of the GNU General Public License along with MAGE / pHTS.	*/ 
-/*	If not, see http://www.gnu.org/licenses/													*/
-/*																								*/
-/*																								*/	
-/*	Copyright 2011 University of Mons :															*/
-/*																								*/	
-/*			Numediart Institute for New Media Art( www.numediart.org )							*/
-/*			Acapela Group ( www.acapela-group.com )												*/
-/*																								*/
-/*																								*/
-/*	 Developed by :																				*/
-/*																								*/
-/*		Maria Astrinaki, Geoffrey Wilfart, Alexis Moinet, Nicolas d'Alessandro, Thierry Dutoit	*/
-/*																								*/
-/* --------------------------------------------------------------------------------------------	*/
+ /* ----------------------------------------------------------------------------------------------- */
+ /* 																								*/
+ /* 	This file is part of MAGE / pHTS( the performative HMM-based speech synthesis system )		*/
+ /* 																								*/
+ /* 	MAGE / pHTS is free software: you can redistribute it and/or modify it under the terms		*/
+ /* 	of the GNU General Public License as published by the Free Software Foundation, either		*/
+ /* 	version 3 of the license, or any later version.												*/
+ /* 																								*/
+ /* 	MAGE / pHTS is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;	*/	
+ /* 	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	*/
+ /* 	See the GNU General Public License for more details.										*/
+ /* 																								*/	
+ /* 	You should have received a copy of the GNU General Public License along with MAGE / pHTS.	*/ 
+ /* 	If not, see http://www.gnu.org/licenses/													*/
+ /* 																								*/
+ /* 																								*/	
+ /* 	Copyright 2011 University of Mons :															*/
+ /* 																								*/	
+ /* 			Numediart Institute for New Media Art( www.numediart.org )							*/
+ /* 			Acapela Group ( www.acapela-group.com )												*/
+ /* 																								*/
+ /* 																								*/
+ /* 	 Developed by :																				*/
+ /* 																								*/
+ /* 		Maria Astrinaki, Geoffrey Wilfart, Alexis Moinet, Nicolas d'Alessandro, Thierry Dutoit	*/
+ /* 																								*/
+ /* ----------------------------------------------------------------------------------------------- */
 
 #include "testApp.h"
 
@@ -37,7 +37,6 @@ void testApp::setup( void )
 	this->mage = new MAGE::Mage( this->Argc, this->Argv );		
 	//this->mage = new MAGE::Mage( "/Users/Maipn/Documents/myLibs/MAGE/examples/of_0071_osx_release/apps/enterface12/mage2.00/inouts/configSLT.conf" );		
 	
-	//this->mage->parseConfigFile("/Users/Maipn/Documents/myLibs/MAGE/examples/of_0071_osx_release/apps/enterface12/mage2.00/inouts/configSLT.conf");
 	// --- Parameter Generation Thread ---
 	generate = new genThread( this->mage );
 	generate->startThread();
@@ -52,7 +51,6 @@ void testApp::setup( void )
 
 	ofSoundStreamSetup( 2, 0, this, defaultSamplingRate, dacBufferLen, 4 ); // audio setup
 		
-	paused = true;
 	loop = true;
 	fill = true;
 }
@@ -69,7 +67,8 @@ void testApp::exit( void )
 
 void testApp::update( void )
 {	
-	/*    
+	/*
+	static int oscAction;
 	static float oscSpeed;
 	static float oscAlpha;
 	static float oscPitch;
@@ -130,7 +129,7 @@ void testApp::update( void )
 			
 			if( oscAction == overwrite )
 			{
-				pitch = 65.406395 *( ( oscPitch/12 )*( oscPitch/12 ) );
+				pitch = 65.406395 * ( ( oscPitch/12 ) * ( oscPitch/12 ) );
 				printf( "pitch_overwrite : %f\n", pitch );
 				this->mage->setPitch( pitch, overwrite );
 			}
@@ -138,7 +137,7 @@ void testApp::update( void )
 			if( oscAction == shift )
 			{
 				//pitch = ofMap( oscPitch, -3, 3, -3, 3, true );
-				pitch = 65.406395 *( ( oscPitch/12 )*( oscPitch/12 ) );
+				pitch = 65.406395 * ( ( oscPitch/12 ) * ( oscPitch/12 ) );
 				printf( "pitch_shift : %f\n", pitch );
 				this->mage->setPitch( pitch, shift );				
 			}
@@ -201,84 +200,35 @@ void testApp::draw( void )
 	}
 }
 
-void testApp::audioOut( float *outBuffer, int bufSize, int nChan )
+void testApp::audioOut( float * outBuffer, int bufSize, int nChan )
 {
-	int c;
+	static int c, indchan;
 
 	for( int k = 0; k < bufSize; k++ )
 	{
-		if( sampleCount >= hopLen-1 )
-		{ // if we hit the hop length			
-			if( !this->mage->getFrameQueue()->isEmpty() )
-			{				 
-				frame = this->mage->getFrameQueue()->get();
-				
-				//any modification to f0 can go here
-				//frame.f0 = frame.f0*f0scale + f0shift;
-				this->mage->getVocoder()->push( frame );
-				
-				this->mage->getFrameQueue()->pop();
-				
-				paused = false;
-			} 
-			else 
-			{
-				paused = true;
-			}
-			
-			//olaBuffer->ola( sampleFrame, frameLen, k ); // OLA the frame
+		// ATTENTION!!! should we generate the samples from the parameters in the audio thread or befor?!  
+		if( sampleCount >= hopLen-1 ) // if we hit the hop length
+		{	
+			this->mage->updateSamples();
 			sampleCount = 0; // and reset the sample count for next time
 		} 
 		else 
-		{
 			sampleCount++; // otherwise increment sample count
-		}
 		
-		int indchan = k * nChan;
+		indchan = k * nChan;
+		outBuffer[indchan] = this->mage->popSamples();
 		
-		if( this->mage->getVocoder()->ready() )
-		{
-			outBuffer[indchan] = 0.5 * this->mage->getVocoder()->pop() / 32768;
-			
-			if( outBuffer[indchan] > 1.0 )
-			{
-				outBuffer[indchan] = 1.0;
-			} 
-			else if( outBuffer[indchan] < -1.0 )
-			{
-				outBuffer[indchan] = -1.0;
-			}
-
-			for( c = 1; c < nChan; c++ )
-				outBuffer[indchan+c] = outBuffer[indchan]; //mono --> stereo / multi-channel
-
-		} else 
-		{
-			outBuffer[indchan] = 0.0;
-			for( c = 1; c < nChan; c++ )
-				outBuffer[indchan+c] = 0.0; //mono --> stereo / multi-channel
-		}
-
+		for( c = 1; c < nChan; c++ )
+			outBuffer[indchan+c] = outBuffer[indchan]; //mono --> stereo / multi-channel
+		
 		if (drawSampleFrame) 
-		{
 			sampleFrame[sampleCount] = outBuffer[k];
-		}
-	}
-	
-	if( !paused )
-	{
-		//	FILE *file;
-		//
-		//	file = fopen( "out.raw", "ab" );
-		//	fwrite( outBuffer, sizeof( float ), bufSize, file );
-		//
-		//	fclose( file );
 	}
 }
 
 //---
 
-testApp::testApp( int argc, char **argv )
+testApp::testApp( int argc, char ** argv )
 {
 	Argc = argc; // we use this trick to pass the HTS command line flags
 	Argv = argv; // to the openFrameworks app and use them at launch
@@ -286,45 +236,22 @@ testApp::testApp( int argc, char **argv )
 
 void testApp::keyPressed( int key )
 {
-	if( key == 'l' )
-	{
-		MAGE::Label label;
-		while( !labellist.empty() )
-		{
-			string q = labellist.front();
-			label.setQuery( q );
-			
-			//label.setSpeed( 0.5 );
-			
-			labellist.pop();
-			
-			this->mage->pushLabel( label );
-		}
-		
-		string s( this->Argv[this->Argc - 1] );
-		parsefile( s );
-	}
-	
 	if( key == 'a' )
 		this->mage->setPitch( 440, MAGE::overwrite );
 	
-	if( key == 'd' )
-		this->mage->setPitch( 2, MAGE::scale );
-	
-	if( key == 'g' )
-		this->mage->setPitch( 0.5, MAGE::scale );
-	
-	if( key == 'h' )
-		this->mage->setPitch( 1000, MAGE::shift );
-
 	if( key == 'b' )
 		this->mage->setPitch( 50, MAGE::shift );
 	
-	if( key == 'r' )
-	{
-		this->mage->resetVocoder( );
-		hopLen = defaultFrameRate;
-	}
+	if( key == 'c' )
+		this->mage->setPitch( 2, MAGE::scale );
+
+	if( key == 'd' )
+		this->mage->setAlpha( 0.8 );
+	
+// --- Speed control :: we keep one? we embed also the hopLen in the Mage API?
+	
+	if( key == 'e' )
+		this->mage->setLabelSpeed( 4 );
 	
 	if( key == 'f' )
 	{
@@ -340,17 +267,68 @@ void testApp::keyPressed( int key )
 		if( hopLen > defaultFrameRate * 20 )
 			hopLen = defaultFrameRate * 20;
 	}
+
+// --- Speed contor :: we keep one? we embed also the hopLen in the Mage API?
+	
+	if( key == 'g' )
+		this->mage->setPitch( 0.5, MAGE::scale );
+
+	if( key == 'h' )
+		this->mage->setPitch( 1000, MAGE::shift );
+	
+	if( key == 'i' )
+		this->mage->setGamma( 2 );
+	
+	if( key == 'j' )
+		this->mage->setVolume( 5 );
+
+	if( key == 'k' )
+	{
+		int updateFunction[nOfStates] = { 1, 1, 30, 1, 1 };
+		this->mage->setDuration( updateFunction, MAGE::shift );
+	}
+	
+	
+	if( key == 'l' )
+	{
+		MAGE::Label label;
+		while( !labellist.empty() )
+		{
+			string q = labellist.front();
+			label.setQuery( q );
+						
+			labellist.pop();
+			
+			this->mage->pushLabel( label );
+		}
+		
+		string s( this->Argv[this->Argc - 1] );
+		parsefile( s );
+	}
+	
+	if( key == 'm' )
+		this->mage->setPOrder( 3 );
+	
 	
 	if( key == 'o' )
 	{
 		this->loop = !this->loop;
 		printf( "loop %d\n",this->loop );
 	}
-
+	
 	if ( key == 'p' ) 
 	{
 		pushLabel();
 	}
+	
+	if( key == 'r' )
+	{
+		this->mage->resetVocoder();
+		hopLen = defaultFrameRate;
+	}
+	
+	
+	
 }
 
 void testApp::keyReleased( int key )

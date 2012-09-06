@@ -68,6 +68,9 @@ void fillLabelQueue(MAGE::Mage *mage, string s)
 int main(int argc, char **argv) {
 	MAGE::Mage *mage = new MAGE::Mage( "slt", argc, argv );
 	mage->addEngine( "slt2",argc,argv );
+	mage->addEngine( "slt2",argc,argv );
+	mage->addEngine( "slt3",argc,argv );
+	mage->removeEngine( "slt3" );
 	string s( argv[argc - 1] );
 	
 	int bufSize = 128;

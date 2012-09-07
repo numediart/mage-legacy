@@ -34,7 +34,7 @@ void testApp::setup( void )
 	//receiver.setup( PORT );
 	
 	// --- Mage ---
-	this->mage = new MAGE::Mage( this->Argc, this->Argv );		
+	this->mage = new MAGE::Mage( "slt", this->Argc, this->Argv );		
 	//this->mage = new MAGE::Mage( "/Users/Maipn/Documents/myLibs/MAGE/examples/of_0071_osx_release/apps/enterface12/mage2.00/inouts/configSLT.conf" );		
 	
 	// --- Parameter Generation Thread ---
@@ -288,6 +288,15 @@ void testApp::keyPressed( int key )
 	
 	if( key == 'w' )
 		this->mage->reset();
+	
+	if( key == 'x' )
+		this->mage->addEngine( "slt", "./inouts/configSLT.conf" );
+	
+	if( key == 'y' )
+		this->mage->setDefaultEngine( "slt" );
+
+	if( key == 'z' )
+		;
 }
 
 void testApp::keyReleased( int key )

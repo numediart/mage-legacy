@@ -1,4 +1,4 @@
-#N canvas -1754 470 1264 809 10;
+#N canvas 309 104 944 662 10;
 #X declare -lib mrpeach;
 #X declare -path ./;
 #X obj 32 25 import mrpeach;
@@ -100,7 +100,7 @@
 #X floatatom 438 51 5 0 0 0 - - -;
 #X obj 441 28 hsl 80 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#N canvas -1108 191 222 176 gamma 0;
+#N canvas 0 191 222 176 gamma 0;
 #X obj 64 41 inlet;
 #X obj 64 64 pack f;
 #X msg 64 86 send /Mage/gamma \$1;
@@ -234,7 +234,7 @@
 #X connect 7 1 6 1;
 #X restore 442 390 pd speed;
 #X obj 445 303 hsl 80 15 -10 10 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4200 1;
+-1 -1 0 1;
 #X obj 255 303 hsl 80 15 -50 50 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X connect 1 0 3 0;

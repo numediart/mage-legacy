@@ -67,7 +67,7 @@ class testApp : public ofBaseApp
 		void keyReleased( int key );
 	
 		void pushLabel();
-		
+	
 		//parse lab file line-by-line
 		void fillLabelQueue();
 		void parsefile( std::string filename );

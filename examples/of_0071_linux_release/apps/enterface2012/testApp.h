@@ -35,11 +35,12 @@
 
 #include <fstream>
 
-// --- OSC
-//#include "ofxOsc.h"
-//#define PORT 5454 
+// --- OSC --- 
+#include "ofxOsc.h"
+#define PORT 5454 
 
-// --- AUDIO THINGS ---
+// --- Audio ---
+// ATTENTION :: should we move that in constants.h?
 const int maxFrameLen =	4800;
 const int dacBufferLen = 128;
 
@@ -66,6 +67,7 @@ class testApp : public ofBaseApp
 		void keyReleased( int key );
 	
 		void pushLabel();
+		
 		//parse lab file line-by-line
 		void fillLabelQueue();
 		void parsefile( std::string filename );
@@ -75,28 +77,32 @@ class testApp : public ofBaseApp
 		int Argc;		// number of arguments passed to the main()
 		char ** Argv;	// table of arguments passed to the main()
 	
-		// --- User controls
-		float speed;
-		float alpha;
-		float volume;
-		float pitch;
-		int	  action;
-	 
-		// --- OSC
-		//ofxOscReceiver	receiver;
+		// --- User controls ---
+		float pitch;			// pitch value set by the user
+		float speed;			// speed value set by the user
+		float alpha;			// alpha value set by the user
+		float volume;			// volume value set by the user
+		int   gamma;			// gamma value set by the user
+		int   porder;			// porder value set by the user
+		int	  pitchAction;		// pitchAction ( noaction, overwrite, shift, scale, synthetic ) value set by the user
+		int	  speedAction;		// speedAction ( noaction, overwrite, shift, scale, synthetic ) value set by the user
+		int	  durationAction;	// durationAction ( noaction, overwrite, shift, scale, synthetic ) value set by the user
 	
-		//--- Mage
+		// --- OSC ---
+		ofxOscReceiver	receiver;
+	
+		//--- Mage ---
 		MAGE::Mage * mage;
-	
+		
 		genThread * generate;
 	 
 		//---
-	
 		float * sampleFrame;	 // frame to be OLAed
 		obOlaBuffer * olaBuffer; // overlap-add buffer
 		bool drawSampleFrame;	 // do we show the frame
 		bool loop;
 		bool fill;
 		
+		// queue of read labels
 		std::queue<std::string> labellist;
 };

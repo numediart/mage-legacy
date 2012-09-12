@@ -34,9 +34,15 @@ void testApp::setup( void )
 	//receiver.setup( PORT );
 	
 	// --- Mage ---
-	this->mage = new MAGE::Mage( "slt", this->Argc, this->Argv );		
-	//this->mage = new MAGE::Mage( "/Users/Maipn/Documents/myLibs/MAGE/examples/of_0071_osx_release/apps/enterface12/mage2.00/inouts/configSLT.conf" );		
 	
+	// create mage
+	this->mage = new MAGE::Mage();
+	
+	// add clb & awb voice models
+	//this->mage->addEngine( "clb", "./inouts/clb.conf" );
+	//this->mage->addEngine( "awb", "./inouts/awb.conf" );
+	this->mage->addEngine( "slt", this->Argc, this->Argv );
+
 	// --- Parameter Generation Thread ---
 	generate = new genThread( this->mage );
 	generate->startThread();
@@ -44,8 +50,9 @@ void testApp::setup( void )
 	// -- OLA AND AUDIO ---
 	drawSampleFrame = true; // we don't draw the sample frame at runtime
 
+	// Question :: shouldn't we put that into mage and be independent from oF?
 	olaBuffer   = new obOlaBuffer( 8 * maxFrameLen ); // allocate memory for the OLA buffer
-	sampleFrame = new float[ maxFrameLen ](); // allocate memory for the speech frame
+	sampleFrame = new float[ maxFrameLen ]();		  // allocate memory for the speech frame
 
 	ofSoundStreamSetup( 2, 0, this, defaultSamplingRate, dacBufferLen, 4 ); // audio setup
 		
@@ -65,84 +72,152 @@ void testApp::exit( void )
 
 void testApp::update( void )
 {	
-	/*
-	static int oscAction;
-	static float oscSpeed;
-	static float oscAlpha;
-	static float oscPitch;
-	static float oscVolume;
-
-	static ofxOscMessage m; 
 	
+	int oscGamma;
+	int oscPorder;
+	int oscAction;
+	
+	float oscSpeed;
+	float oscAlpha;
+	float oscPitch;
+	float oscVolume;
+	
+	string oscEngineName;	
+	string oscConfigFile;
+	
+	ofxOscMessage m; 
+
+	// TODO :: this has to be replaced by a function producing 
+	// weights and not to use a static array of weights
+	int   oscUpdateFunction[MAGE::nOfStates];
+
+	// parsing the received OSC messages
 	if( receiver.hasWaitingMessages() )
 	{
-		// --- get new OSC message ---
+		// --- Get new OSC message ---
 		m.clear();
 		receiver.getNextMessage( &m );
 		
-		// --- THE LIST OF MESSAGES ---
+		// --- List of messages ---
 		
-		if( m.getAddress() == "/speed" )
+		// --- Change pitch ---
+		if( m.getAddress() == "/Mage/pitch" )
 		{
-			// --- change speed	---
-			oscSpeed = m.getArgAsFloat( 0 );
-			//speed = ofMap( oscSpeed, 0, 3, 0.1, 3, true );
-			//setSpeed( speed );
-			//printf( "speed : %d\n", hopLen );
-		}
-		
-		if( m.getAddress() == "/alpha" )
-		{
-			// --- change alpha ---
-			oscAlpha = m.getArgAsFloat( 0 );
-			alpha = ofMap( oscAlpha, 0.1, 0.9, 0.1, 0.9, true );
-			//printf( "alpha : %f\n", alpha );
-			this->mage->setAlpha( alpha );
-		}
-		
-		if( m.getAddress() == "/volume" )
-		{
-			// --- change volume ---
-			oscVolume = m.getArgAsFloat( 0 );
-			volume = ofMap( oscVolume, 0, 5, 0, 5, true );
-			//printf( "volume : %f\n", volume );
-			this->mage->setVolume( volume );
-		}
-		
-		if( m.getAddress() == "/pitch" )
-		{
-			// --- change pitch ---
 			oscPitch = m.getArgAsFloat( 0 ); 
-			oscAction = m.getArgAsFloat( 1 );
+			oscAction = m.getArgAsInt32( 1 );
 			
-			if( oscAction == overwrite )
-			{
-				pitch = 65.406395 * ( ( oscPitch/12 ) * ( oscPitch/12 ) );
-				printf( "pitch_overwrite : %f\n", pitch );
-				this->mage->setPitch( pitch, overwrite );
-			}
-			
-			if( oscAction == shift )
-			{
-				//pitch = ofMap( oscPitch, -3, 3, -3, 3, true );
-				pitch = 65.406395 * ( ( oscPitch/12 ) * ( oscPitch/12 ) );
-				printf( "pitch_shift : %f\n", pitch );
-				this->mage->setPitch( pitch, shift );				
-			}
-			
-			if( oscAction == scale )
-			{
-				pitch = ofMap( oscPitch, -3, 3, -3, 3, true );
-				//printf( "pitch_scale : %f\n", pitch );
-				this->mage->setPitch( pitch, scale );				
-			}
+			this->pitch = oscPitch; 
+			this->pitchAction = oscAction;
+			this->mage->setPitch( this->pitch, this->pitchAction );
+			// 65.406395 * ( ( oscPitch/12 ) * ( oscPitch/12 ) );
 		}
 		
-		if( m.getAddress() == "/reset" )
-			this->mage->reset();
-
+		// --- Change alpha ---
+		if( m.getAddress() == "/Mage/alpha" ) 
+		{
+			oscAlpha = m.getArgAsFloat( 0 );
+			
+			this->alpha = ofMap( oscAlpha, 0.1, 0.9, 0.1, 0.9, true );
+			this->mage->setAlpha( this->alpha );
+		}
 		
-		if( m.getAddress() == "/loop" )
+		// --- Change gamma ---
+		if( m.getAddress() == "/Mage/gamma" ) 
+		{
+			oscGamma = m.getArgAsFloat( 0 );
+			
+			this->gamma = ofMap( oscGamma, 0, 5, 0, 5, true );
+			this->mage->setGamma( this->gamma );
+		}		
+		
+		// --- Change porder ---
+		if( m.getAddress() == "/Mage/porder" ) 
+		{
+			oscPorder = m.getArgAsFloat( 0 );
+			
+			this->porder = ofMap( oscPorder, 0, 5, 0, 5, true );
+			this->mage->setPOrder( this->porder );
+		}
+		
+		// --- Change speed	---
+		if( m.getAddress() == "/Mage/speed" )
+		{
+			oscSpeed = m.getArgAsFloat( 0 );
+			oscAction = m.getArgAsInt32( 1 );
+			
+			this->speed = oscSpeed;
+			this->speedAction = oscAction;
+			this->mage->setSpeed( this->speed, this->speedAction );
+		}
+		
+		// --- Change labelSpeed ---
+		if( m.getAddress() == "/Mage/lSpeed" )
+		{
+			oscSpeed = m.getArgAsFloat( 0 );
+			
+			this->speed = ofMap( oscSpeed, 0, 10, 0.1, 10, true );
+			this->mage->setLabelSpeed( this->speed );
+		}
+		
+		// --- Change volume ---
+		if( m.getAddress() == "/Mage/volume" )
+		{
+			oscVolume = m.getArgAsFloat( 0 );
+			
+			this->volume = ofMap( oscVolume, 0, 5, 0, 5, true );
+			this->mage->setVolume( this->volume );
+		}
+		
+		// --- Change duration ---
+		if( m.getAddress() == "/Mage/duration" )
+		{
+			// TODO :: this has to be replaced by a function producing 
+			// weights and not to use a static array of weights
+			int updateFunction[nOfStates] = { 1, 1, 30, 1, 1 };
+
+			oscAction = m.getArgAsInt32( 0 );
+			
+			this->durationAction = oscAction;
+			this->mage->setDuration( updateFunction, this->durationAction );
+		}
+		
+		// --- Reset Mage ---
+		if( m.getAddress() == "/Mage/resetMage" )
+			this->mage->reset();
+		
+		// --- Reset ONLY the Vocoder ---
+		if( m.getAddress() == "/Mage/resetVocoder" )
+			this->mage->resetVocoder();
+		
+		// --- Add an Engine ---
+		// (here a new voice model)
+		if( m.getAddress() == "/Mage/addEngine" )
+		{
+			oscEngineName = m.getArgAsString( 0 );
+			oscConfigFile = m.getArgAsString( 1 );
+			
+			this->mage->addEngine( oscEngineName, oscConfigFile );
+		}
+		
+		// --- Change the default Engine used for the synthesis ---
+		// (here change the default voice model used)
+		if( m.getAddress() == "/Mage/setDefaultEngine" )
+		{
+			oscEngineName = m.getArgAsString( 0 );
+
+			this->mage->setDefaultEngine( oscEngineName );
+		}
+		
+		// --- Remove an Engine existing in the used list od engines ---
+		// (here a voice model)
+		if( m.getAddress() == "/Mage/removeEngine" )
+		{
+			oscEngineName = m.getArgAsString( 0 );
+			this->mage->removeEngine( oscEngineName );
+		}
+		
+		// --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+		if( m.getAddress() == "/Mage/loop" )
 		{
 			this->loop = !this->loop;
 			if( this->loop )
@@ -151,8 +226,8 @@ void testApp::update( void )
 				printf( "No Loop\n" );
 		}
 	}
-	*/
-	//TODO check that this is thread-safe( probably not )
+	
+	// TODO :: check that this is thread-safe( probably not )
 	if( this->fill && this->mage->getLabelQueue()->isEmpty() && this->loop )
 		fillLabelQueue();
 }
@@ -191,21 +266,23 @@ void testApp::audioOut( float * outBuffer, int bufSize, int nChan )
 
 	for( int k = 0; k < bufSize; k++ )
 	{
-		// ATTENTION!!! should we generate the samples from the parameters in the audio thread or befor?!  
+		// generate the samples from the computed parameters taking into account the user contol
 		this->mage->updateSamples();
 		
 		indchan = k * nChan;
+		
+		// get the generated samples
 		outBuffer[indchan] = this->mage->popSamples();
 		
+		// mono --> stereo / multi-channel
 		for( c = 1; c < nChan; c++ )
-			outBuffer[indchan+c] = outBuffer[indchan]; //mono --> stereo / multi-channel
+			outBuffer[indchan+c] = outBuffer[indchan]; 
 		
+		// draw samples
 		if (drawSampleFrame) 
 			sampleFrame[this->mage->getSampleCounter()] = outBuffer[k];
 	}
 }
-
-//---
 
 testApp::testApp( int argc, char ** argv )
 {
@@ -215,45 +292,6 @@ testApp::testApp( int argc, char ** argv )
 
 void testApp::keyPressed( int key )
 {
-	if( key == 'a' )
-		this->mage->setPitch( 440, MAGE::overwrite );
-	
-	if( key == 'b' )
-		this->mage->setPitch( 50, MAGE::shift );
-	
-	if( key == 'c' )
-		this->mage->setPitch( 2, MAGE::scale );
-
-	if( key == 'd' )
-		this->mage->setAlpha( 0.8 );
-		
-	if( key == 'e' )
-		this->mage->setLabelSpeed( 4 );
-	
-	if( key == 'f' )
-		this->mage->setSpeed( 0.5, MAGE::scale );
-	
-	if( key == 's' )
-		this->mage->setSpeed( 10, MAGE::shift );
-	
-	if( key == 'g' )
-		this->mage->setPitch( 0.5, MAGE::scale );
-
-	if( key == 'h' )
-		this->mage->setPitch( 1000, MAGE::shift );
-	
-	if( key == 'i' )
-		this->mage->setGamma( 2 );
-	
-	if( key == 'j' )
-		this->mage->setVolume( 5 );
-
-	if( key == 'k' )
-	{
-		int updateFunction[nOfStates] = { 1, 1, 30, 1, 1 };
-		this->mage->setDuration( updateFunction, MAGE::shift );
-	}
-	
 	if( key == 'l' )
 	{
 		MAGE::Label label;
@@ -261,7 +299,7 @@ void testApp::keyPressed( int key )
 		{
 			string q = labellist.front();
 			label.setQuery( q );
-						
+			
 			labellist.pop();
 			
 			this->mage->pushLabel( label );
@@ -271,32 +309,52 @@ void testApp::keyPressed( int key )
 		parsefile( s );
 	}
 	
-	if( key == 'm' )
-		this->mage->setPOrder( 3 );
-	
 	if( key == 'o' )
 	{
 		this->loop = !this->loop;
 		printf( "loop %d\n",this->loop );
 	}
-	
+		
 	if ( key == 'p' ) 
 		pushLabel();
-	
-	if( key == 'r' )
-		this->mage->resetVocoder();
+
+	if( key == 'q' )
+		this->mage->enableInterpolation( true );   
 	
 	if( key == 'w' )
-		this->mage->reset();
+		this->mage->enableInterpolation( false );
 	
-	if( key == 'x' )
-		this->mage->addEngine( "slt", "./inouts/configSLT.conf" );
-	
-	if( key == 'y' )
-		this->mage->setDefaultEngine( "slt" );
+	if( key == 'e' )
+	{
+		map < string, double * > interpolationFunctions;
+		
+		/*double a[nOfStreams + 1] = { 1, 0, 1, 0 };
+		interpolationFunctions["clb"] = a;
+		
+		double b[nOfStreams + 1] = { 0, 1, 0, 1 };
+		interpolationFunctions["awb"] = b;*/
+		
+		double a[nOfStreams + 1] = { 1.5, 0.25, 0.5, 0 }; //{ 0.25, 0.75, 0.25, 0.75 };
+		interpolationFunctions["clb"] = a;
+		
+		double b[nOfStreams + 1] = { 1, 1.5, 1, 1 }; //{ 0.75, 0.25, 0.75, 0.25 };
+		interpolationFunctions["awb"] = b;
+		
+		this->mage->setInterpolationFunctions( interpolationFunctions );	
+		
+	}
 
-	if( key == 'z' )
-		;
+	
+	/*if( key == 'a' )
+	{
+		int updateFunction[5] = {1, 1, 10, 1, 1};
+		this->mage->setDuration( updateFunction, MAGE::shift );	
+	}*/
+	if( key == '1' )
+		this->mage->print();
+
+	if( key == 'r' )
+		this->mage->reset();
 }
 
 void testApp::keyReleased( int key )

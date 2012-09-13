@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 7B9581061385495E0011EE57 /* MAGE_Pd */;
+		activeTarget = D2AAC0620554660B00DB518D /* MAGE~ */;
+		addToTargets = (
+			D2AAC0620554660B00DB518D /* MAGE~ */,
+		);
+		breakpoints = (
+			7BF1242014FD8A17000A374B /* mage~.c:389 */,
+			7B4428F2160211B00068C768 /* mage~.cpp:192 */,
+		);
+		codeSenseManager = 7B957FE11385449B0011EE57 /* Code sense */;
+		executables = (
+			7B9581061385495E0011EE57 /* MAGE_Pd */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					250,
+					20,
+					150,
+					150,
+					80,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					949,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1061,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					638,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					718,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1021,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 369235633;
+			PBXWorkspaceStateSaveDate = 369235633;
+		};
+		perUserProjectItems = {
+			7B44290C160215040068C768 = 7B44290C160215040068C768 /* PBXTextBookmark */;
+			7B442911160216180068C768 = 7B442911160216180068C768 /* PBXTextBookmark */;
+			7B442912160216180068C768 = 7B442912160216180068C768 /* PBXTextBookmark */;
+			7B442913160216180068C768 = 7B442913160216180068C768 /* PBXTextBookmark */;
+			7B442914160216180068C768 = 7B442914160216180068C768 /* PBXTextBookmark */;
+			7B442915160216180068C768 = 7B442915160216180068C768 /* PBXTextBookmark */;
+			7B442920160216BB0068C768 /* PBXTextBookmark */ = 7B442920160216BB0068C768 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 7B957FE01385449B0011EE57 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	7B2E0E6314D802CA005CF773 /* m_pd.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {913, 8034}}";
+			sepNavSelRange = "{17602, 36}";
+			sepNavVisRange = "{16624, 2007}";
+			sepNavWindowFrame = "{{-1790, 172}, {1014, 768}}";
+		};
+	};
+	7B442853160208540068C768 /* mage~.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1443, 3960}}";
+			sepNavSelRange = "{4653, 0}";
+			sepNavVisRange = "{4399, 924}";
+		};
+	};
+	7B4428791602087A0068C768 /* CMakeLists.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 800}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 324}";
+		};
+	};
+	7B44287A1602087A0068C768 /* Constants.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 1422}}";
+			sepNavSelRange = "{0, 1664}";
+			sepNavVisRange = "{0, 2437}";
+		};
+	};
+	7B44287F1602087A0068C768 /* hts.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 17046}}";
+			sepNavSelRange = "{19487, 0}";
+			sepNavVisRange = "{19238, 704}";
+		};
+	};
+	7B4428851602087A0068C768 /* mage.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1245, 9324}}";
+			sepNavSelRange = "{11218, 0}";
+			sepNavVisRange = "{10610, 1053}";
+		};
+	};
+	7B4428861602087A0068C768 /* mage.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 3546}}";
+			sepNavSelRange = "{0, 1664}";
+			sepNavVisRange = "{0, 1918}";
+		};
+	};
+	7B4428D7160210220068C768 /* mage~.c */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.c;
+		name = "mage~.c";
+		path = "/Users/Maipn/Desktop/mage~.c";
+		sourceTree = "<absolute>";
+	};
+	7B4428F2160211B00068C768 /* mage~.cpp:192 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 7B442853160208540068C768 /* mage~.cpp */;
+		functionName = "mage_tilde_new( void )";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 192;
+		location = "mage~.pd_darwin";
+		modificationTime = 369234355.449855;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	7B44290C160215040068C768 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7B4428D7160210220068C768 /* mage~.c */;
+		name = "mage~.c: 467";
+		rLen = 35;
+		rLoc = 12505;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 11276;
+	};
+	7B442911160216180068C768 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7B4428861602087A0068C768 /* mage.h */;
+		name = "mage.h: 1";
+		rLen = 1664;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1918;
+		vrLoc = 0;
+	};
+	7B442912160216180068C768 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7B4428791602087A0068C768 /* CMakeLists.txt */;
+		name = "CMakeLists.txt: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 324;
+		vrLoc = 0;
+	};
+	7B442913160216180068C768 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7B44287A1602087A0068C768 /* Constants.h */;
+		name = "Constants.h: 1";
+		rLen = 1664;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2437;
+		vrLoc = 0;
+	};
+	7B442914160216180068C768 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7B442853160208540068C768 /* mage~.cpp */;
+		name = "mage~.cpp: 2";
+		rLen = 0;
+		rLoc = 1637;
+		rType = 0;
+		vrLen = 1869;
+		vrLoc = 0;
+	};
+	7B442915160216180068C768 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7B442853160208540068C768 /* mage~.cpp */;
+		name = "mage~.cpp: 193";
+		rLen = 0;
+		rLoc = 5296;
+		rType = 0;
+		vrLen = 889;
+		vrLoc = 4434;
+	};
+	7B442920160216BB0068C768 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7B442853160208540068C768 /* mage~.cpp */;
+		name = "mage~.cpp: 168";
+		rLen = 0;
+		rLoc = 4653;
+		rType = 0;
+		vrLen = 924;
+		vrLoc = 4399;
+	};
+	7B957FE01385449B0011EE57 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	7B957FE11385449B0011EE57 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	7B95807A1385474E0011EE57 /* mage~.c */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.c;
+		name = "mage~.c";
+		path = "/Users/Maipn/Documents/myLibs/MAGE/magelib-2.00/pd_xcode/mage~.c";
+		sourceTree = "<absolute>";
+	};
+	7B9581061385495E0011EE57 /* MAGE_Pd */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				commandLineArgs = (
+				);
+				displayName = "Executable Runner";
+				environment = {
+				};
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = 7B9581071385495E0011EE57 /* pd */;
+		libgmallocEnabled = 0;
+		name = MAGE_Pd;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	7B9581071385495E0011EE57 /* pd */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = "compiled.mach-o.executable";
+		name = pd;
+		path = "/Applications/Pd-extended.app/Contents/Resources/bin/pd";
+		sourceTree = "<absolute>";
+	};
+	7BF1242014FD8A17000A374B /* mage~.c:389 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 7B95807A1385474E0011EE57 /* mage~.c */;
+		functionName = "MAGE_setP()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 389;
+		location = "mage~.pd_darwin";
+		modificationTime = 369234328.2482829;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	D2AAC0620554660B00DB518D /* MAGE~ */ = {
+		activeExec = 0;
+	};
+}

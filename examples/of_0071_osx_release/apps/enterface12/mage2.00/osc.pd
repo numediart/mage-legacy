@@ -1,4 +1,4 @@
-#N canvas -1224 325 1027 698 10;
+#N canvas 79 192 1027 698 10;
 #X declare -lib mrpeach;
 #X declare -path ./;
 #X obj 32 25 import mrpeach;

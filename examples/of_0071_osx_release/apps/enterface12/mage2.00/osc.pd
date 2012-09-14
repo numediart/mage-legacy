@@ -1,4 +1,4 @@
-#N canvas 266 22 1180 711 10;
+#N canvas 438 22 1180 711 12;
 #X declare -lib mrpeach;
 #X declare -path ./;
 #X obj 32 25 import mrpeach;
@@ -49,10 +49,10 @@
 #X connect 3 0 0 0;
 #X restore 535 75 pd lSpeed;
 #X obj 538 28 hsl 80 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1300 1;
+-1 -1 0 1;
 #X floatatom 247 51 5 0 0 0 - - -;
 #X obj 250 28 hsl 80 15 0 5 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 1600 1;
+-1 -1 0 1;
 #N canvas 0 672 222 176 alpha 0;
 #X obj 64 65 pack f;
 #X msg 64 87 send /Mage/alpha \$1;
@@ -64,7 +64,7 @@
 #X restore 247 75 pd alpha;
 #X floatatom 341 51 5 0 0 0 - - -;
 #X obj 344 28 hsl 80 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4100 1;
+-1 -1 0 1;
 #N canvas 0 565 247 180 volume 0;
 #X obj 64 41 inlet;
 #X obj 64 66 pack f;
@@ -108,7 +108,7 @@
 #X restore 438 75 pd gamma;
 #X floatatom 630 51 5 0 0 0 - - -;
 #X obj 633 28 hsl 80 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3400 1;
+-1 -1 0 1;
 #N canvas 0 631 222 176 porder 0;
 #X obj 50 37 inlet;
 #X obj 50 61 pack f;
@@ -225,9 +225,9 @@
 #X connect 7 1 6 1;
 #X restore 738 242 pd speed;
 #X obj 741 155 hsl 80 15 -10 10 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5400 1;
+-1 -1 7000 1;
 #X obj 551 155 hsl 80 15 -50 50 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2600 1;
+-1 -1 6300 1;
 #X obj 47 476 r enableInterpolation;
 #X floatatom 586 527 5 0 0 0 - - -;
 #X floatatom 551 527 5 0 0 0 - - -;
@@ -275,15 +275,15 @@
 #X msg 315 527 bdl;
 #X msg 284 527 awb;
 #X obj 484 443 hsl 80 15 0 1 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 7900 1;
+-1 -1 7400 1;
 #X obj 519 461 hsl 80 15 0 1 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 7900 1;
+-1 -1 7400 1;
 #X obj 554 480 hsl 80 15 0 1 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 7900 1;
+-1 -1 7400 1;
 #X obj 589 500 hsl 80 15 0 1 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 7900 1;
+-1 -1 7400 1;
 #X obj 691 475 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7900 1;
+-1 -1 7400 1;
 #X msg 955 389 0;
 #X msg 955 409 1;
 #X msg 955 429 2;

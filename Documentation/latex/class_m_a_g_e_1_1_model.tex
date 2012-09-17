@@ -1,0 +1,63 @@
+\hypertarget{class_m_a_g_e_1_1_model}{\section{M\-A\-G\-E\-:\-:Model Class Reference}
+\label{class_m_a_g_e_1_1_model}\index{M\-A\-G\-E\-::\-Model@{M\-A\-G\-E\-::\-Model}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a98f78c5746a9d3f6c58564e68fc5d256}{\hyperlink{struct_m_a_g_e_1_1_state}{State} {\bfseries get\-State} (int index)}\label{class_m_a_g_e_1_1_model_a98f78c5746a9d3f6c58564e68fc5d256}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a2400f49e3b5901ed04436fcee9b49641}{int {\bfseries get\-Duration} (void)}\label{class_m_a_g_e_1_1_model_a2400f49e3b5901ed04436fcee9b49641}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a4c3af53691987ae0c8d3f0d921da3f61}{void {\bfseries set\-State} (\hyperlink{struct_m_a_g_e_1_1_state}{State} state, int index)}\label{class_m_a_g_e_1_1_model_a4c3af53691987ae0c8d3f0d921da3f61}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a59f493069f299cd68862c954791bcf34}{void {\bfseries set\-Duration} (int duration)}\label{class_m_a_g_e_1_1_model_a59f493069f299cd68862c954791bcf34}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a9d8c1c2a881e496c9e49464b595b7a81}{void {\bfseries init\-Duration} (void)}\label{class_m_a_g_e_1_1_model_a9d8c1c2a881e496c9e49464b595b7a81}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a0da8e90094bcf69179718334b1ad13b5}{void {\bfseries init\-Parameters} (void)}\label{class_m_a_g_e_1_1_model_a0da8e90094bcf69179718334b1ad13b5}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a90a47244e550dfaf403ab9e28175af86}{void {\bfseries update\-Duration} (double $\ast$update\-Function, int action)}\label{class_m_a_g_e_1_1_model_a90a47244e550dfaf403ab9e28175af86}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_af32192860c3f1a173d45ee9cb529a976}{void {\bfseries compute\-Duration} (\hyperlink{class_m_a_g_e_1_1_engine}{M\-A\-G\-E\-::\-Engine} $\ast$engine, \hyperlink{class_m_a_g_e_1_1_label}{M\-A\-G\-E\-::\-Label} $\ast$label, double $\ast$interpolation\-Weight)}\label{class_m_a_g_e_1_1_model_af32192860c3f1a173d45ee9cb529a976}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a1c14789a6c16843aecddc12886f986b3}{void {\bfseries compute\-Parameters} (\hyperlink{class_m_a_g_e_1_1_engine}{M\-A\-G\-E\-::\-Engine} $\ast$engine, \hyperlink{class_m_a_g_e_1_1_label}{M\-A\-G\-E\-::\-Label} $\ast$label, double $\ast$interpolation\-Weight)}\label{class_m_a_g_e_1_1_model_a1c14789a6c16843aecddc12886f986b3}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_adfd98e1d3be9ef4b25a6b544f353f81a}{void {\bfseries compute\-Global\-Variances} (\hyperlink{class_m_a_g_e_1_1_engine}{M\-A\-G\-E\-::\-Engine} $\ast$engine, \hyperlink{class_m_a_g_e_1_1_label}{M\-A\-G\-E\-::\-Label} $\ast$label)}\label{class_m_a_g_e_1_1_model_adfd98e1d3be9ef4b25a6b544f353f81a}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a48c3cee5d400aeba415997b056b2d25e}{void {\bfseries check\-Interpolation\-Weights} (\hyperlink{class_m_a_g_e_1_1_engine}{M\-A\-G\-E\-::\-Engine} $\ast$engine, bool forced=false)}\label{class_m_a_g_e_1_1_model_a48c3cee5d400aeba415997b056b2d25e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_ab52fc4232cba2bb126f7efed8dff0830}{int {\bfseries duration}}\label{class_m_a_g_e_1_1_model_ab52fc4232cba2bb126f7efed8dff0830}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_ac2d75ff326129cf1261b6e90574a1ef4}{\hyperlink{struct_m_a_g_e_1_1_state}{State} {\bfseries state} \mbox{[}n\-Of\-States\mbox{]}}\label{class_m_a_g_e_1_1_model_ac2d75ff326129cf1261b6e90574a1ef4}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a546726e2ff72b89e550fea7fb7a39087}{\hyperlink{class_m_a_g_e_1_1_model_memory}{Model\-Memory} {\bfseries model\-Memory}}\label{class_m_a_g_e_1_1_model_a546726e2ff72b89e550fea7fb7a39087}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a57567f9a8804bc6324dc1797ec7c7ccb}{char {\bfseries str\-Query} \mbox{[}max\-Str\-Len\mbox{]}}\label{class_m_a_g_e_1_1_model_a57567f9a8804bc6324dc1797ec7c7ccb}
+
+\item 
+\hypertarget{class_m_a_g_e_1_1_model_a41b96d881c37ec97efe9442043c6011c}{bool {\bfseries weights\-Checked}}\label{class_m_a_g_e_1_1_model_a41b96d881c37ec97efe9442043c6011c}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/\-Maipn/\-Documents/my\-Libs/\-M\-A\-G\-E/magelib-\/2.\-00/src/\hyperlink{_model_8h}{Model.\-h}\item 
+/\-Users/\-Maipn/\-Documents/my\-Libs/\-M\-A\-G\-E/magelib-\/2.\-00/src/\hyperlink{_model_8cpp}{Model.\-cpp}\end{DoxyCompactItemize}

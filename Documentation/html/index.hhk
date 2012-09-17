@@ -1,0 +1,855 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a5c141fafcec68091378466e7bdc5b1d7"><param name="Name" value="action"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a44e46eaece0747f143196739223e0435"><param name="Name" value="addEngine"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a407749e074c4e722099af615da63684f"><param name="Name" value="alpha"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#abfbfddb7e4e03a69d7e2648c6f78c69a"><param name="Name" value="begin"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad690491113171be438989d5b070f384b"><param name="Name" value="checkInterpolationWeights"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad690491113171be438989d5b070f384b"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a48c3cee5d400aeba415997b056b2d25e"><param name="Name" value="MAGE::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a654955584a96562c1b863b386298444d"><param name="Name" value="computeDuration"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a654955584a96562c1b863b386298444d"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#af32192860c3f1a173d45ee9cb529a976"><param name="Name" value="MAGE::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#adfd98e1d3be9ef4b25a6b544f353f81a"><param name="Name" value="computeGlobalVariances"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad4a3a580d66430a68d8fb27534543eb1"><param name="Name" value="computeParameters"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad4a3a580d66430a68d8fb27534543eb1"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a1c14789a6c16843aecddc12886f986b3"><param name="Name" value="MAGE::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html"><param name="Name" value="Constants.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#ab2bf5e717d3e772cdef44df8bd6557ad"><param name="Name" value="defaultAlpha"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a1f02bdc93d4ba82b88cd94ea5748059b"><param name="Name" value="defaultFrameRate"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a9af0a3b9dc76d8b2e39f10fc8cc10ec7"><param name="Name" value="defaultGamma"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#adbbdf48e539c84536079ea02ae1cb1d3"><param name="Name" value="defaultInterpFrameRate"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a0b2bdf6bd33e8418547f3d520e3778bc"><param name="Name" value="defaultInterpolationWeight"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a5f40bad0e2700f9d7eec355420209cb4"><param name="Name" value="defaultPadeOrder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#aaf66bc71efbd694a01ccf3121c3cc610"><param name="Name" value="defaultSamplingRate"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a05a3181ab06fffff791f99bf9df6dcee"><param name="Name" value="defaultVolume"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a94dc1d2aee01ea03c5616ab896f023d3"><param name="Name" value="durStreamIndex"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#aa93924432bf812ff05dab21f1ffbaf32"><param name="Name" value="lf0Len"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#ae1590c9e012c9d9c614e0e17b71fead7"><param name="Name" value="lf0StreamIndex"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#ac44f5816340536d7c3350dc9ff56e559"><param name="Name" value="lpfLen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a862dc97415a1e8ab8959240d0c38567d"><param name="Name" value="lpfStreamIndex"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a1039e56e904d9d67f056bb9e4277b0b5"><param name="Name" value="maxFrameQueueLen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a0f62945e9c0cf6ecc76a2b181497556c"><param name="Name" value="maxLabelQueueLen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#adef8aabcbe7798af46e9763d5a6e4628"><param name="Name" value="maxModelQueueLen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#acf59391d7f0ea3cbe5cea815bdc8a92f"><param name="Name" value="maxNumOfArguments"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#ad4a58c876332c54ba8b05b80cf82d00d"><param name="Name" value="maxNumOfFrames"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#aecaa791f74be49fa20a279fc68eeadff"><param name="Name" value="maxStrLen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#ab940fabf4b498878ac92f4bacf7a0dbc"><param name="Name" value="maxWindowWidth"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#ae448024a2434ab426b6eb2864ca4d6a0"><param name="Name" value="mgcLen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#afe3d6b516bf2ddd0cce309b1b35effc7"><param name="Name" value="mgcStreamIndex"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#adff3e7a6c9e0bd6c78982e29f946b131"><param name="Name" value="noaction"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#afeaa9334040c794c816b9d0dec4045c2"><param name="Name" value="nOfBackup"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a51faac58888055285b9bea607226e673"><param name="Name" value="nOfDers"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a75c4bcc4f8ec1af6be6b1b6af89d9af5"><param name="Name" value="nOfLF0s"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#aa05ddefa96a94e42421eebea57141c6c"><param name="Name" value="nOfLookup"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a975bdb463a4319fa817dab74f3e5f919"><param name="Name" value="nOfLPFs"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a052a7a46d76c95ee2a25c90c7dd172e1"><param name="Name" value="nOfMGCs"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a1601229625b4bb57090b276109638323"><param name="Name" value="nOfStates"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a5cab4d4a31028ec7d684077a782508d5"><param name="Name" value="nOfStreams"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#aff9d55e1160243060a2eff3f3ee0b1d6"><param name="Name" value="overwrite"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a6f86b724735cda5a8243392b24cdb3ef"><param name="Name" value="scale"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a8a38b5e1998068ddd8c6037925561945"><param name="Name" value="shift"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_constants_8h.html#a6cac226dc53fdcfe78b5478568d15ba8"><param name="Name" value="synthetic"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ab2bf5e717d3e772cdef44df8bd6557ad"><param name="Name" value="defaultAlpha"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a6da578b50f823123b9b14f210528fc92"><param name="Name" value="defaultEngine"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a1f02bdc93d4ba82b88cd94ea5748059b"><param name="Name" value="defaultFrameRate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a9af0a3b9dc76d8b2e39f10fc8cc10ec7"><param name="Name" value="defaultGamma"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#adbbdf48e539c84536079ea02ae1cb1d3"><param name="Name" value="defaultInterpFrameRate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a0b2bdf6bd33e8418547f3d520e3778bc"><param name="Name" value="defaultInterpolationWeight"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a5f40bad0e2700f9d7eec355420209cb4"><param name="Name" value="defaultPadeOrder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#aaf66bc71efbd694a01ccf3121c3cc610"><param name="Name" value="defaultSamplingRate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a05a3181ab06fffff791f99bf9df6dcee"><param name="Name" value="defaultVolume"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ab52fc4232cba2bb126f7efed8dff0830"><param name="Name" value="duration"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ab52fc4232cba2bb126f7efed8dff0830"><param name="Name" value="MAGE::Model"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a374a7cb32876f8190f7ee541283f969a"><param name="Name" value="MAGE::State"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a64e9f8ae727c1b83ff3f6a044a0684b5"><param name="Name" value="duration_array"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#acfebd76b2013186c0174a37295c2a4b3"><param name="Name" value="duration_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a07996f8c357d0e30be9ecaab0beb641e"><param name="Name" value="duration_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a94dc1d2aee01ea03c5616ab896f023d3"><param name="Name" value="durStreamIndex"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a082da9f9d38a4d65029d0d700b52405c"><param name="Name" value="enableInterpolation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a1902501774c298de2f29709b715e7b01"><param name="Name" value="end"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a2cda1c9bd936a2aae08f16048f8a3d8d"><param name="Name" value="engine"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ade080b2b3a230abbc162dbc840fe7df9"><param name="Name" value="Error"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ade080b2b3a230abbc162dbc840fe7df9"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ade080b2b3a230abbc162dbc840fe7df9"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#a22ebe115d2e0d1f1ceb0570042d10f34"><param name="Name" value="f0"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#a22ebe115d2e0d1f1ceb0570042d10f34"><param name="Name" value="MAGE::Frame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a9433e206e040793167b2bb12dff07430"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a060d1f98bb90a6e0a9408bfd154e6bf2"><param name="Name" value="frame"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a060d1f98bb90a6e0a9408bfd154e6bf2"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a15ff44566b9c488e977e2fd8cf11a85b"><param name="Name" value="MAGE::ModelQueue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_frame_queue.html#ac0e14776a1fff8f7c08680228bf7b928"><param name="Name" value="FrameQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a6972a9650e11f8f0e1f28fdb979a8b7c"><param name="Name" value="frameQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a9e55a05bc4a9545bfd7af6238843a6e9"><param name="Name" value="g"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a8fdaf7429b1457c2ec70cbc4080ca7a9"><param name="Name" value="gamma"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a6592defce9e72de3cfc266ae5e52e86d"><param name="Name" value="generate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a1adf91ffe03fdcf9b1746e4003b21c51"><param name="Name" value="get"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a1adf91ffe03fdcf9b1746e4003b21c51"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a3532d34616adfad18e1ef240c3c8e263"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a3532d34616adfad18e1ef240c3c8e263"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a3532d34616adfad18e1ef240c3c8e263"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#ac0707389d3fcb19a1acc4e44ef5b2d94"><param name="Name" value="getAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a1b2b4ac762d9975341f1dda039d6063e"><param name="Name" value="getAlpha"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a1b2b4ac762d9975341f1dda039d6063e"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#af5b257b55f3200e733a96af8b8e1013f"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#afc10c4c04c795c4139d53a50f4372446"><param name="Name" value="getBegin"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aef955527c26da647594a51f6a8d9888d"><param name="Name" value="getDefaultEngine"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a82621924af342fa5aeee62a75491b3cc"><param name="Name" value="getDuration"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a82621924af342fa5aeee62a75491b3cc"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a2400f49e3b5901ed04436fcee9b49641"><param name="Name" value="MAGE::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a1ebed98d1be44acec4b76508ad4aabdc"><param name="Name" value="getEnd"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae8ea8a1afdb6a62f0813b4bdadc25281"><param name="Name" value="getFrame"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#afb485148201b8bf80a323cc0337e5b7b"><param name="Name" value="getFrameQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a26952851fc21f3b39f7c88729a6b4ea8"><param name="Name" value="getGamma"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a26952851fc21f3b39f7c88729a6b4ea8"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#aa69d3116f7989880455766230d8af06c"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a7f5524bb3e6f55c6ee496fcd86923ca8"><param name="Name" value="getGlobal"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#aec652c9a05431ed75a93c5166d9760c5"><param name="Name" value="getIsForced"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ac1e3d8167214d6e3f4738981a4d5e36d"><param name="Name" value="getLabel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a8f02241895387ecd266748e6c8c54cde"><param name="Name" value="getLabelQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ace06f1944bb05f005772b6e83b5407ef"><param name="Name" value="getLabelSpeed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a5a5c3797369cb5a8a8f65aeed98c94a1"><param name="Name" value="getModel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ac87e1ff7eb1a77a058a3e0c1c586128b"><param name="Name" value="getModelQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#ab1f2f92109e6fca56b51be0ead9b105d"><param name="Name" value="getModelQueueMemory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#aaafb8884aeb03edb88f7b61f358a74ea"><param name="Name" value="getModelSet"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a134f211ab996b0a1a00909eacec6a1a2"><param name="Name" value="GetNumInterp"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a134f211ab996b0a1a00909eacec6a1a2"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a134f211ab996b0a1a00909eacec6a1a2"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a13da4728554d9321c489d2ac20b97446"><param name="Name" value="getNumOfItems"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a13da4728554d9321c489d2ac20b97446"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a13da4728554d9321c489d2ac20b97446"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a13da4728554d9321c489d2ac20b97446"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a9d4b3e4f17d2a710eb29c18acfd2db09"><param name="Name" value="getPadeOrder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a76b9cc7b27f27760b8f6d4c2f14cd2ed"><param name="Name" value="getPeriod"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a756095e0c9f07afa5d7bc0569a0f93d5"><param name="Name" value="getPitch"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a756095e0c9f07afa5d7bc0569a0f93d5"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a2e3e6b7d223c8e253901a30709b39100"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a9a3c9ba41daa6de0d7fa8295873da3ab"><param name="Name" value="getPOrder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#acaab046109c999aa884245e5e8dd613a"><param name="Name" value="getPStream"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a5fb8ca583cd8ec3beed66640785e29d1"><param name="Name" value="getQuery"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae150f208260289625610d6d8c1d99b8b"><param name="Name" value="getSampleCounter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a4992f435a3ce7b6aea25e09c5fc31e76"><param name="Name" value="getSpeed"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a4992f435a3ce7b6aea25e09c5fc31e76"><param name="Name" value="MAGE::Label"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab236f986ba28ec053d142be80697892e"><param name="Name" value="MAGE::Mage"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a98f78c5746a9d3f6c58564e68fc5d256"><param name="Name" value="getState"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a1d0b5e7d42b9a72d53e3d9bcd853f12b"><param name="Name" value="getVocoder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab2d2a99d80b9e44fb31edc013acf10c2"><param name="Name" value="getVolume"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab2d2a99d80b9e44fb31edc013acf10c2"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a5f5bb1141cc727462434116b9dd24e42"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a384e050ced9ebccc4bf37d8c6051900f"><param name="Name" value="global"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ac6a49470b063d92f069d3974bbe9fb81"><param name="Name" value="gv_lf0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a7bccb3672ce2572036faf33f280278fc"><param name="Name" value="gv_lpf"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ad80de821c46d9cf83e0659cb3042bf3e"><param name="Name" value="gv_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ae7506fd46c784319649c618c4a71dd5f"><param name="Name" value="gv_mgc"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a3ef2b07a2bec7fac84e5adb6ac1ca249"><param name="Name" value="gv_switch"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a1d4e17199ea97e1b4a11c7d20e7151f0"><param name="Name" value="gv_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a8ce20b001dec594aeb232d0bab3adc6f"><param name="Name" value="head"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a98b6d2861a1d6302d50f588b8e41a054"><param name="Name" value="hopLen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html"><param name="Name" value="hts.cpp"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ade080b2b3a230abbc162dbc840fe7df9"><param name="Name" value="Error"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a134f211ab996b0a1a00909eacec6a1a2"><param name="Name" value="GetNumInterp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a5f7fbda6fa2e87eaadd4024e5066eb1f"><param name="Name" value="HTS_finv"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ac49a7bc2eab2cbdec93a2e98e861880d"><param name="Name" value="HTS_PStream_backward_substitution"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ab6f03b58c851c2a9cb99c7db11426c88"><param name="Name" value="HTS_PStream_calc_derivative"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a0454f4485d31e93f6cd02a3035f45daf"><param name="Name" value="HTS_PStream_calc_gv"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a164912f376f89a9c5d08669ad6e8ccb5"><param name="Name" value="HTS_PStream_calc_wuw_and_wum"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a153db6ffa6ddb40290297ec974df09a0"><param name="Name" value="HTS_PStream_conv_gv"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ae407a56aad8ff102e20cfbe08cbdf97b"><param name="Name" value="HTS_PStream_forward_substitution"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ad1e0140e378e294f736da44e17229a17"><param name="Name" value="HTS_PStream_gv_parmgen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a870b4fa1b40ad11c8031a0dd5d47e61c"><param name="Name" value="HTS_PStream_ldl_factorization"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a8c1275605ff331b268d6387d4fd39dd9"><param name="Name" value="HTS_PStream_mlpg"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ad96dba606b0178a13fc3211e8475c244"><param name="Name" value="isdigit_string"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a2502432c0d6cb36622bc5619dc35f37d"><param name="Name" value="mHTS_set_duration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a40185ea52d16cecaafae70740e90af29"><param name="Name" value="Usage"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html"><param name="Name" value="hts.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ade080b2b3a230abbc162dbc840fe7df9"><param name="Name" value="Error"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a134f211ab996b0a1a00909eacec6a1a2"><param name="Name" value="GetNumInterp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a5f7fbda6fa2e87eaadd4024e5066eb1f"><param name="Name" value="HTS_finv"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ac49a7bc2eab2cbdec93a2e98e861880d"><param name="Name" value="HTS_PStream_backward_substitution"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ab6f03b58c851c2a9cb99c7db11426c88"><param name="Name" value="HTS_PStream_calc_derivative"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a0454f4485d31e93f6cd02a3035f45daf"><param name="Name" value="HTS_PStream_calc_gv"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a164912f376f89a9c5d08669ad6e8ccb5"><param name="Name" value="HTS_PStream_calc_wuw_and_wum"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a153db6ffa6ddb40290297ec974df09a0"><param name="Name" value="HTS_PStream_conv_gv"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ae407a56aad8ff102e20cfbe08cbdf97b"><param name="Name" value="HTS_PStream_forward_substitution"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ad1e0140e378e294f736da44e17229a17"><param name="Name" value="HTS_PStream_gv_parmgen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a870b4fa1b40ad11c8031a0dd5d47e61c"><param name="Name" value="HTS_PStream_ldl_factorization"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a8c1275605ff331b268d6387d4fd39dd9"><param name="Name" value="HTS_PStream_mlpg"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ad96dba606b0178a13fc3211e8475c244"><param name="Name" value="isdigit_string"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a2502432c0d6cb36622bc5619dc35f37d"><param name="Name" value="mHTS_set_duration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a40185ea52d16cecaafae70740e90af29"><param name="Name" value="Usage"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a5f7fbda6fa2e87eaadd4024e5066eb1f"><param name="Name" value="HTS_finv"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a5f7fbda6fa2e87eaadd4024e5066eb1f"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a5f7fbda6fa2e87eaadd4024e5066eb1f"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ac49a7bc2eab2cbdec93a2e98e861880d"><param name="Name" value="HTS_PStream_backward_substitution"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ac49a7bc2eab2cbdec93a2e98e861880d"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ac49a7bc2eab2cbdec93a2e98e861880d"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ab6f03b58c851c2a9cb99c7db11426c88"><param name="Name" value="HTS_PStream_calc_derivative"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ab6f03b58c851c2a9cb99c7db11426c88"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ab6f03b58c851c2a9cb99c7db11426c88"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a0454f4485d31e93f6cd02a3035f45daf"><param name="Name" value="HTS_PStream_calc_gv"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a0454f4485d31e93f6cd02a3035f45daf"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a0454f4485d31e93f6cd02a3035f45daf"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a164912f376f89a9c5d08669ad6e8ccb5"><param name="Name" value="HTS_PStream_calc_wuw_and_wum"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a164912f376f89a9c5d08669ad6e8ccb5"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a164912f376f89a9c5d08669ad6e8ccb5"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a153db6ffa6ddb40290297ec974df09a0"><param name="Name" value="HTS_PStream_conv_gv"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a153db6ffa6ddb40290297ec974df09a0"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a153db6ffa6ddb40290297ec974df09a0"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ae407a56aad8ff102e20cfbe08cbdf97b"><param name="Name" value="HTS_PStream_forward_substitution"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ae407a56aad8ff102e20cfbe08cbdf97b"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ae407a56aad8ff102e20cfbe08cbdf97b"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ad1e0140e378e294f736da44e17229a17"><param name="Name" value="HTS_PStream_gv_parmgen"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ad1e0140e378e294f736da44e17229a17"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ad1e0140e378e294f736da44e17229a17"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a870b4fa1b40ad11c8031a0dd5d47e61c"><param name="Name" value="HTS_PStream_ldl_factorization"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a870b4fa1b40ad11c8031a0dd5d47e61c"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a870b4fa1b40ad11c8031a0dd5d47e61c"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a8c1275605ff331b268d6387d4fd39dd9"><param name="Name" value="HTS_PStream_mlpg"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a8c1275605ff331b268d6387d4fd39dd9"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a8c1275605ff331b268d6387d4fd39dd9"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a9d8c1c2a881e496c9e49464b595b7a81"><param name="Name" value="initDuration"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a0da8e90094bcf69179718334b1ad13b5"><param name="Name" value="initParameters"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae013f381e433a8d38fdd91a0f6153c4b"><param name="Name" value="interpolationFlag"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ad96dba606b0178a13fc3211e8475c244"><param name="Name" value="isdigit_string"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#ad96dba606b0178a13fc3211e8475c244"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#ad96dba606b0178a13fc3211e8475c244"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0a2d45cf42d8ba62240d544b61f690c8"><param name="Name" value="isEmpty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0a2d45cf42d8ba62240d544b61f690c8"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad58057636272de08aca77c2773ce178f"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad58057636272de08aca77c2773ce178f"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad58057636272de08aca77c2773ce178f"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#afec7c4e82578ed9d9b03878107c223df"><param name="Name" value="isForced"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#ac55a268122abcec371db89ecacdfd94e"><param name="Name" value="isFull"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#ac55a268122abcec371db89ecacdfd94e"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a14d11ba168fec1a6e2a90ae589f7456d"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a14d11ba168fec1a6e2a90ae589f7456d"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a14d11ba168fec1a6e2a90ae589f7456d"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a6082303317d5ce9424fc880a0e5b76c3"><param name="Name" value="isVoiced"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a636545600f4ee5360b7d9782c9042744"><param name="Name" value="ivar"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a52e386d730501d12817be92f89cb2611"><param name="Name" value="Label"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aaeb0eeeffb9fb5f84649e40b123ca951"><param name="Name" value="label"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a2a35d82d85dbe5640121e4e829b59a52"><param name="Name" value="labelMemory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a5d69bbec1eefe9fccd34a14802d18e33"><param name="Name" value="LabelQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a0bc721d13c832f77794dfbe8446d4ad1"><param name="Name" value="labelQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a755abfac229ab051cf7a2272bd0112a4"><param name="Name" value="labelSpeed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="length"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ae1685135e0a59bc23e8e7bbde11c2c97"><param name="Name" value="lf0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a77240283e31e92076c73ecc0f9dbc34f"><param name="Name" value="lf0_gv_switch"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a3059f36a01ccbb2d7251f50656a8da44"><param name="Name" value="lf0_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a4a0ad4390763808f5145660046ec84db"><param name="Name" value="lf0_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#aa93924432bf812ff05dab21f1ffbaf32"><param name="Name" value="lf0Len"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ae1590c9e012c9d9c614e0e17b71fead7"><param name="Name" value="lf0StreamIndex"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a06011d5cf59c57d195b47b03d37b5206"><param name="Name" value="load"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#aeaab3d1d1d46a336225af11f43583c1f"><param name="Name" value="lpf"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#aeaab3d1d1d46a336225af11f43583c1f"><param name="Name" value="MAGE::Frame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a62f825871ec404acd4387f66c3a9d2d9"><param name="Name" value="MAGE::State"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a174dfed9ae24aff59d3f69d0733478e5"><param name="Name" value="lpf_gv_switch"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ab97ed8bed09fa61ab56e88380879f9f9"><param name="Name" value="lpf_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a7e047e702ee5029a374fd76c7924346e"><param name="Name" value="lpf_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ac44f5816340536d7c3350dc9ff56e559"><param name="Name" value="lpfLen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a862dc97415a1e8ab8959240d0c38567d"><param name="Name" value="lpfStreamIndex"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_distribution.html"><param name="Name" value="MAGE::Distribution"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_distribution.html#a604ebb36706e149529946d2028a178eb"><param name="Name" value="mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_distribution.html#a9e2f2aa03bb780e60bb402d6eb5c941d"><param name="Name" value="vari"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html"><param name="Name" value="MAGE::Engine"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a7f5524bb3e6f55c6ee496fcd86923ca8"><param name="Name" value="getGlobal"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#aaafb8884aeb03edb88f7b61f358a74ea"><param name="Name" value="getModelSet"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#acaab046109c999aa884245e5e8dd613a"><param name="Name" value="getPStream"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a384e050ced9ebccc4bf37d8c6051900f"><param name="Name" value="global"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a06011d5cf59c57d195b47b03d37b5206"><param name="Name" value="load"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#ad26bf0e3d9eeebcdb9917a4f48971fa2"><param name="Name" value="ms"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a76b2f51be6691017e93b45c2187f8fa5"><param name="Name" value="pss"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a5a0940ccfcd254f4e26e1e4f7bac4352"><param name="Name" value="setGlobal"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a2c560516aed6235a6e97787581d20ab1"><param name="Name" value="setModelSet"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a6d9578d3142bd223e4f9a16b85c345ad"><param name="Name" value="setPStream"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html"><param name="Name" value="MAGE::Frame"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#a22ebe115d2e0d1f1ceb0570042d10f34"><param name="Name" value="f0"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#aeaab3d1d1d46a336225af11f43583c1f"><param name="Name" value="lpf"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#acb7d2f554e9ae0d63f0bcad3a5450c3d"><param name="Name" value="mgc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#a7d0bff085a85c0cf4b6a5fc1eaf2827f"><param name="Name" value="voiced"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_frame_queue.html"><param name="Name" value="MAGE::FrameQueue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_frame_queue.html#ac0e14776a1fff8f7c08680228bf7b928"><param name="Name" value="FrameQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_frame_queue.html#ad57e61773de705ea155e62f6956fc2f5"><param name="Name" value="printQueue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html"><param name="Name" value="MAGE::Label"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#abfbfddb7e4e03a69d7e2648c6f78c69a"><param name="Name" value="begin"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a1902501774c298de2f29709b715e7b01"><param name="Name" value="end"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#afc10c4c04c795c4139d53a50f4372446"><param name="Name" value="getBegin"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a1ebed98d1be44acec4b76508ad4aabdc"><param name="Name" value="getEnd"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#aec652c9a05431ed75a93c5166d9760c5"><param name="Name" value="getIsForced"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a5fb8ca583cd8ec3beed66640785e29d1"><param name="Name" value="getQuery"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a4992f435a3ce7b6aea25e09c5fc31e76"><param name="Name" value="getSpeed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#afec7c4e82578ed9d9b03878107c223df"><param name="Name" value="isForced"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a52e386d730501d12817be92f89cb2611"><param name="Name" value="Label"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a2a35d82d85dbe5640121e4e829b59a52"><param name="Name" value="labelMemory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#ab712ec7ae4d3ebf1ab041845da608719"><param name="Name" value="parseQuery"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#adda3f353ba52de2abdf3773ec976875a"><param name="Name" value="printQuery"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a2d39a9bcadb698c17ff42d4b999faac8"><param name="Name" value="query"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a9ac98d6509ab6e758b9660d2a5aa46ed"><param name="Name" value="setBegin"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#abd9e189054153f714d6c85b5c50bb1ba"><param name="Name" value="setEnd"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a5e5c9387f04be05ae215bea33db15bbf"><param name="Name" value="setIsForced"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a371dc0984e9a505b06ddd6f750ed251a"><param name="Name" value="setQuery"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#ae307a1bd87eac39162ca659d6984e154"><param name="Name" value="setSpeed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a2944a3886038159fd5d5ab0b798fa93b"><param name="Name" value="speed"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html"><param name="Name" value="MAGE::LabelMemory"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a382f808581ccf99a9bb6f8b086005960"><param name="Name" value="strBegin"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a9e14137e9d57426d097cf3e266a2f153"><param name="Name" value="strEnd"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a623b0a23723b50d2bb7746b015ee8bd5"><param name="Name" value="strQuery"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a1adf91ffe03fdcf9b1746e4003b21c51"><param name="Name" value="get"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0a2d45cf42d8ba62240d544b61f690c8"><param name="Name" value="isEmpty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#ac55a268122abcec371db89ecacdfd94e"><param name="Name" value="isFull"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a5d69bbec1eefe9fccd34a14802d18e33"><param name="Name" value="LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#ad601c5c5034dd42fbbe511d4fb715b56"><param name="Name" value="next"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#aeb3e11635459ef045c4b93966775d723"><param name="Name" value="nOfLabels"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a096711daf22ea9b75b2049f2be70aea3"><param name="Name" value="pop"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0fcea608643f081bd3044706ae98142d"><param name="Name" value="print"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#abd3acda693815cbb59cc3a084d9c0829"><param name="Name" value="push"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#ac3e06511af7d94f1eeff2911fff27325"><param name="Name" value="queue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#afa43057433f1ab70f910d74930e55a6e"><param name="Name" value="read"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0618d5991d8d4541dbf1cd208998d2f2"><param name="Name" value="write"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html"><param name="Name" value="MAGE::Mage"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a44e46eaece0747f143196739223e0435"><param name="Name" value="addEngine"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad690491113171be438989d5b070f384b"><param name="Name" value="checkInterpolationWeights"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a654955584a96562c1b863b386298444d"><param name="Name" value="computeDuration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad4a3a580d66430a68d8fb27534543eb1"><param name="Name" value="computeParameters"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a6da578b50f823123b9b14f210528fc92"><param name="Name" value="defaultEngine"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a082da9f9d38a4d65029d0d700b52405c"><param name="Name" value="enableInterpolation"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a2cda1c9bd936a2aae08f16048f8a3d8d"><param name="Name" value="engine"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a060d1f98bb90a6e0a9408bfd154e6bf2"><param name="Name" value="frame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a6972a9650e11f8f0e1f28fdb979a8b7c"><param name="Name" value="frameQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a1b2b4ac762d9975341f1dda039d6063e"><param name="Name" value="getAlpha"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aef955527c26da647594a51f6a8d9888d"><param name="Name" value="getDefaultEngine"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a82621924af342fa5aeee62a75491b3cc"><param name="Name" value="getDuration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae8ea8a1afdb6a62f0813b4bdadc25281"><param name="Name" value="getFrame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#afb485148201b8bf80a323cc0337e5b7b"><param name="Name" value="getFrameQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a26952851fc21f3b39f7c88729a6b4ea8"><param name="Name" value="getGamma"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ac1e3d8167214d6e3f4738981a4d5e36d"><param name="Name" value="getLabel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a8f02241895387ecd266748e6c8c54cde"><param name="Name" value="getLabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ace06f1944bb05f005772b6e83b5407ef"><param name="Name" value="getLabelSpeed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a5a5c3797369cb5a8a8f65aeed98c94a1"><param name="Name" value="getModel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ac87e1ff7eb1a77a058a3e0c1c586128b"><param name="Name" value="getModelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a756095e0c9f07afa5d7bc0569a0f93d5"><param name="Name" value="getPitch"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a9a3c9ba41daa6de0d7fa8295873da3ab"><param name="Name" value="getPOrder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae150f208260289625610d6d8c1d99b8b"><param name="Name" value="getSampleCounter"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab236f986ba28ec053d142be80697892e"><param name="Name" value="getSpeed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a1d0b5e7d42b9a72d53e3d9bcd853f12b"><param name="Name" value="getVocoder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab2d2a99d80b9e44fb31edc013acf10c2"><param name="Name" value="getVolume"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a98b6d2861a1d6302d50f588b8e41a054"><param name="Name" value="hopLen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae013f381e433a8d38fdd91a0f6153c4b"><param name="Name" value="interpolationFlag"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aaeb0eeeffb9fb5f84649e40b123ca951"><param name="Name" value="label"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a0bc721d13c832f77794dfbe8446d4ad1"><param name="Name" value="labelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a755abfac229ab051cf7a2272bd0112a4"><param name="Name" value="labelSpeed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#addc8c5637cd9e1c38b077354bd89da33"><param name="Name" value="Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae0026ef68a41dc1764571ff86192e6ce"><param name="Name" value="model"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a2a13c60d4174db48bd1b2de2f1f606ed"><param name="Name" value="modelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad1608921d3634dbcedf7ab06eb558b6f"><param name="Name" value="optimizeParameters"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#afccd7f699d3a3c95decb77b872642ebd"><param name="Name" value="popLabel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#acf48640f37d4a797a285930b8e2639be"><param name="Name" value="popSamples"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a7a123427ef52c6e54aa0ebfa3a62d131"><param name="Name" value="prepareModel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a925cd537c72cd98e1ed488398ad46e45"><param name="Name" value="print"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a09eeea43ffba1519cb5709f39ddda43b"><param name="Name" value="pushLabel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa374565aaed67cb05b39516e11eb6638"><param name="Name" value="removeEngine"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a41a3d6bdc9dec7fb502f5d2f3212d95b"><param name="Name" value="reset"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#afa6d88eb37afdaf56a762b47df0f3f7c"><param name="Name" value="resetVocoder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#af4813e05a1a6390a280302588b7ab84a"><param name="Name" value="run"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a0301b5e7d0876dcf9f1424c7c1900e73"><param name="Name" value="sampleCount"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa5bcce5e56cc246c7dce73d287d59c9d"><param name="Name" value="setAlpha"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab2cc4ec66c1c570fd70313384406e742"><param name="Name" value="setDefaultEngine"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aafa5e062b14d856d4ad845dcab706005"><param name="Name" value="setDuration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ac7bf18d62123a16be7062332ff9e4199"><param name="Name" value="setFrame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a150ae12ed4e3ffc3a62abaf5fdfd9e3d"><param name="Name" value="setFrameQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa619158500973cb5cb30b5017cf4624f"><param name="Name" value="setGamma"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#adef698d2640dc3c76c6faa7c0c9853a9"><param name="Name" value="setInterpolationFunctions"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aec2890ec81154a590c43771fcbc5c01f"><param name="Name" value="setLabel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a9b17d63eb3d7e5056fc1e07341abe15a"><param name="Name" value="setLabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a7f8dabb44a06ecee3abde35842ffe48e"><param name="Name" value="setLabelSpeed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a5b5483ba34fdc6fe9c8f120737ad8e5f"><param name="Name" value="setModel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab2035e9b0d1ba9b37487f8d89933c61a"><param name="Name" value="setModelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae3dd0c90ccb3a22f0bf87347177b4ad3"><param name="Name" value="setPitch"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a55ed47d0fcf247afc9dd3d613782ac66"><param name="Name" value="setPOrder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a4002ab5e2dd124e10f8a46713f43bf15"><param name="Name" value="setSpeed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a40e130dd62fecb5039f1228b6bdc2464"><param name="Name" value="setVocoder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a1e87dd6829eeb4e5d0877e846b1e7329"><param name="Name" value="setVolume"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a31c05688b6f303a45f25cecd0d402b6d"><param name="Name" value="updateSamples"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa43e2f78a23a977d9d237c853e0cb39e"><param name="Name" value="vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a3532d34616adfad18e1ef240c3c8e263"><param name="Name" value="get"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a13da4728554d9321c489d2ac20b97446"><param name="Name" value="getNumOfItems"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad58057636272de08aca77c2773ce178f"><param name="Name" value="isEmpty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a14d11ba168fec1a6e2a90ae589f7456d"><param name="Name" value="isFull"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="length"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a6511417af94f01a9aecf95ee6cd287ba"><param name="Name" value="MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a84c38188c7243f8200ce06172cb351e7"><param name="Name" value="next"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a7239003377e584461a68b946e8a450c2"><param name="Name" value="nOfItems"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f6a5e82ef09da2dcc4fb206ee2daae"><param name="Name" value="pop"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ab1a6d50de41fe85f2bc43475ae60561b"><param name="Name" value="push"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f511bef09c174561f274c5929f5cbc"><param name="Name" value="rawData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a37c26fa8fa2fee058e60abe244b1401b"><param name="Name" value="read"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#aeff52eaca471c116901ae4bed71f9df8"><param name="Name" value="remain"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ac587185d80b23548645d428bd7ce12c4"><param name="Name" value="write"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html"><param name="Name" value="MAGE::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a48c3cee5d400aeba415997b056b2d25e"><param name="Name" value="checkInterpolationWeights"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#af32192860c3f1a173d45ee9cb529a976"><param name="Name" value="computeDuration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#adfd98e1d3be9ef4b25a6b544f353f81a"><param name="Name" value="computeGlobalVariances"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a1c14789a6c16843aecddc12886f986b3"><param name="Name" value="computeParameters"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ab52fc4232cba2bb126f7efed8dff0830"><param name="Name" value="duration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a2400f49e3b5901ed04436fcee9b49641"><param name="Name" value="getDuration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a98f78c5746a9d3f6c58564e68fc5d256"><param name="Name" value="getState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a9d8c1c2a881e496c9e49464b595b7a81"><param name="Name" value="initDuration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a0da8e90094bcf69179718334b1ad13b5"><param name="Name" value="initParameters"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a546726e2ff72b89e550fea7fb7a39087"><param name="Name" value="modelMemory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a59f493069f299cd68862c954791bcf34"><param name="Name" value="setDuration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a4c3af53691987ae0c8d3f0d921da3f61"><param name="Name" value="setState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ac2d75ff326129cf1261b6e90574a1ef4"><param name="Name" value="state"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a57567f9a8804bc6324dc1797ec7c7ccb"><param name="Name" value="strQuery"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a90a47244e550dfaf403ab9e28175af86"><param name="Name" value="updateDuration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a41b96d881c37ec97efe9442043c6011c"><param name="Name" value="weightsChecked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html"><param name="Name" value="MAGE::ModelMemory"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a64e9f8ae727c1b83ff3f6a044a0684b5"><param name="Name" value="duration_array"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#acfebd76b2013186c0174a37295c2a4b3"><param name="Name" value="duration_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a07996f8c357d0e30be9ecaab0beb641e"><param name="Name" value="duration_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a3059f36a01ccbb2d7251f50656a8da44"><param name="Name" value="lf0_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a4a0ad4390763808f5145660046ec84db"><param name="Name" value="lf0_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ab97ed8bed09fa61ab56e88380879f9f9"><param name="Name" value="lpf_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a7e047e702ee5029a374fd76c7924346e"><param name="Name" value="lpf_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a4a0ea059ab8d24374a405e1abeab2904"><param name="Name" value="mgc_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ab7320b69a914d63ef1b1db2ea55dbe5b"><param name="Name" value="mgc_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a73e749ceae42aff89c1865122956fcc4"><param name="Name" value="strQuery"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html"><param name="Name" value="MAGE::ModelQueue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a15ff44566b9c488e977e2fd8cf11a85b"><param name="Name" value="frame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a6592defce9e72de3cfc266ae5e52e86d"><param name="Name" value="generate"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#ab1f2f92109e6fca56b51be0ead9b105d"><param name="Name" value="getModelQueueMemory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a8ce20b001dec594aeb232d0bab3adc6f"><param name="Name" value="head"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a03f786d7dc7e7adad25216f8ec83752d"><param name="Name" value="ModelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#aac94662cccf3527e70879cc3f58c2ece"><param name="Name" value="modelQueueMemory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a6c76b6ddff10f8caa21fc454325d3b77"><param name="Name" value="optimizeParameters"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a566cc6d3e8f6e50a54da65f185592629"><param name="Name" value="printQueue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html"><param name="Name" value="MAGE::ModelQueueMemory"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a9e55a05bc4a9545bfd7af6238843a6e9"><param name="Name" value="g"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ad80de821c46d9cf83e0659cb3042bf3e"><param name="Name" value="gv_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a3ef2b07a2bec7fac84e5adb6ac1ca249"><param name="Name" value="gv_switch"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a1d4e17199ea97e1b4a11c7d20e7151f0"><param name="Name" value="gv_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a636545600f4ee5360b7d9782c9042744"><param name="Name" value="ivar"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a6831d4cdf1472693fc85f4d3c53ea7f4"><param name="Name" value="mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#aebc11b875893cb9f893042acda3654d0"><param name="Name" value="par"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a109bd7570f9690fcc3662381042e7b05"><param name="Name" value="voiced_unvoiced"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ae7bad2f0e36ec2ca981f4516d2ee98eb"><param name="Name" value="wum"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ae4956587c224f47c013fbade1181716e"><param name="Name" value="wuw"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_m_s_distribution.html"><param name="Name" value="MAGE::MSDistribution"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_m_s_distribution.html#a0ed9157691205923f9555223b473387a"><param name="Name" value="msdFlag"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html"><param name="Name" value="MAGE::State"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a374a7cb32876f8190f7ee541283f969a"><param name="Name" value="duration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ac6a49470b063d92f069d3974bbe9fb81"><param name="Name" value="gv_lf0"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a7bccb3672ce2572036faf33f280278fc"><param name="Name" value="gv_lpf"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ae7506fd46c784319649c618c4a71dd5f"><param name="Name" value="gv_mgc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ae1685135e0a59bc23e8e7bbde11c2c97"><param name="Name" value="lf0"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a77240283e31e92076c73ecc0f9dbc34f"><param name="Name" value="lf0_gv_switch"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a62f825871ec404acd4387f66c3a9d2d9"><param name="Name" value="lpf"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a174dfed9ae24aff59d3f69d0733478e5"><param name="Name" value="lpf_gv_switch"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a1a8511f007e662b79fc204e4cb3261a4"><param name="Name" value="mgc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#af71881812290585c3ea318251c0bb3f5"><param name="Name" value="mgc_gv_switch"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a5c141fafcec68091378466e7bdc5b1d7"><param name="Name" value="action"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a407749e074c4e722099af615da63684f"><param name="Name" value="alpha"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a9433e206e040793167b2bb12dff07430"><param name="Name" value="f0"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a8fdaf7429b1457c2ec70cbc4080ca7a9"><param name="Name" value="gamma"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#ac0707389d3fcb19a1acc4e44ef5b2d94"><param name="Name" value="getAction"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#af5b257b55f3200e733a96af8b8e1013f"><param name="Name" value="getAlpha"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#aa69d3116f7989880455766230d8af06c"><param name="Name" value="getGamma"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a9d4b3e4f17d2a710eb29c18acfd2db09"><param name="Name" value="getPadeOrder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a76b9cc7b27f27760b8f6d4c2f14cd2ed"><param name="Name" value="getPeriod"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a2e3e6b7d223c8e253901a30709b39100"><param name="Name" value="getPitch"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a5f5bb1141cc727462434116b9dd24e42"><param name="Name" value="getVolume"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a6082303317d5ce9424fc880a0e5b76c3"><param name="Name" value="isVoiced"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a1ce94efa74a2b8f2391ddaf9443e60d7"><param name="Name" value="pop"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a090b14af5e7371412ebee3829808f2de"><param name="Name" value="push"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#af71ab9d9790777fb336354d1360b5c46"><param name="Name" value="ready"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#aa219489f0b80f526dd97f19587b35239"><param name="Name" value="reset"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a638ebd059ae6e38500f9bf0b62ffde79"><param name="Name" value="setAlpha"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#af7f2886e18a5ca7929a1031b86c1cf4b"><param name="Name" value="setGamma"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a67cdc9e3f2f2561782944b6702fff7d1"><param name="Name" value="setPadeOrder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#ad0010897fe2f1b7ff08ff765b2c315b9"><param name="Name" value="setPitch"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a56823e2f6437744f5d2ceb2ec973b3f2"><param name="Name" value="setVoiced"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#abe8aa23071fe0b6ba424a4f0105b3788"><param name="Name" value="setVolume"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a2989b96b629bc07f2a1b09f01b6fa1fd"><param name="Name" value="t0"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a0c949814cc5263ae226c23fb5ca7abf4"><param name="Name" value="Vocoder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a5ad040b2ba593e638a29c015c8a8212a"><param name="Name" value="voiced"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#addc8c5637cd9e1c38b077354bd89da33"><param name="Name" value="Mage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_math_functions_8h.html"><param name="Name" value="MathFunctions.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_math_functions_8h.html#a1bed5a930aea388098142aa3ff874789"><param name="Name" value="Max"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_math_functions_8h.html#a2f1c180ea5a765fe2ab5b2c4778d466d"><param name="Name" value="Min"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_math_functions_8h.html#a6f1b1461b20a31ddc1ec34750b1f4004"><param name="Name" value="Random"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a1bed5a930aea388098142aa3ff874789"><param name="Name" value="Max"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a1039e56e904d9d67f056bb9e4277b0b5"><param name="Name" value="maxFrameQueueLen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a0f62945e9c0cf6ecc76a2b181497556c"><param name="Name" value="maxLabelQueueLen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#adef8aabcbe7798af46e9763d5a6e4628"><param name="Name" value="maxModelQueueLen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#acf59391d7f0ea3cbe5cea815bdc8a92f"><param name="Name" value="maxNumOfArguments"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ad4a58c876332c54ba8b05b80cf82d00d"><param name="Name" value="maxNumOfFrames"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#aecaa791f74be49fa20a279fc68eeadff"><param name="Name" value="maxStrLen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ab940fabf4b498878ac92f4bacf7a0dbc"><param name="Name" value="maxWindowWidth"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_distribution.html#a604ebb36706e149529946d2028a178eb"><param name="Name" value="mean"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_distribution.html#a604ebb36706e149529946d2028a178eb"><param name="Name" value="MAGE::Distribution"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a6831d4cdf1472693fc85f4d3c53ea7f4"><param name="Name" value="MAGE::ModelQueueMemory"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a3532d34616adfad18e1ef240c3c8e263"><param name="Name" value="get"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a13da4728554d9321c489d2ac20b97446"><param name="Name" value="getNumOfItems"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad58057636272de08aca77c2773ce178f"><param name="Name" value="isEmpty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a14d11ba168fec1a6e2a90ae589f7456d"><param name="Name" value="isFull"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="length"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a6511417af94f01a9aecf95ee6cd287ba"><param name="Name" value="MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a84c38188c7243f8200ce06172cb351e7"><param name="Name" value="next"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a7239003377e584461a68b946e8a450c2"><param name="Name" value="nOfItems"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f6a5e82ef09da2dcc4fb206ee2daae"><param name="Name" value="pop"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ab1a6d50de41fe85f2bc43475ae60561b"><param name="Name" value="push"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f511bef09c174561f274c5929f5cbc"><param name="Name" value="rawData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a37c26fa8fa2fee058e60abe244b1401b"><param name="Name" value="read"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#aeff52eaca471c116901ae4bed71f9df8"><param name="Name" value="remain"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ac587185d80b23548645d428bd7ce12c4"><param name="Name" value="write"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a3532d34616adfad18e1ef240c3c8e263"><param name="Name" value="get"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a13da4728554d9321c489d2ac20b97446"><param name="Name" value="getNumOfItems"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad58057636272de08aca77c2773ce178f"><param name="Name" value="isEmpty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a14d11ba168fec1a6e2a90ae589f7456d"><param name="Name" value="isFull"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="length"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a6511417af94f01a9aecf95ee6cd287ba"><param name="Name" value="MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a84c38188c7243f8200ce06172cb351e7"><param name="Name" value="next"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a7239003377e584461a68b946e8a450c2"><param name="Name" value="nOfItems"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f6a5e82ef09da2dcc4fb206ee2daae"><param name="Name" value="pop"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ab1a6d50de41fe85f2bc43475ae60561b"><param name="Name" value="push"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f511bef09c174561f274c5929f5cbc"><param name="Name" value="rawData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a37c26fa8fa2fee058e60abe244b1401b"><param name="Name" value="read"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#aeff52eaca471c116901ae4bed71f9df8"><param name="Name" value="remain"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ac587185d80b23548645d428bd7ce12c4"><param name="Name" value="write"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a6511417af94f01a9aecf95ee6cd287ba"><param name="Name" value="MemQueue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a6511417af94f01a9aecf95ee6cd287ba"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a6511417af94f01a9aecf95ee6cd287ba"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a6511417af94f01a9aecf95ee6cd287ba"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#acb7d2f554e9ae0d63f0bcad3a5450c3d"><param name="Name" value="mgc"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#acb7d2f554e9ae0d63f0bcad3a5450c3d"><param name="Name" value="MAGE::Frame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a1a8511f007e662b79fc204e4cb3261a4"><param name="Name" value="MAGE::State"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#af71881812290585c3ea318251c0bb3f5"><param name="Name" value="mgc_gv_switch"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a4a0ea059ab8d24374a405e1abeab2904"><param name="Name" value="mgc_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ab7320b69a914d63ef1b1db2ea55dbe5b"><param name="Name" value="mgc_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ae448024a2434ab426b6eb2864ca4d6a0"><param name="Name" value="mgcLen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#afe3d6b516bf2ddd0cce309b1b35effc7"><param name="Name" value="mgcStreamIndex"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a2502432c0d6cb36622bc5619dc35f37d"><param name="Name" value="mHTS_set_duration"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a2502432c0d6cb36622bc5619dc35f37d"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a2502432c0d6cb36622bc5619dc35f37d"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a2f1c180ea5a765fe2ab5b2c4778d466d"><param name="Name" value="Min"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae0026ef68a41dc1764571ff86192e6ce"><param name="Name" value="model"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a546726e2ff72b89e550fea7fb7a39087"><param name="Name" value="modelMemory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a2a13c60d4174db48bd1b2de2f1f606ed"><param name="Name" value="modelQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a03f786d7dc7e7adad25216f8ec83752d"><param name="Name" value="ModelQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#aac94662cccf3527e70879cc3f58c2ece"><param name="Name" value="modelQueueMemory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#ad26bf0e3d9eeebcdb9917a4f48971fa2"><param name="Name" value="ms"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_m_s_distribution.html#a0ed9157691205923f9555223b473387a"><param name="Name" value="msdFlag"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#ad601c5c5034dd42fbbe511d4fb715b56"><param name="Name" value="next"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#ad601c5c5034dd42fbbe511d4fb715b56"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a84c38188c7243f8200ce06172cb351e7"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a84c38188c7243f8200ce06172cb351e7"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a84c38188c7243f8200ce06172cb351e7"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#adff3e7a6c9e0bd6c78982e29f946b131"><param name="Name" value="noaction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#afeaa9334040c794c816b9d0dec4045c2"><param name="Name" value="nOfBackup"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a51faac58888055285b9bea607226e673"><param name="Name" value="nOfDers"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a7239003377e584461a68b946e8a450c2"><param name="Name" value="nOfItems"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a7239003377e584461a68b946e8a450c2"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a7239003377e584461a68b946e8a450c2"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a7239003377e584461a68b946e8a450c2"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#aeb3e11635459ef045c4b93966775d723"><param name="Name" value="nOfLabels"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a75c4bcc4f8ec1af6be6b1b6af89d9af5"><param name="Name" value="nOfLF0s"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#aa05ddefa96a94e42421eebea57141c6c"><param name="Name" value="nOfLookup"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a975bdb463a4319fa817dab74f3e5f919"><param name="Name" value="nOfLPFs"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a052a7a46d76c95ee2a25c90c7dd172e1"><param name="Name" value="nOfMGCs"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a1601229625b4bb57090b276109638323"><param name="Name" value="nOfStates"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a5cab4d4a31028ec7d684077a782508d5"><param name="Name" value="nOfStreams"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad1608921d3634dbcedf7ab06eb558b6f"><param name="Name" value="optimizeParameters"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ad1608921d3634dbcedf7ab06eb558b6f"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a6c76b6ddff10f8caa21fc454325d3b77"><param name="Name" value="MAGE::ModelQueue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#aff9d55e1160243060a2eff3f3ee0b1d6"><param name="Name" value="overwrite"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#aebc11b875893cb9f893042acda3654d0"><param name="Name" value="par"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#ab712ec7ae4d3ebf1ab041845da608719"><param name="Name" value="parseQuery"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a096711daf22ea9b75b2049f2be70aea3"><param name="Name" value="pop"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a096711daf22ea9b75b2049f2be70aea3"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f6a5e82ef09da2dcc4fb206ee2daae"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a1ce94efa74a2b8f2391ddaf9443e60d7"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f6a5e82ef09da2dcc4fb206ee2daae"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f6a5e82ef09da2dcc4fb206ee2daae"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#afccd7f699d3a3c95decb77b872642ebd"><param name="Name" value="popLabel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#acf48640f37d4a797a285930b8e2639be"><param name="Name" value="popSamples"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a7a123427ef52c6e54aa0ebfa3a62d131"><param name="Name" value="prepareModel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0fcea608643f081bd3044706ae98142d"><param name="Name" value="print"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0fcea608643f081bd3044706ae98142d"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a925cd537c72cd98e1ed488398ad46e45"><param name="Name" value="MAGE::Mage"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#adda3f353ba52de2abdf3773ec976875a"><param name="Name" value="printQuery"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_frame_queue.html#ad57e61773de705ea155e62f6956fc2f5"><param name="Name" value="printQueue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_frame_queue.html#ad57e61773de705ea155e62f6956fc2f5"><param name="Name" value="MAGE::FrameQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a566cc6d3e8f6e50a54da65f185592629"><param name="Name" value="MAGE::ModelQueue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a76b2f51be6691017e93b45c2187f8fa5"><param name="Name" value="pss"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#abd3acda693815cbb59cc3a084d9c0829"><param name="Name" value="push"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#abd3acda693815cbb59cc3a084d9c0829"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ab1a6d50de41fe85f2bc43475ae60561b"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a090b14af5e7371412ebee3829808f2de"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ab1a6d50de41fe85f2bc43475ae60561b"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ab1a6d50de41fe85f2bc43475ae60561b"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a09eeea43ffba1519cb5709f39ddda43b"><param name="Name" value="pushLabel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a2d39a9bcadb698c17ff42d4b999faac8"><param name="Name" value="query"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#ac3e06511af7d94f1eeff2911fff27325"><param name="Name" value="queue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a6f1b1461b20a31ddc1ec34750b1f4004"><param name="Name" value="Random"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f511bef09c174561f274c5929f5cbc"><param name="Name" value="rawData"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f511bef09c174561f274c5929f5cbc"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f511bef09c174561f274c5929f5cbc"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a82f511bef09c174561f274c5929f5cbc"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#afa43057433f1ab70f910d74930e55a6e"><param name="Name" value="read"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#afa43057433f1ab70f910d74930e55a6e"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a37c26fa8fa2fee058e60abe244b1401b"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a37c26fa8fa2fee058e60abe244b1401b"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#a37c26fa8fa2fee058e60abe244b1401b"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#af71ab9d9790777fb336354d1360b5c46"><param name="Name" value="ready"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#aeff52eaca471c116901ae4bed71f9df8"><param name="Name" value="remain"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#aeff52eaca471c116901ae4bed71f9df8"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#aeff52eaca471c116901ae4bed71f9df8"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#aeff52eaca471c116901ae4bed71f9df8"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa374565aaed67cb05b39516e11eb6638"><param name="Name" value="removeEngine"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a41a3d6bdc9dec7fb502f5d2f3212d95b"><param name="Name" value="reset"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a41a3d6bdc9dec7fb502f5d2f3212d95b"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#aa219489f0b80f526dd97f19587b35239"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#afa6d88eb37afdaf56a762b47df0f3f7c"><param name="Name" value="resetVocoder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#af4813e05a1a6390a280302588b7ab84a"><param name="Name" value="run"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a0301b5e7d0876dcf9f1424c7c1900e73"><param name="Name" value="sampleCount"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a6f86b724735cda5a8243392b24cdb3ef"><param name="Name" value="scale"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa5bcce5e56cc246c7dce73d287d59c9d"><param name="Name" value="setAlpha"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa5bcce5e56cc246c7dce73d287d59c9d"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a638ebd059ae6e38500f9bf0b62ffde79"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a9ac98d6509ab6e758b9660d2a5aa46ed"><param name="Name" value="setBegin"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab2cc4ec66c1c570fd70313384406e742"><param name="Name" value="setDefaultEngine"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aafa5e062b14d856d4ad845dcab706005"><param name="Name" value="setDuration"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aafa5e062b14d856d4ad845dcab706005"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a59f493069f299cd68862c954791bcf34"><param name="Name" value="MAGE::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#abd9e189054153f714d6c85b5c50bb1ba"><param name="Name" value="setEnd"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ac7bf18d62123a16be7062332ff9e4199"><param name="Name" value="setFrame"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a150ae12ed4e3ffc3a62abaf5fdfd9e3d"><param name="Name" value="setFrameQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa619158500973cb5cb30b5017cf4624f"><param name="Name" value="setGamma"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa619158500973cb5cb30b5017cf4624f"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#af7f2886e18a5ca7929a1031b86c1cf4b"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a5a0940ccfcd254f4e26e1e4f7bac4352"><param name="Name" value="setGlobal"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#adef698d2640dc3c76c6faa7c0c9853a9"><param name="Name" value="setInterpolationFunctions"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a5e5c9387f04be05ae215bea33db15bbf"><param name="Name" value="setIsForced"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aec2890ec81154a590c43771fcbc5c01f"><param name="Name" value="setLabel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a9b17d63eb3d7e5056fc1e07341abe15a"><param name="Name" value="setLabelQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a7f8dabb44a06ecee3abde35842ffe48e"><param name="Name" value="setLabelSpeed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a5b5483ba34fdc6fe9c8f120737ad8e5f"><param name="Name" value="setModel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ab2035e9b0d1ba9b37487f8d89933c61a"><param name="Name" value="setModelQueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a2c560516aed6235a6e97787581d20ab1"><param name="Name" value="setModelSet"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a67cdc9e3f2f2561782944b6702fff7d1"><param name="Name" value="setPadeOrder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae3dd0c90ccb3a22f0bf87347177b4ad3"><param name="Name" value="setPitch"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae3dd0c90ccb3a22f0bf87347177b4ad3"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#ad0010897fe2f1b7ff08ff765b2c315b9"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a55ed47d0fcf247afc9dd3d613782ac66"><param name="Name" value="setPOrder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a6d9578d3142bd223e4f9a16b85c345ad"><param name="Name" value="setPStream"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a371dc0984e9a505b06ddd6f750ed251a"><param name="Name" value="setQuery"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#ae307a1bd87eac39162ca659d6984e154"><param name="Name" value="setSpeed"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#ae307a1bd87eac39162ca659d6984e154"><param name="Name" value="MAGE::Label"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a4002ab5e2dd124e10f8a46713f43bf15"><param name="Name" value="MAGE::Mage"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a4c3af53691987ae0c8d3f0d921da3f61"><param name="Name" value="setState"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a40e130dd62fecb5039f1228b6bdc2464"><param name="Name" value="setVocoder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a56823e2f6437744f5d2ceb2ec973b3f2"><param name="Name" value="setVoiced"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a1e87dd6829eeb4e5d0877e846b1e7329"><param name="Name" value="setVolume"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a1e87dd6829eeb4e5d0877e846b1e7329"><param name="Name" value="MAGE::Mage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#abe8aa23071fe0b6ba424a4f0105b3788"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a8a38b5e1998068ddd8c6037925561945"><param name="Name" value="shift"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a2944a3886038159fd5d5ab0b798fa93b"><param name="Name" value="speed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ac2d75ff326129cf1261b6e90574a1ef4"><param name="Name" value="state"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a382f808581ccf99a9bb6f8b086005960"><param name="Name" value="strBegin"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a9e14137e9d57426d097cf3e266a2f153"><param name="Name" value="strEnd"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a623b0a23723b50d2bb7746b015ee8bd5"><param name="Name" value="strQuery"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a623b0a23723b50d2bb7746b015ee8bd5"><param name="Name" value="MAGE::LabelMemory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a57567f9a8804bc6324dc1797ec7c7ccb"><param name="Name" value="MAGE::Model"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a73e749ceae42aff89c1865122956fcc4"><param name="Name" value="MAGE::ModelMemory"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a6cac226dc53fdcfe78b5478568d15ba8"><param name="Name" value="synthetic"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a2989b96b629bc07f2a1b09f01b6fa1fd"><param name="Name" value="t0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a90a47244e550dfaf403ab9e28175af86"><param name="Name" value="updateDuration"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a31c05688b6f303a45f25cecd0d402b6d"><param name="Name" value="updateSamples"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a40185ea52d16cecaafae70740e90af29"><param name="Name" value="Usage"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a40185ea52d16cecaafae70740e90af29"><param name="Name" value="hts.cpp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8h.html#a40185ea52d16cecaafae70740e90af29"><param name="Name" value="hts.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_distribution.html#a9e2f2aa03bb780e60bb402d6eb5c941d"><param name="Name" value="vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#aa43e2f78a23a977d9d237c853e0cb39e"><param name="Name" value="vocoder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a0c949814cc5263ae226c23fb5ca7abf4"><param name="Name" value="Vocoder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#a7d0bff085a85c0cf4b6a5fc1eaf2827f"><param name="Name" value="voiced"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#a7d0bff085a85c0cf4b6a5fc1eaf2827f"><param name="Name" value="MAGE::Frame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a5ad040b2ba593e638a29c015c8a8212a"><param name="Name" value="MAGE::Vocoder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a109bd7570f9690fcc3662381042e7b05"><param name="Name" value="voiced_unvoiced"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a41b96d881c37ec97efe9442043c6011c"><param name="Name" value="weightsChecked"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0618d5991d8d4541dbf1cd208998d2f2"><param name="Name" value="write"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0618d5991d8d4541dbf1cd208998d2f2"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ac587185d80b23548645d428bd7ce12c4"><param name="Name" value="MAGE::MemQueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ac587185d80b23548645d428bd7ce12c4"><param name="Name" value="MemQueue< Frame >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ac587185d80b23548645d428bd7ce12c4"><param name="Name" value="MemQueue< Model >"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ae7bad2f0e36ec2ca981f4516d2ee98eb"><param name="Name" value="wum"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ae4956587c224f47c013fbade1181716e"><param name="Name" value="wuw"></OBJECT>
+</UL>
+</BODY>
+</HTML>

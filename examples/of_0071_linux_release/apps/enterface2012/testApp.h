@@ -22,7 +22,7 @@
  /* 																								*/
  /* 	 Developed by :																				*/
  /* 																								*/
- /* 		Maria Astrinaki, Geoffrey Wilfart, Alexis Moinet, Nicolas d'Alessandro, Thierry Dutoit	*/
+ /* 		Maria Astrinaki, Alexis Moinet, Geoffrey Wilfart, Nicolas d'Alessandro, Thierry Dutoit	*/
  /* 																								*/
  /* ----------------------------------------------------------------------------------------------- */
 
@@ -101,6 +101,7 @@ class testApp : public ofBaseApp
 		bool loop;
 		bool fill;
 		
+		string labelFile;
 		// queue of read labels
 		std::queue<std::string> labellist;
 };

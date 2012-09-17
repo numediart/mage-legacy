@@ -22,7 +22,7 @@
  /* 																								*/
  /* 	 Developed by :																				*/
  /* 																								*/
- /* 		Maria Astrinaki, Geoffrey Wilfart, Alexis Moinet, Nicolas d'Alessandro, Thierry Dutoit	*/
+ /* 		Maria Astrinaki, Alexis Moinet, Geoffrey Wilfart, Nicolas d'Alessandro, Thierry Dutoit	*/
  /* 																								*/
  /* ----------------------------------------------------------------------------------------------- */
 
@@ -55,8 +55,9 @@ void testApp::setup( void )
 
 	ofSoundStreamSetup( 2, 0, this, defaultSamplingRate, dacBufferLen, 4 ); // audio setup
 		
-	loop = true;
-	fill = true;
+	this->loop = true;
+	this->fill = true;
+	this->labelFile = "./inouts/labels/alice01.lab";
 }
 
 void testApp::exit( void )
@@ -84,6 +85,7 @@ void testApp::update( void )
 	
 	ofxOscMessage m; 
 	
+	double oscUpdateDuration[nOfStates];
 	double oscInterpolationWeights[nOfStreams + 1];
 	map < string, double * > oscInterpolationFunctions;   
 
@@ -169,16 +171,15 @@ void testApp::update( void )
 		}
 		
 		// --- Change duration ---
-		if( m.getAddress() == "/Mage/duration" )
-		{
-			// TODO :: this has to be replaced by a function producing 
-			// weights and not to use a static array of weights
-			int updateFunction[nOfStates] = { 1, 1, 30, 1, 1 };
-
-			oscAction = m.getArgAsInt32( 0 );
+		if( m.getAddress() == "/Mage/duration" ) 
+		{	
+			for( int i = 0; i < nOfStates; i++ )
+				oscUpdateDuration[i] = m.getArgAsFloat( i );
 			
+			oscAction = m.getArgAsFloat( nOfStates );
+		
 			this->durationAction = oscAction;
-			this->mage->setDuration( updateFunction, this->durationAction );
+			this->mage->setDuration( oscUpdateDuration, this->durationAction );
 		}
 		
 		// --- Reset Mage ---
@@ -224,7 +225,7 @@ void testApp::update( void )
 				this->mage->enableInterpolation( false );   			
 			else			
 			{
-				for( int i = 0; i < nOfStreams + 1; i++)
+				for( int i = 0; i < nOfStreams + 1; i++ )
 					oscInterpolationWeights[i] = m.getArgAsFloat( i + 1 );
 				
 				oscInterpolationFunctions[oscEngineName] = oscInterpolationWeights;				
@@ -234,7 +235,6 @@ void testApp::update( void )
 				this->mage->print();
 			}
 		}
-		
 		
 		// --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 		if( m.getAddress() == "/Mage/loop" )
@@ -306,8 +306,8 @@ void testApp::audioOut( float * outBuffer, int bufSize, int nChan )
 
 testApp::testApp( int argc, char ** argv )
 {
-	Argc = argc; // we use this trick to pass the HTS command line flags
-	Argv = argv; // to the openFrameworks app and use them at launch
+	this->Argc = argc; // we use this trick to pass the HTS command line flags
+	this->Argv = argv; // to the openFrameworks app and use them at launch
 }
 
 void testApp::keyPressed( int key )
@@ -325,7 +325,7 @@ void testApp::keyPressed( int key )
 			this->mage->pushLabel( label );
 		}
 		
-		string s( this->Argv[this->Argc - 1] );
+		string s( this->labelFile );
 		parsefile( s );
 	}
 	
@@ -357,13 +357,7 @@ void testApp::keyPressed( int key )
 		this->mage->setInterpolationFunctions( interpolationFunctions );	
 		
 	}
-
 	
-	/*if( key == 'a' )
-	{
-		int updateFunction[5] = {1, 1, 10, 1, 1};
-		this->mage->setDuration( updateFunction, MAGE::shift );	
-	}*/
 	if( key == '1' )
 		this->mage->print();
 
@@ -394,7 +388,7 @@ void testApp::fillLabelQueue()
 {	
 	MAGE::Label label;
 	
-	string s( this->Argv[this->Argc - 1] );
+	string s( this->labelFile );
 	parsefile( s );
 	
 	this->fill = false;

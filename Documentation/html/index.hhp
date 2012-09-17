@@ -28,7 +28,6 @@ _m_s_distribution_8h_source.html
 _state_8h_source.html
 _vocoder_8h_source.html
 _constants_8h.html
-_distribution_8h.html
 _frame_8h.html
 _frame_queue_8cpp.html
 _frame_queue_8h.html
@@ -47,7 +46,6 @@ _model_8cpp.html
 _model_8h.html
 _model_queue_8cpp.html
 _model_queue_8h.html
-_state_8h.html
 _vocoder_8cpp.html
 _vocoder_8h.html
 struct_m_a_g_e_1_1_distribution.html

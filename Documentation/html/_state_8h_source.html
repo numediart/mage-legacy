@@ -50,7 +50,7 @@
 <div class="title">State.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_state_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/* ----------------------------------------------------------------------------------------------- */</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/* ----------------------------------------------------------------------------------------------- */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; <span class="comment">/*                                                                                                 */</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="comment">/*     This file is part of MAGE / pHTS( the performative HMM-based speech synthesis system )      */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; <span class="comment">/*                                                                                                 */</span></div>
@@ -78,40 +78,47 @@
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; <span class="comment">/*                                                                                                 */</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="comment">/* ----------------------------------------------------------------------------------------------- */</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_distribution_8h.html" title="MSD Gaussian parameters.">Distribution.h</a>&quot;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;MSDistribution.h&quot;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_constants_8h.html">Constants.h</a>&quot;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span>MAGE </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html">   59</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_m_a_g_e_1_1_state.html" title="Definition of the HMMs.">State</a> </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a374a7cb32876f8190f7ee541283f969a">   65</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_m_a_g_e_1_1_state.html#a374a7cb32876f8190f7ee541283f969a" title="It contains the duration of every state of a given HMM.">duration</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// global variances switch</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#af71881812290585c3ea318251c0bb3f5">   72</a></span>&#160;<span class="comment"></span>        <span class="keywordtype">bool</span> <a class="code" href="struct_m_a_g_e_1_1_state.html#af71881812290585c3ea318251c0bb3f5" title="It contains the global variance flag of the mgc stream for every state of a given HMM...">mgc_gv_switch</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a77240283e31e92076c73ecc0f9dbc34f">   78</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_m_a_g_e_1_1_state.html#a77240283e31e92076c73ecc0f9dbc34f" title="It contains the global variance flag of the lf0 stream for every state of a given HMM...">lf0_gv_switch</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;Distribution.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;MSDistribution.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_constants_8h.html">Constants.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span>MAGE </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html">   50</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_m_a_g_e_1_1_state.html" title="Definition of the HMMs.">State</a> </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a374a7cb32876f8190f7ee541283f969a">   56</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_m_a_g_e_1_1_state.html#a374a7cb32876f8190f7ee541283f969a" title="It contains the duration of every state of a given HMM.">duration</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// global variances switch</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#af71881812290585c3ea318251c0bb3f5">   64</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_m_a_g_e_1_1_state.html#af71881812290585c3ea318251c0bb3f5" title="It contains the global variance flag of the spectral stream for every state of a given HMM...">mgc_gv_switch</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a77240283e31e92076c73ecc0f9dbc34f">   70</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_m_a_g_e_1_1_state.html#a77240283e31e92076c73ecc0f9dbc34f" title="It contains the global variance flag of the fundamental frequency stream for every state of a given H...">lf0_gv_switch</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a174dfed9ae24aff59d3f69d0733478e5">   76</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_m_a_g_e_1_1_state.html#a174dfed9ae24aff59d3f69d0733478e5" title="It contains the global variance flag of the low-pass filtering stream for every state of a given HMM...">lpf_gv_switch</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// parameters loaded from trees</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a174dfed9ae24aff59d3f69d0733478e5">   84</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_m_a_g_e_1_1_state.html#a174dfed9ae24aff59d3f69d0733478e5" title="It contains the global variance flag of the lpf stream for every state of a given HMM...">lpf_gv_switch</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// parameters loaded from trees</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a1a8511f007e662b79fc204e4cb3261a4">   91</a></span>&#160;<span class="comment"></span>        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a Gaussian distribution.">Distribution</a>    <a class="code" href="struct_m_a_g_e_1_1_state.html#a1a8511f007e662b79fc204e4cb3261a4" title="It contains the global variance flag of the lpf stream for every state of a given HMM...">mgc</a>[nOfDers * nOfMGCs];</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_m_s_distribution.html">MSDistribution</a>  lf0[nOfDers * nOfLF0s];</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a Gaussian distribution.">Distribution</a>    lpf[nOfDers * nOfLPFs];</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">// global variances</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a Gaussian distribution.">Distribution</a> gv_mgc[nOfDers * nOfMGCs];</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a Gaussian distribution.">Distribution</a> gv_lf0[nOfDers * nOfLF0s];</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a Gaussian distribution.">Distribution</a> gv_lpf[nOfDers * nOfLPFs];</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    };</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a1a8511f007e662b79fc204e4cb3261a4">   85</a></span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a gaussian distribution.">Distribution</a> <a class="code" href="struct_m_a_g_e_1_1_state.html#a1a8511f007e662b79fc204e4cb3261a4" title="It contains the gaussian distribution (including static and dynamic features) of the spectral stream ...">mgc</a>[nOfDers * nOfMGCs];</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a5e97786bd0abad3f676aab2e4238bd58">   92</a></span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_m_s_distribution.html" title="Definition of an NSD gaussian distribution.">MSDistribution</a> <a class="code" href="struct_m_a_g_e_1_1_state.html#a5e97786bd0abad3f676aab2e4238bd58" title="It contains the gaussian distribution (including static and dynamic features) of the fundamental freq...">lf0</a>[nOfDers * nOfLF0s];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a6d3ea7b615c59e014d82ebf67ae2766d">   99</a></span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a gaussian distribution.">Distribution</a> <a class="code" href="struct_m_a_g_e_1_1_state.html#a6d3ea7b615c59e014d82ebf67ae2766d" title="It contains the gaussian distribution (including static and dynamic features) of the low-pass filteri...">lpf</a>[nOfDers * nOfLPFs];</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// global variances</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a69a8e57098ea4126782a671d42485f82">  108</a></span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a gaussian distribution.">Distribution</a> <a class="code" href="struct_m_a_g_e_1_1_state.html#a69a8e57098ea4126782a671d42485f82" title="It contains the gaussian distribution (including static and dynamic features) of the global variance ...">gv_mgc</a>[nOfDers * nOfMGCs];</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a3d3ecc2eaccfe03e5b30b2919eeb3df2">  115</a></span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a gaussian distribution.">Distribution</a> <a class="code" href="struct_m_a_g_e_1_1_state.html#a3d3ecc2eaccfe03e5b30b2919eeb3df2" title="It contains the gaussian distribution (including static and dynamic features) of the global variance ...">gv_lf0</a>[nOfDers * nOfLF0s];</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="struct_m_a_g_e_1_1_state.html#a849ff0368b589c4e298340450952a39b">  122</a></span>&#160;        <a class="code" href="struct_m_a_g_e_1_1_distribution.html" title="Definition of a gaussian distribution.">Distribution</a> <a class="code" href="struct_m_a_g_e_1_1_state.html#a849ff0368b589c4e298340450952a39b" title="It contains the gaussian distribution (including static and dynamic features) of the global variance ...">gv_lpf</a>[nOfDers * nOfLPFs];</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    };</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 17 2012 18:25:22 for MageProject by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 17 2012 22:00:24 for MageProject by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

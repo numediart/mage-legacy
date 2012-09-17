@@ -76,9 +76,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ab52fc4232cba2bb126f7efed8dff0830"><param name="Name" value="MAGE::Model"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a374a7cb32876f8190f7ee541283f969a"><param name="Name" value="MAGE::State"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a64e9f8ae727c1b83ff3f6a044a0684b5"><param name="Name" value="duration_array"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#acfebd76b2013186c0174a37295c2a4b3"><param name="Name" value="duration_mean"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a07996f8c357d0e30be9ecaab0beb641e"><param name="Name" value="duration_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ade9a7acd349027d31a76d6b1d2afa0ba"><param name="Name" value="duration_array"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a3fa3ae357555f0af234d82e9323b8846"><param name="Name" value="duration_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a05baed554a9634c42ea1e15650b65532"><param name="Name" value="duration_vari"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a94dc1d2aee01ea03c5616ab896f023d3"><param name="Name" value="durStreamIndex"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a082da9f9d38a4d65029d0d700b52405c"><param name="Name" value="enableInterpolation"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label.html#a1902501774c298de2f29709b715e7b01"><param name="Name" value="end"></OBJECT>
@@ -175,10 +175,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a5f5bb1141cc727462434116b9dd24e42"><param name="Name" value="MAGE::Vocoder"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a384e050ced9ebccc4bf37d8c6051900f"><param name="Name" value="global"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ac6a49470b063d92f069d3974bbe9fb81"><param name="Name" value="gv_lf0"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a7bccb3672ce2572036faf33f280278fc"><param name="Name" value="gv_lpf"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a3d3ecc2eaccfe03e5b30b2919eeb3df2"><param name="Name" value="gv_lf0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a849ff0368b589c4e298340450952a39b"><param name="Name" value="gv_lpf"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ad80de821c46d9cf83e0659cb3042bf3e"><param name="Name" value="gv_mean"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ae7506fd46c784319649c618c4a71dd5f"><param name="Name" value="gv_mgc"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a69a8e57098ea4126782a671d42485f82"><param name="Name" value="gv_mgc"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a3ef2b07a2bec7fac84e5adb6ac1ca249"><param name="Name" value="gv_switch"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a1d4e17199ea97e1b4a11c7d20e7151f0"><param name="Name" value="gv_vari"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a8ce20b001dec594aeb232d0bab3adc6f"><param name="Name" value="head"></OBJECT>
@@ -306,21 +306,21 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="MemQueue< Frame >"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mem_queue.html#ad3ce9ca41cbc3406810da09cea8ce5bb"><param name="Name" value="MemQueue< Model >"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ae1685135e0a59bc23e8e7bbde11c2c97"><param name="Name" value="lf0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a5e97786bd0abad3f676aab2e4238bd58"><param name="Name" value="lf0"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a77240283e31e92076c73ecc0f9dbc34f"><param name="Name" value="lf0_gv_switch"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a3059f36a01ccbb2d7251f50656a8da44"><param name="Name" value="lf0_mean"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a4a0ad4390763808f5145660046ec84db"><param name="Name" value="lf0_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a5185a150edaa92b0a80a338a22221aa0"><param name="Name" value="lf0_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ae65fab1d3ffa0c6a63ad69be3ef383c6"><param name="Name" value="lf0_vari"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#aa93924432bf812ff05dab21f1ffbaf32"><param name="Name" value="lf0Len"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ae1590c9e012c9d9c614e0e17b71fead7"><param name="Name" value="lf0StreamIndex"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_engine.html#a06011d5cf59c57d195b47b03d37b5206"><param name="Name" value="load"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#aeaab3d1d1d46a336225af11f43583c1f"><param name="Name" value="lpf"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_frame.html#aeaab3d1d1d46a336225af11f43583c1f"><param name="Name" value="MAGE::Frame"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a62f825871ec404acd4387f66c3a9d2d9"><param name="Name" value="MAGE::State"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a6d3ea7b615c59e014d82ebf67ae2766d"><param name="Name" value="MAGE::State"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a174dfed9ae24aff59d3f69d0733478e5"><param name="Name" value="lpf_gv_switch"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ab97ed8bed09fa61ab56e88380879f9f9"><param name="Name" value="lpf_mean"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a7e047e702ee5029a374fd76c7924346e"><param name="Name" value="lpf_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#aa3462aa5c781ecb1f5ebc2b4365d8f0e"><param name="Name" value="lpf_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a9928940a2732079e59805df9af7e7684"><param name="Name" value="lpf_vari"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ac44f5816340536d7c3350dc9ff56e559"><param name="Name" value="lpfLen"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a862dc97415a1e8ab8959240d0c38567d"><param name="Name" value="lpfStreamIndex"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_distribution.html"><param name="Name" value="MAGE::Distribution"></OBJECT>
@@ -491,26 +491,28 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a98f78c5746a9d3f6c58564e68fc5d256"><param name="Name" value="getState"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a9d8c1c2a881e496c9e49464b595b7a81"><param name="Name" value="initDuration"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a0da8e90094bcf69179718334b1ad13b5"><param name="Name" value="initParameters"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ab8aede0293060f9f2a2987b97e3b866f"><param name="Name" value="Model"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a546726e2ff72b89e550fea7fb7a39087"><param name="Name" value="modelMemory"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a59f493069f299cd68862c954791bcf34"><param name="Name" value="setDuration"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a4c3af53691987ae0c8d3f0d921da3f61"><param name="Name" value="setState"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ac2d75ff326129cf1261b6e90574a1ef4"><param name="Name" value="state"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a57567f9a8804bc6324dc1797ec7c7ccb"><param name="Name" value="strQuery"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a90a47244e550dfaf403ab9e28175af86"><param name="Name" value="updateDuration"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a41b96d881c37ec97efe9442043c6011c"><param name="Name" value="weightsChecked"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a1ed2323cc8bf49132ccde2cc5ca8005e"><param name="Name" value="~Model"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html"><param name="Name" value="MAGE::ModelMemory"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a64e9f8ae727c1b83ff3f6a044a0684b5"><param name="Name" value="duration_array"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#acfebd76b2013186c0174a37295c2a4b3"><param name="Name" value="duration_mean"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a07996f8c357d0e30be9ecaab0beb641e"><param name="Name" value="duration_vari"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a3059f36a01ccbb2d7251f50656a8da44"><param name="Name" value="lf0_mean"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a4a0ad4390763808f5145660046ec84db"><param name="Name" value="lf0_vari"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ab97ed8bed09fa61ab56e88380879f9f9"><param name="Name" value="lpf_mean"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a7e047e702ee5029a374fd76c7924346e"><param name="Name" value="lpf_vari"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a4a0ea059ab8d24374a405e1abeab2904"><param name="Name" value="mgc_mean"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ab7320b69a914d63ef1b1db2ea55dbe5b"><param name="Name" value="mgc_vari"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a73e749ceae42aff89c1865122956fcc4"><param name="Name" value="strQuery"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ade9a7acd349027d31a76d6b1d2afa0ba"><param name="Name" value="duration_array"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a3fa3ae357555f0af234d82e9323b8846"><param name="Name" value="duration_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a05baed554a9634c42ea1e15650b65532"><param name="Name" value="duration_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a5185a150edaa92b0a80a338a22221aa0"><param name="Name" value="lf0_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ae65fab1d3ffa0c6a63ad69be3ef383c6"><param name="Name" value="lf0_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#aa3462aa5c781ecb1f5ebc2b4365d8f0e"><param name="Name" value="lpf_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a9928940a2732079e59805df9af7e7684"><param name="Name" value="lpf_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a55d427b2adcec893e5b1656d8681ae26"><param name="Name" value="mgc_mean"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#adf4a17940d051617a93a39b1bbe1d72f"><param name="Name" value="mgc_vari"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a8e04e25a67664a2a0f5f1f386582a461"><param name="Name" value="ModelMemory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a45b6edc35e435af4cd50b7dd1850575b"><param name="Name" value="strQuery"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#adb8e596089647fe32e62039ff3688bf5"><param name="Name" value="~ModelMemory"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html"><param name="Name" value="MAGE::ModelQueue"></OBJECT>
   <UL>
@@ -543,12 +545,12 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html"><param name="Name" value="MAGE::State"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a374a7cb32876f8190f7ee541283f969a"><param name="Name" value="duration"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ac6a49470b063d92f069d3974bbe9fb81"><param name="Name" value="gv_lf0"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a7bccb3672ce2572036faf33f280278fc"><param name="Name" value="gv_lpf"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ae7506fd46c784319649c618c4a71dd5f"><param name="Name" value="gv_mgc"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#ae1685135e0a59bc23e8e7bbde11c2c97"><param name="Name" value="lf0"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a3d3ecc2eaccfe03e5b30b2919eeb3df2"><param name="Name" value="gv_lf0"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a849ff0368b589c4e298340450952a39b"><param name="Name" value="gv_lpf"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a69a8e57098ea4126782a671d42485f82"><param name="Name" value="gv_mgc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a5e97786bd0abad3f676aab2e4238bd58"><param name="Name" value="lf0"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a77240283e31e92076c73ecc0f9dbc34f"><param name="Name" value="lf0_gv_switch"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a62f825871ec404acd4387f66c3a9d2d9"><param name="Name" value="lpf"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a6d3ea7b615c59e014d82ebf67ae2766d"><param name="Name" value="lpf"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a174dfed9ae24aff59d3f69d0733478e5"><param name="Name" value="lpf_gv_switch"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a1a8511f007e662b79fc204e4cb3261a4"><param name="Name" value="mgc"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#af71881812290585c3ea318251c0bb3f5"><param name="Name" value="mgc_gv_switch"></OBJECT>
@@ -647,8 +649,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#a1a8511f007e662b79fc204e4cb3261a4"><param name="Name" value="MAGE::State"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_m_a_g_e_1_1_state.html#af71881812290585c3ea318251c0bb3f5"><param name="Name" value="mgc_gv_switch"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a4a0ea059ab8d24374a405e1abeab2904"><param name="Name" value="mgc_mean"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#ab7320b69a914d63ef1b1db2ea55dbe5b"><param name="Name" value="mgc_vari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a55d427b2adcec893e5b1656d8681ae26"><param name="Name" value="mgc_mean"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#adf4a17940d051617a93a39b1bbe1d72f"><param name="Name" value="mgc_vari"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#ae448024a2434ab426b6eb2864ca4d6a0"><param name="Name" value="mgcLen"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#afe3d6b516bf2ddd0cce309b1b35effc7"><param name="Name" value="mgcStreamIndex"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="hts_8cpp.html#a2502432c0d6cb36622bc5619dc35f37d"><param name="Name" value="mHTS_set_duration"></OBJECT>
@@ -658,7 +660,9 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a2f1c180ea5a765fe2ab5b2c4778d466d"><param name="Name" value="Min"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#ae0026ef68a41dc1764571ff86192e6ce"><param name="Name" value="model"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#ab8aede0293060f9f2a2987b97e3b866f"><param name="Name" value="Model"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a546726e2ff72b89e550fea7fb7a39087"><param name="Name" value="modelMemory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a8e04e25a67664a2a0f5f1f386582a461"><param name="Name" value="ModelMemory"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_mage.html#a2a13c60d4174db48bd1b2de2f1f606ed"><param name="Name" value="modelQueue"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#a03f786d7dc7e7adad25216f8ec83752d"><param name="Name" value="ModelQueue"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue.html#aac94662cccf3527e70879cc3f58c2ece"><param name="Name" value="modelQueueMemory"></OBJECT>
@@ -819,8 +823,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a623b0a23723b50d2bb7746b015ee8bd5"><param name="Name" value="strQuery"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_memory.html#a623b0a23723b50d2bb7746b015ee8bd5"><param name="Name" value="MAGE::LabelMemory"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a57567f9a8804bc6324dc1797ec7c7ccb"><param name="Name" value="MAGE::Model"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a73e749ceae42aff89c1865122956fcc4"><param name="Name" value="MAGE::ModelMemory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#a45b6edc35e435af4cd50b7dd1850575b"><param name="Name" value="MAGE::ModelMemory"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_m_a_g_e.html#a6cac226dc53fdcfe78b5478568d15ba8"><param name="Name" value="synthetic"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a2989b96b629bc07f2a1b09f01b6fa1fd"><param name="Name" value="t0"></OBJECT>
@@ -840,7 +843,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_vocoder.html#a5ad040b2ba593e638a29c015c8a8212a"><param name="Name" value="MAGE::Vocoder"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#a109bd7570f9690fcc3662381042e7b05"><param name="Name" value="voiced_unvoiced"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a41b96d881c37ec97efe9442043c6011c"><param name="Name" value="weightsChecked"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0618d5991d8d4541dbf1cd208998d2f2"><param name="Name" value="write"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_label_queue.html#a0618d5991d8d4541dbf1cd208998d2f2"><param name="Name" value="MAGE::LabelQueue"></OBJECT>
@@ -850,6 +852,8 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ae7bad2f0e36ec2ca981f4516d2ee98eb"><param name="Name" value="wum"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_queue_memory.html#ae4956587c224f47c013fbade1181716e"><param name="Name" value="wuw"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model.html#a1ed2323cc8bf49132ccde2cc5ca8005e"><param name="Name" value="~Model"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_m_a_g_e_1_1_model_memory.html#adb8e596089647fe32e62039ff3688bf5"><param name="Name" value="~ModelMemory"></OBJECT>
 </UL>
 </BODY>
 </HTML>

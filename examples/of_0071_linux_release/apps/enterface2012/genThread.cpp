@@ -22,7 +22,7 @@
  /* 																								*/
  /* 	 Developed by :																				*/
  /* 																								*/
- /* 		Maria Astrinaki, Geoffrey Wilfart, Alexis Moinet, Nicolas d'Alessandro, Thierry Dutoit	*/
+ /* 		Maria Astrinaki, Alexis Moinet, Geoffrey Wilfart, Nicolas d'Alessandro, Thierry Dutoit	*/
  /* 																								*/
  /* ----------------------------------------------------------------------------------------------- */
 
@@ -39,7 +39,7 @@ void genThread::threadedFunction( void )
 {		
 	while( isThreadRunning() )
 	{
-		if( this->mage )
+		if( this->mage->ready() )
 		{
 			// --- Run mage ---
 			//this->mage->run( ); 
@@ -64,6 +64,12 @@ void genThread::threadedFunction( void )
 				// optimize the generated parameters 
 				this->mage->optimizeParameters();
 			}
+		}
+		else
+		{
+			//printf("mage not ready, probably loading engine\n");
+			//sleep 10ms waiting for mage to be ready again
+			usleep(10000);
 		}
 	}
 	return;

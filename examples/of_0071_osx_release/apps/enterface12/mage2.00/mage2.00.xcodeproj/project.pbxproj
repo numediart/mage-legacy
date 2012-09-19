@@ -446,12 +446,12 @@
 			isa = PBXGroup;
 			children = (
 				9FBA3D3615AF02C40063B53D /* MemQueue.h */,
-				9FF6C0AB15AEBB83004B4363 /* LabelQueue.cpp */,
 				9FF6C0AD15AEBB93004B4363 /* LabelQueue.h */,
-				9F11F62B15AF5F0200745C92 /* ModelQueue.cpp */,
+				9FF6C0AB15AEBB83004B4363 /* LabelQueue.cpp */,
 				9F11F62D15AF5F1000745C92 /* ModelQueue.h */,
-				9F4800EA15AF751000556F97 /* FrameQueue.cpp */,
+				9F11F62B15AF5F0200745C92 /* ModelQueue.cpp */,
 				9F4800E915AF750400556F97 /* FrameQueue.h */,
+				9F4800EA15AF751000556F97 /* FrameQueue.cpp */,
 			);
 			name = queues;
 			sourceTree = "<group>";

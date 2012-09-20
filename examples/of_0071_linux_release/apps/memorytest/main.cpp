@@ -73,6 +73,8 @@ int main(int argc, char **argv) {
 	mage->removeEngine( "slt3" );
 	string s( argv[argc - 1] );
 	
+	printf("MAGE timestamp : %s\n",mage->timestamp().c_str());
+	
 	int bufSize = 128;
 	MAGE::Frame *frame;
 	float *outbuffer;

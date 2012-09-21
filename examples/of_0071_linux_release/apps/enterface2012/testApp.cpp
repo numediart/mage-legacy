@@ -26,6 +26,13 @@
  /* 																								*/
  /* ----------------------------------------------------------------------------------------------- */
 
+/** 
+ *	@file		testApp.cpp
+ *
+ *	@author		Maria Astrinaki, Alexis Moinet, Geoffrey Wilfart, Nicolas d'Alessandro, Thierry Dutoit
+ * 			
+ */
+
 #include "testApp.h"
 
 void testApp::setup( void )
@@ -40,9 +47,10 @@ void testApp::setup( void )
 	
 	// add clb & awb voice models
 	//this->mage->addEngine( "clb", "./inouts/clb.conf" );
-	//this->mage->addEngine( "awb", "./inouts/awb.conf" );
-	this->mage->addEngine( "slt", this->Argc, this->Argv );
-
+	this->mage->addEngine( "slt", "./inouts/slt.conf" );
+	this->mage->addEngine( "awb", "./inouts/awb.conf" );
+	this->mage->enableInterpolation(true);
+	
 	// --- Parameter Generation Thread ---
 	generate = new genThread( this->mage );
 	generate->startThread();
@@ -232,7 +240,7 @@ void testApp::update( void )
 				
 				this->mage->enableInterpolation( true );  
 				this->mage->setInterpolationFunctions( oscInterpolationFunctions );	
-				this->mage->print();
+				this->mage->printInterpolationWeights();
 			}
 		}
 		
@@ -246,6 +254,7 @@ void testApp::update( void )
 				printf( "No Loop\n" );
 		}
 	}
+ 
 	
 	// TODO :: check that this is thread-safe( probably not )
 	if( this->fill && this->mage->getLabelQueue()->isEmpty() && this->loop )
@@ -359,7 +368,7 @@ void testApp::keyPressed( int key )
 	}
 	
 	if( key == '1' )
-		this->mage->print();
+		this->mage->printInterpolationWeights();
 
 	if( key == 'r' )
 		this->mage->reset();

@@ -134,7 +134,6 @@
 		9F0C2BA215AEC15400FF66D7 /* mage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mage.h; path = "../../../../../../magelib-2.00/src/mage.h"; sourceTree = "<group>"; };
 		9F0C2BA715AED9FF00FF66D7 /* State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
 		9F0C2BAC15AEEED300FF66D7 /* Distribution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Distribution.h; sourceTree = "<group>"; };
-		9F0C2BAD15AEEFDF00FF66D7 /* MSDistribution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSDistribution.h; sourceTree = "<group>"; };
 		9F0C2BAE15AEF5FC00FF66D7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "../../../../../../magelib-2.00/src/Constants.h"; sourceTree = "<group>"; };
 		9F0C2BAF15AEFE3700FF66D7 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		9F11F62815AF57F100745C92 /* genThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = genThread.h; sourceTree = "<group>"; };
@@ -426,7 +425,6 @@
 			children = (
 				9F0C2BA715AED9FF00FF66D7 /* State.h */,
 				9F0C2BAC15AEEED300FF66D7 /* Distribution.h */,
-				9F0C2BAD15AEEFDF00FF66D7 /* MSDistribution.h */,
 				7BEFD22F15C00FB2009A7F4A /* Model.cpp */,
 				9F0C2BAF15AEFE3700FF66D7 /* Model.h */,
 			);

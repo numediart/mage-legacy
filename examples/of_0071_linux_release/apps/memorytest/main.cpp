@@ -65,12 +65,35 @@ void fillLabelQueue(MAGE::Mage *mage, string s)
 	}
 }
 
+void mage_interpolation( MAGE::Mage *mage, string speaker, double weight )
+{
+	string s(speaker);
+
+	double interpolationWeights[nOfStreams + 1];
+	map < string, double * > interpolationFunctions;
+
+	for( unsigned int i = 0; i < nOfStreams + 1; i++ ) 
+	{
+		interpolationWeights[i] = (double) weight;
+	}
+
+	interpolationFunctions[s] = interpolationWeights;
+
+	mage->setInterpolationFunctions( interpolationFunctions );	
+
+	return;
+}
+
 int main(int argc, char **argv) {
 	MAGE::Mage *mage = new MAGE::Mage( "slt", argc, argv );
-	mage->addEngine( "slt2",argc,argv );
+	/*mage->addEngine( "slt2",argc,argv );
 	mage->addEngine( "slt2",argc,argv );
 	mage->addEngine( "slt3",argc,argv );
-	mage->removeEngine( "slt3" );
+	mage->removeEngine( "slt3" );*/
+	
+	mage->addEngine( "slt", "./inouts/slt.conf" );
+	mage->addEngine( "awb", "./inouts/awb.conf" );
+	mage->enableInterpolation(true);
 	string s( argv[argc - 1] );
 	
 	printf("MAGE timestamp : %s\n",mage->timestamp().c_str());
@@ -102,6 +125,15 @@ int main(int argc, char **argv) {
 				if( mage->getVocoder()->ready() )
 					outbuffer[k] = 0.5 * mage->getVocoder()->pop() / 32768;
 			}
+			
+			if (count == 20)
+			{
+				printf("change interpolation weights\n");
+				double weight = 0.2;
+				mage_interpolation(mage, "slt", weight);
+				mage_interpolation(mage, "awb", 1-weight);
+			}
+			count ++;
 		}
 	}
 	

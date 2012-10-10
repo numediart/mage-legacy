@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7B48042615E3B2000074DC29 /* mage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B48042515E3B2000074DC29 /* mage.cpp */; };
+		7B8954CE16258A110092E84B /* fft-sptk.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B8954C816258A110092E84B /* fft-sptk.c */; };
+		7B8954CF16258A110092E84B /* getmem-sptk.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B8954CA16258A110092E84B /* getmem-sptk.c */; };
+		7B8954D016258A110092E84B /* mlsacheck-sptk.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B8954CC16258A110092E84B /* mlsacheck-sptk.c */; };
 		7BEFD22B15C00F99009A7F4A /* hts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFD22915C00F99009A7F4A /* hts.cpp */; };
 		7BEFD22E15C00FA7009A7F4A /* MathFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFD22C15C00FA7009A7F4A /* MathFunctions.cpp */; };
 		7BEFD23015C00FB2009A7F4A /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFD22F15C00FB2009A7F4A /* Model.cpp */; };
@@ -91,6 +94,12 @@
 
 /* Begin PBXFileReference section */
 		7B48042515E3B2000074DC29 /* mage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mage.cpp; path = "../../../../../magelib-2.00/src/mage.cpp"; sourceTree = SOURCE_ROOT; };
+		7B8954C816258A110092E84B /* fft-sptk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "fft-sptk.c"; sourceTree = "<group>"; };
+		7B8954C916258A110092E84B /* fft-sptk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fft-sptk.h"; sourceTree = "<group>"; };
+		7B8954CA16258A110092E84B /* getmem-sptk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "getmem-sptk.c"; sourceTree = "<group>"; };
+		7B8954CB16258A110092E84B /* getmem-sptk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "getmem-sptk.h"; sourceTree = "<group>"; };
+		7B8954CC16258A110092E84B /* mlsacheck-sptk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mlsacheck-sptk.c"; sourceTree = "<group>"; };
+		7B8954CD16258A110092E84B /* mlsacheck-sptk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mlsacheck-sptk.h"; sourceTree = "<group>"; };
 		7BEFD22915C00F99009A7F4A /* hts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hts.cpp; sourceTree = "<group>"; };
 		7BEFD22A15C00F99009A7F4A /* hts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hts.h; sourceTree = "<group>"; };
 		7BEFD22C15C00FA7009A7F4A /* MathFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MathFunctions.cpp; sourceTree = "<group>"; };
@@ -210,6 +219,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B8954C716258A110092E84B /* sptk */ = {
+			isa = PBXGroup;
+			children = (
+				7B8954C816258A110092E84B /* fft-sptk.c */,
+				7B8954C916258A110092E84B /* fft-sptk.h */,
+				7B8954CA16258A110092E84B /* getmem-sptk.c */,
+				7B8954CB16258A110092E84B /* getmem-sptk.h */,
+				7B8954CC16258A110092E84B /* mlsacheck-sptk.c */,
+				7B8954CD16258A110092E84B /* mlsacheck-sptk.h */,
+			);
+			name = sptk;
+			path = "../../../../../magelib-2.00/libs/sptk";
+			sourceTree = SOURCE_ROOT;
+		};
 		7BEFD32715C01B1A009A7F4A /* addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +390,7 @@
 				7B48042515E3B2000074DC29 /* mage.cpp */,
 				9F0C2BAE15AEF5FC00FF66D7 /* Constants.h */,
 				9FB76E7E15ADBD72001711DA /* classes */,
+				7B8954C716258A110092E84B /* sptk */,
 				9F47327B15B00611001C9C1F /* portaudio */,
 				9F4B303015ACDA3E00E6DF6E /* hts_engine */,
 				9F3FDD0C15AD6A2F0002376C /* olabox */,
@@ -650,6 +674,9 @@
 				7BEFD35D15C01B1B009A7F4A /* ofxOscReceiver.cpp in Sources */,
 				7BEFD35E15C01B1B009A7F4A /* ofxOscSender.cpp in Sources */,
 				7B48042615E3B2000074DC29 /* mage.cpp in Sources */,
+				7B8954CE16258A110092E84B /* fft-sptk.c in Sources */,
+				7B8954CF16258A110092E84B /* getmem-sptk.c in Sources */,
+				7B8954D016258A110092E84B /* mlsacheck-sptk.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

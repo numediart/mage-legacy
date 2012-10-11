@@ -134,7 +134,7 @@
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X restore 315 308 pd removeEngine;
-#N canvas 0 535 309 290 addEngine 0;
+#N canvas 0 535 549 323 addEngine 0;
 #N canvas 0 370 322 223 makepath 0;
 #X obj 64 110 pack s s;
 #X obj 64 88 getdir 1;
@@ -160,19 +160,19 @@
 #X obj 99 92 getdir 1;
 #X obj 99 70 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 99 136 makesymbol %s/inouts/%s.conf;
 #X obj 98 31 pack s;
 #X obj 54 203 s addEngine;
-#X connect 1 0 8 0;
+#X obj 99 136 makesymbol %s/data/voiceConfig/%s.conf;
+#X connect 1 0 7 0;
 #X connect 2 0 3 0;
-#X connect 3 0 9 0;
-#X connect 4 0 7 0;
+#X connect 3 0 8 0;
+#X connect 4 0 9 0;
 #X connect 5 0 4 0;
 #X connect 6 0 5 0;
-#X connect 7 0 2 1;
-#X connect 8 0 4 1;
-#X connect 8 0 6 0;
-#X connect 8 0 2 0;
+#X connect 7 0 4 1;
+#X connect 7 0 6 0;
+#X connect 7 0 2 0;
+#X connect 9 0 2 1;
 #X restore 320 158 pd addEngine;
 #N canvas 0 160 303 173 setDefaultEngine 0;
 #X obj 61 108 s setDefaultEngine;
@@ -225,9 +225,9 @@
 #X connect 7 1 6 1;
 #X restore 738 242 pd speed;
 #X obj 741 155 hsl 80 15 -10 10 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7000 1;
+-1 -1 0 1;
 #X obj 551 155 hsl 80 15 -50 50 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6300 1;
+-1 -1 0 1;
 #X obj 47 476 r enableInterpolation;
 #X floatatom 586 527 5 0 0 0 - - -;
 #X floatatom 551 527 5 0 0 0 - - -;
@@ -275,15 +275,15 @@
 #X msg 315 527 bdl;
 #X msg 284 527 awb;
 #X obj 484 443 hsl 80 15 0 1 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 7400 1;
+-1 -1 0 1;
 #X obj 519 461 hsl 80 15 0 1 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 7400 1;
+-1 -1 0 1;
 #X obj 554 480 hsl 80 15 0 1 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 7400 1;
+-1 -1 0 1;
 #X obj 589 500 hsl 80 15 0 1 0 0 empty empty empty -2 2 0 10 -262144
--1 -1 7400 1;
+-1 -1 0 1;
 #X obj 691 475 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7400 1;
+-1 -1 0 1;
 #X msg 955 389 0;
 #X msg 955 409 1;
 #X msg 955 429 2;
